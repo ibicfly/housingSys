@@ -24,7 +24,7 @@ import com.easyhousing.service.RentHouseSearch;
 
 /**
  * 
- * @author 王辰辰
+ * @author 张东南
  * 按条件搜索租房
  */
 @Controller
@@ -138,7 +138,6 @@ public class RentHouseSelectController {
 	        return sbuf.toString();  
 	    }  
 	
-	
 	@Autowired
 	private RentHouseSearch rentHouseSearch;
 	
@@ -152,7 +151,9 @@ public class RentHouseSelectController {
 		String strAddress = (String)session.getAttribute("address");
 		String strlowPrice = (String)session.getAttribute("lowPrice");
 		String strhighPrice = (String)session.getAttribute("highPrice");
-		String strlowRoomNum = (String)session.getAttribute("lowRoomNum");
+		String strlowRoomNum =null;
+		if(session.getAttribute("lowRoomNum")!=null)
+			strlowRoomNum= (String)session.getAttribute("lowRoomNum");
 		String strhighRoomNum = (String)session.getAttribute("highRoomNum");
 		String strclass1 = (String)session.getAttribute("class1");
 		String strclass2 = (String)session.getAttribute("class2");
@@ -184,9 +185,23 @@ public class RentHouseSelectController {
 		String address = (String)session.getAttribute("address");
 		int lowPrice = Integer.parseInt((String)session.getAttribute("lowPrice"));
 		int highPrice = Integer.parseInt((String)session.getAttribute("highPrice"));
-		int lowRoomNum = Integer.parseInt((String)session.getAttribute("lowRoomNum"));
-		int highRoomNum = Integer.parseInt((String)session.getAttribute("highRoomNum"));
-		List<RentHouse>list = rentHouseSearch.searchRentHouse(address, lowPrice, highPrice, lowRoomNum, highRoomNum);
+		
+		int lowRoomNum;
+		String str_lowRoomNum=(String) session.getAttribute("lowRoomNum");
+		if(str_lowRoomNum!=null&&!str_lowRoomNum.equals(""))
+			lowRoomNum = Integer.parseInt(str_lowRoomNum);
+		else
+			lowRoomNum=0;
+		int highRoomNum;
+		String str_highRoomNum= (String) session.getAttribute("highRoomNum");
+			
+		if(str_highRoomNum!=null&&!str_highRoomNum.equals(""))
+			highRoomNum = Integer.parseInt(str_highRoomNum);
+		else
+			highRoomNum=0;
+
+		List<RentHouse>list = 
+			rentHouseSearch.searchRentHouse(address, lowPrice, highPrice, lowRoomNum, highRoomNum);
 		
 		List<String> rentHousePicList = new ArrayList<>();
 		for (RentHouse i : list) {
@@ -202,8 +217,8 @@ public class RentHouseSelectController {
 		session.setAttribute("st", 0);
 		session.setAttribute("listSize", list.size());
 		for(RentHouse i : list) {
-			System.err.println(i.getRentHouseAddress());
-			System.err.println(list.size());
+			System.out.println(i.getRentHouseAddress());
+			System.out.println(list.size());
 		}
 		modelAndView.setViewName("rentWindow");
 		return modelAndView;
@@ -215,10 +230,10 @@ public class RentHouseSelectController {
 		Cookie[] cookie = request.getCookies();
 		HttpSession session = request.getSession();
 		if(cookie == null) {
-			System.err.println("cnm");
+			System.out.println("cnm");
 		}
 		else {
-			System.err.println("yyyyyy");
+			System.out.println("yyyyyy");
 			//设置价格，卧室数量，地址查询
 			for(Cookie iCookie : cookie) {
 					String strtemp = iCookie.getName();
@@ -230,7 +245,7 @@ public class RentHouseSelectController {
 							value = "";
 						}
 						session.setAttribute("address", value);
-						System.err.println(value);
+						System.out.println(value);
 					}
 					else if(strtemp.equals("lowPrice")) {
 						value = unescape(iCookie.getValue());
@@ -260,7 +275,7 @@ public class RentHouseSelectController {
 						value = unescape(iCookie.getValue());
 						session.setAttribute("class3", value);
 					}
-					System.err.println(iCookie.getName());
+					System.out.println(iCookie.getName());
 			}
 		}
 		String strAddress = (String)session.getAttribute("address");
@@ -303,7 +318,7 @@ public class RentHouseSelectController {
 		session.setAttribute("list", list);
 		session.setAttribute("st", 0);
 		session.setAttribute("listSize", list.size());
-		System.err.println(session.getAttribute("class1"));
+		System.out.println(session.getAttribute("class1"));
 	}
 	
 	//前一页显示

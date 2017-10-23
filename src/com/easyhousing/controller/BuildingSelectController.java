@@ -19,7 +19,7 @@ import com.easyhousing.service.BuildingSearch;
 
 /**
  * 
- * @author 王辰辰
+ * @author 张东南
  * 楼盘按条件查询
  */
 @Controller
@@ -76,7 +76,7 @@ public class BuildingSelectController {
 			}
 			else {
 				buildingPicList.add(t.get(0));
-				System.err.println(t.get(0));
+				System.out.println(t.get(0));
 			}
 		}
 		
@@ -87,8 +87,8 @@ public class BuildingSelectController {
 		session.setAttribute("buildingSt", 0);
 		session.setAttribute("buildingListSize", list.size());
 		for(BuildingInfo i : list) {
-			System.err.println(i.getBuildingAddress());
-			System.err.println(list.size());
+			System.out.println(i.getBuildingAddress());
+			System.out.println(list.size());
 		}
 		
 		modelAndView.setViewName("building");
@@ -101,10 +101,10 @@ public class BuildingSelectController {
 		Cookie[] cookie = request.getCookies();
 		HttpSession session = request.getSession();
 		if(cookie == null) {
-			System.err.println("cnm");
+			System.out.println("cnm");
 		}
 		else {
-			System.err.println("yyyyyy");
+			System.out.println("yyyyyy");
 			//设置属性
 			for(Cookie iCookie : cookie) {
 					String strtemp = iCookie.getName();
@@ -116,7 +116,7 @@ public class BuildingSelectController {
 							value = "";
 						}
 						session.setAttribute("buildingAddress", value);
-						System.err.println(value);
+						System.out.println(value);
 					}
 					else if(strtemp.equals("buildingLowPrice")) {
 						value = unescape(iCookie.getValue());
@@ -134,7 +134,7 @@ public class BuildingSelectController {
 						value = unescape(iCookie.getValue());
 						session.setAttribute("buildingClass2", value);
 					}
-					System.err.println(iCookie.getName());
+					System.out.println(iCookie.getName());
 			}
 		}
 		String strAddress = (String)session.getAttribute("buildingAddress");
@@ -170,7 +170,7 @@ public class BuildingSelectController {
 		session.setAttribute("buildingList", list);
 		session.setAttribute("buildingSt", 0);
 		session.setAttribute("buildingListSize", list.size());
-		System.err.println(session.getAttribute("buildingClass1"));
+		System.out.println(session.getAttribute("buildingClass1"));
 	}
 	
 	//分页显示，前一页

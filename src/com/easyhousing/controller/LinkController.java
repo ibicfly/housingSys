@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 /**
  * 
- * @author 王辰辰
+ * @author 张东南
  * 前期用于跳转的代码，已经不用了
  */
 

@@ -56,7 +56,7 @@ public class adminAgentController {
 			file.transferTo(dir);
 			
 			String filePath = path + "\\" + fileName;
-			System.err.println(filePath);
+			System.out.println(filePath);
 			String name = new Date().toInstant().toString();
 			new Tool().upload(filePath, name);
 			agent.setPicUrl(String.valueOf("http://os8z6i0zb.bkt.clouddn.com/" + name));
@@ -105,7 +105,7 @@ public class adminAgentController {
 			// MultipartFile自带的解析方法
 			file.transferTo(dir);
 			String filePath = path + "\\" + fileName;
-			System.err.println(filePath);
+			System.out.println(filePath);
 			String name = new Date().toInstant().toString();
 			new Tool().upload(filePath, name);
 			agent.setPicUrl(String.valueOf("http://os8z6i0zb.bkt.clouddn.com/" + name));
@@ -167,7 +167,7 @@ public class adminAgentController {
 				deleteAgentPart = value;
 			}
 		}
-		System.err.println(deleteAgentPart);
+		System.out.println(deleteAgentPart);
 		
 		//前端将经纪人id用","分割，这里将其分解开
 		String[] ids = deleteAgentPart.split("\\.");
@@ -175,7 +175,7 @@ public class adminAgentController {
 		for(String iString : ids) {
 			if(iString == null) continue;
 			if(iString == "") continue;
-			System.err.println(iString);
+			System.out.println(iString);
 			agent.setAgentId(Integer.parseInt(iString));
 			agentDao.deleteAgent(agent);
 		}

@@ -28,7 +28,7 @@ import com.easyhousing.service.UserService;
 
 /**
  * 
- * @author 王辰辰
+ * @author 张东南
  * 控制各个界面的跳转初始化
  */
 
@@ -164,10 +164,10 @@ public class AdminInit {
 		
 		List<BuildingInfo> buildingInfoList = buildingInfoDao.selectAll();
 		session.setAttribute("buildingInfoList", buildingInfoList);
-		System.err.println("ctbb1");
+		System.out.println("ctbb1");
 		for(BuildingInfo iBuildingInfo : buildingInfoList) {
-			System.err.println("ctbb");
-			System.err.println(iBuildingInfo.getBuildingAddress());
+			System.out.println("ctbb");
+			System.out.println(iBuildingInfo.getBuildingAddress());
 		}
 		
 		modelAndView.setViewName("SystemUser/managerBuilding");

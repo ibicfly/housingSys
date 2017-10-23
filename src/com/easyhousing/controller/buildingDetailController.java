@@ -26,7 +26,7 @@ import com.easyhousing.model.UserCollectBuilding;
 import com.easyhousing.service.BuildingSearch;
 /**
  * 
- * @author 王辰辰
+ * @author 张东南
  * 显示楼盘具体信息
  */
 @Controller
@@ -65,7 +65,7 @@ public class buildingDetailController {
 		}
 		BuildingInfo buildingInfo = buildingSearch.searchBuildingById(buildingId);
 		session.setAttribute("buildingId", buildingId);
-		System.err.println(buildingInfo.getBuildingId());
+		System.out.println(buildingInfo.getBuildingId());
 		
 
 		User user = (User)session.getAttribute("user");
@@ -73,7 +73,7 @@ public class buildingDetailController {
 		
 		//用户已登录，查看是否收藏
 		if(user != null) {
-			System.err.println(user.getUserId());
+			System.out.println(user.getUserId());
 			UserCollectBuilding ucb = new UserCollectBuilding();
 			ucb.setUserId(user.getUserId());
 			for (UserCollectBuilding i : userCollectBuildingDao.selectAllByUserId(ucb)) {
@@ -83,7 +83,7 @@ public class buildingDetailController {
 				}
 			}
 		}
-		System.err.println(buildingId);
+		System.out.println(buildingId);
 
 		//设置收藏属性
 		session.setAttribute("buildingInfo", buildingInfo);

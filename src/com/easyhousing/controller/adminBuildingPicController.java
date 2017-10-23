@@ -58,16 +58,16 @@ public class adminBuildingPicController {
 			file.transferTo(dir);
 			
 			String filePath = path + "\\" + fileName;
-			System.err.println(filePath);
+			System.out.println(filePath);
 			String name = new Date().toInstant().toString();
 			new Tool().upload(filePath, name);
 			buildingPic.setBuildingPicUrl(String.valueOf("http://os8z6i0zb.bkt.clouddn.com/" + name));
 		} catch (Exception e) {
 			
 		}
-		//System.err.println(buildingPic.getBuildingPicType());
-		//System.err.println(buildingPic.getBuildingId());
-		//System.err.println(buildingPic.getBuildingPicUrl());
+		//System.out.println(buildingPic.getBuildingPicType());
+		//System.out.println(buildingPic.getBuildingId());
+		//System.out.println(buildingPic.getBuildingPicUrl());
 		
 		//插入图片
 		buildingPicDao.insertBuildingPic(buildingPic);

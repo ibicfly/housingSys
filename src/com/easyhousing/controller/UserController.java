@@ -281,7 +281,7 @@ public class UserController {
 				file.transferTo(dir); 
 	        
 		        String filePath = path + "\\" + fileName;
-	        	System.err.println(filePath);
+	        	System.out.println(filePath);
 	        	String name = new Date().toInstant().toString();
 	        	// 使用Date作为名字得以唯一确定图片。因为七牛云删除图片再上传有问题，暂且这么解决
 	        	new Tool().upload(filePath, name); // 上传到七牛云
@@ -372,7 +372,7 @@ public class UserController {
 		
         try {
         	String filePath = path + "\\" + fileName;
-        	System.err.println(filePath);
+        	System.out.println(filePath);
         	String name = new Date().toInstant().toString();
         	new Tool().upload(filePath, name);
         	user.setUserPhoto(String.valueOf("http://os8z6i0zb.bkt.clouddn.com/" + name));
@@ -491,7 +491,7 @@ public class UserController {
 
 		int buyHouseCommentId = Integer.parseInt(request.getParameter("buyHouseCommentId"));
 		
-		//System.err.println(buyHouseCommentId);
+		//System.out.println(buyHouseCommentId);
 		
 		User user = (User)session.getAttribute("user");
 		

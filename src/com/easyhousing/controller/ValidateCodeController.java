@@ -17,7 +17,7 @@ import com.easyhousing.service.ValidateCode;
 
 /**
  * 
- * @author 王辰辰
+ * @author 张东南
  * 取得service生成的验证码，并显示
  */
 

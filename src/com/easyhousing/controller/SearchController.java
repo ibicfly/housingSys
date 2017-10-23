@@ -79,7 +79,7 @@ public class SearchController {
 				}
 				else {
 					buildingPicList.add(t.get(0));
-					System.err.println(t.get(0));
+					System.out.println(t.get(0));
 				}
 			}
 			session.setAttribute("buildingPicList", buildingPicList);
@@ -88,8 +88,8 @@ public class SearchController {
 			session.setAttribute("buildingSt", 0); // 房屋的遍历开始下标，用于分页
 			session.setAttribute("buildingListSize", list.size()); // 房屋个数，用于分页结尾标记
 			for(BuildingInfo i : list) {
-				System.err.println(i.getBuildingAddress());
-				System.err.println(list.size());
+				System.out.println(i.getBuildingAddress());
+				System.out.println(list.size());
 			}
 			
 			return "building";
@@ -147,8 +147,8 @@ public class SearchController {
 		session.setAttribute("st", 0); // 房屋的遍历开始下标，用于分页
 		session.setAttribute("listSize", list.size()); // 房屋个数，用于分页结尾标记
 		for(RentHouse i : list) {
-			System.err.println(i.getRentHouseAddress());
-			System.err.println(list.size());
+			System.out.println(i.getRentHouseAddress());
+			System.out.println(list.size());
 		}
 		
 		return "rentWindow";
@@ -175,14 +175,14 @@ public class SearchController {
 			}
 			else {
 				buildingPicList.add(t.get(0));
-				System.err.println(t.get(0));
+				System.out.println(t.get(0));
 			}
 		}
 		session.setAttribute("mapBuildingPicList", buildingPicList);
 		session.setAttribute("mapBuildingList", list);
 		for(BuildingInfo i : list) {
-			System.err.println(i.getBuildingAddress());
-			System.err.println(list.size());
+			System.out.println(i.getBuildingAddress());
+			System.out.println(list.size());
 		}
 		
 		// 租房
@@ -202,8 +202,8 @@ public class SearchController {
 		session.setAttribute("mapRentHousePicList", rentHousePicList);
 		session.setAttribute("mapRentHouseList", rlist);
 		for(RentHouse i : rlist) {
-			System.err.println(i.getRentHouseAddress());
-			System.err.println(list.size());
+			System.out.println(i.getRentHouseAddress());
+			System.out.println(list.size());
 		}
 		
 		return "mapHouse";

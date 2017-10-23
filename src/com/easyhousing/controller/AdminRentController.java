@@ -22,7 +22,7 @@ import com.easyhousing.model.RentHouseDeal;
 
 /**
  * 
- * @author 王辰辰
+ * @author 张东南
  * 租房增删改查
  */
 @Controller
@@ -43,7 +43,7 @@ public class AdminRentController {
 		
 		//设置表单时间
 		rentHouse.setRentHousePublishTime(inputPublishTime);
-		System.err.println(inputPublishTime);
+		System.out.println(inputPublishTime);
 		
 		rentHouseDao.insertRentHouse(rentHouse);
 		
@@ -63,7 +63,7 @@ public class AdminRentController {
 		Cookie[] cookies = request.getCookies();
 		
 		rentHouse.setRentHousePublishTime(inputPublishTime);
-		//System.err.println(inputPublishTime);
+		//System.out.println(inputPublishTime);
 		//获取更新id
 		int updateRentHouseId = 0;
 		for(Cookie iCookie : cookies) {
@@ -73,7 +73,7 @@ public class AdminRentController {
 				updateRentHouseId = Integer.parseInt(value);
 			}
 		}
-		//System.err.println(updateRentHouseId);
+		//System.out.println(updateRentHouseId);
 		//更新
 		rentHouse.setRentHouseId(updateRentHouseId);
 		rentHouseDao.updateRentHouse(rentHouse);
@@ -102,7 +102,7 @@ public class AdminRentController {
 		rentHouse.setRentHouseId(delRentHouseId);
 		rentHouseDao.deleteRentHouse(rentHouse);
 		
-		System.err.println(delRentHouseId);
+		System.out.println(delRentHouseId);
 		
 		List<RentHouse> rentHouseList = rentHouseDao.selectAllRentHouse();
 		session.setAttribute("rentHouseList", rentHouseList);
@@ -121,7 +121,7 @@ public class AdminRentController {
 				deleteRentHousePart = value;
 			}
 		}
-		System.err.println(deleteRentHousePart);
+		System.out.println(deleteRentHousePart);
 		String[] ids = deleteRentHousePart.split("\\.");
 		
 		RentHouse rentHouse = new RentHouse();
@@ -129,7 +129,7 @@ public class AdminRentController {
 		for(String iString : ids) {
 			if(iString == null) continue;
 			if(iString == "") continue;
-			System.err.println(iString);
+			System.out.println(iString);
 			rentHouse.setRentHouseId(Integer.parseInt(iString));
 			rentHouseDao.deleteRentHouse(rentHouse);
 		}
@@ -141,10 +141,10 @@ public class AdminRentController {
 		HttpSession session = request.getSession();
 		rentHouseDeal.setRentTime(date);
 		
-		System.err.println("ctbb");
-		System.err.println(date);
-		System.err.println(rentHouseDeal.getRentHouseDay());
-		System.err.println(rentHouseDeal.getRentTime());
+		System.out.println("ctbb");
+		System.out.println(date);
+		System.out.println(rentHouseDeal.getRentHouseDay());
+		System.out.println(rentHouseDeal.getRentTime());
 		
 		rentHouseDealDao.insertRentHouseDeal(rentHouseDeal);
 		
@@ -170,7 +170,7 @@ public class AdminRentController {
 				updateRentId = Integer.parseInt(value);
 			}
 		}
-		System.err.println(updateRentId);
+		System.out.println(updateRentId);
 		rentHouseDeal.setRentId(updateRentId);
 		rentHouseDeal.setRentTime(date);
 		rentHouseDealDao.updateRentHouseDeal(rentHouseDeal);
@@ -199,7 +199,7 @@ public class AdminRentController {
 		rentHouseDeal.setRentId(delRentId);
 		rentHouseDealDao.deleteRentHouseDeal(rentHouseDeal);
 		
-		System.err.println(delRentId);
+		System.out.println(delRentId);
 		
 		List<RentHouseDeal> rentHouseDealList = rentHouseDealDao.selectAll();
 		session.setAttribute("rentHouseDealList", rentHouseDealList);
@@ -218,7 +218,7 @@ public class AdminRentController {
 				deleteRentHouseDealPart = value;
 			}
 		}
-		System.err.println(deleteRentHouseDealPart);
+		System.out.println(deleteRentHouseDealPart);
 		String[] ids = deleteRentHouseDealPart.split("\\.");
 		
 		RentHouseDeal rentHouseDeal = new RentHouseDeal();
@@ -226,7 +226,7 @@ public class AdminRentController {
 		for(String iString : ids) {
 			if(iString == null) continue;
 			if(iString == "") continue;
-			System.err.println(iString);
+			System.out.println(iString);
 			rentHouseDeal.setRentId(Integer.parseInt(iString));
 			rentHouseDealDao.deleteRentHouseDeal(rentHouseDeal);
 		}

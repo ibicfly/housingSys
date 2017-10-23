@@ -1,9 +1,10 @@
 package com.easyhousing.model;
 
+import java.io.Serializable;
 import java.util.Date;
 
 
-public class RentHouse {
+public class RentHouse implements Serializable {
 	private int rentHouseId;
 	private int communityId;
 	private String rentHouseAddress;

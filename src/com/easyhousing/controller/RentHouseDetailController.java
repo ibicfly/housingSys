@@ -29,7 +29,7 @@ import com.easyhousing.service.RentHouseSearch;
 
 /**
  * 
- * @author 王辰辰
+ * @author 张东南
  * 租房详情显示
  */
 
@@ -70,7 +70,7 @@ public class RentHouseDetailController {
 		}
 		RentHouse rentHouse = rentHouseSearch.searchRentHouseById(rentHouseId);
 		session.setAttribute("rentHouseId", rentHouseId);
-		System.err.println(rentHouse.getRentHouseId());
+		System.out.println(rentHouse.getRentHouseId());
 		
 		List<String> rentHousePicList = rentHousePicUrlService.searchRentHousePicByRentHouseId(rentHouseId);
 		if (rentHousePicList != null && rentHousePicList.size() != 0) {
@@ -81,12 +81,12 @@ public class RentHouseDetailController {
 		}
 		
 		if(rentHousePicList == null) {
-			System.err.println("ctbb");
+			System.out.println("ctbb");
 		}
 		else {
-			System.err.println("????");
+			System.out.println("????");
 			for(String iString : rentHousePicList) {
-				System.err.println(iString);
+				System.out.println(iString);
 			}
 		}
 		User user = (User)session.getAttribute("user");
@@ -94,9 +94,9 @@ public class RentHouseDetailController {
 		if(user != null)
 			haveRent = rentHouseCollect.selectByUserIdRentHouseId(user.getUserId(), rentHouseId);
 		if(user != null)
-			System.err.println(user.getUserId());
-		System.err.println(rentHouseId);
-		System.err.println(haveRent);
+			System.out.println(user.getUserId());
+		System.out.println(rentHouseId);
+		System.out.println(haveRent);
 		session.setAttribute("haveRent", haveRent);
 		session.setAttribute("rentHouse", rentHouse);
 		session.setAttribute("rentHousePicList", rentHousePicList);
@@ -137,7 +137,7 @@ public class RentHouseDetailController {
 		HttpSession session = request.getSession();
 		RentHouse rentHouse = rentHouseSearch.searchRentHouseById(rentHouseId);
 		session.setAttribute("rentHouseId", rentHouseId);
-		System.err.println(rentHouse.getRentHouseId());
+		System.out.println(rentHouse.getRentHouseId());
 		
 		List<String> rentHousePicList = rentHousePicUrlService.searchRentHousePicByRentHouseId(rentHouseId);
 		if (rentHousePicList != null && rentHousePicList.size() != 0) {
@@ -148,12 +148,12 @@ public class RentHouseDetailController {
 		}
 		
 		if(rentHousePicList == null) {
-			System.err.println("ctbb");
+			System.out.println("ctbb");
 		}
 		else {
-			System.err.println("????");
+			System.out.println("????");
 			for(String iString : rentHousePicList) {
-				System.err.println(iString);
+				System.out.println(iString);
 			}
 		}
 		User user = (User)session.getAttribute("user");
@@ -161,9 +161,9 @@ public class RentHouseDetailController {
 		if(user != null)
 			haveRent = rentHouseCollect.selectByUserIdRentHouseId(user.getUserId(), rentHouseId);
 		if(user != null)
-			System.err.println(user.getUserId());
-		System.err.println(rentHouseId);
-		System.err.println(haveRent);
+			System.out.println(user.getUserId());
+		System.out.println(rentHouseId);
+		System.out.println(haveRent);
 		session.setAttribute("haveRent", haveRent);
 		session.setAttribute("rentHouse", rentHouse);
 		session.setAttribute("rentHousePicList", rentHousePicList);

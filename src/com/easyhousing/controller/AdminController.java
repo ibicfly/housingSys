@@ -27,7 +27,7 @@ import com.easyhousing.util.Tool;
 
 /**
  * 
- * @author 王辰辰
+ * @author 张东南
  * 用户登录以及增删改查
  */
 
@@ -87,7 +87,7 @@ public class AdminController {
 			file.transferTo(dir);
 			
 			String filePath = path + "\\" + fileName;
-			System.err.println(filePath);
+			System.out.println(filePath);
 			String name = new Date().toInstant().toString();
 			new Tool().upload(filePath, name);
 			u.setUserPhoto(String.valueOf("http://os8z6i0zb.bkt.clouddn.com/" + name));
@@ -96,8 +96,8 @@ public class AdminController {
 		}
 		
 		User user = userService.selectUserByName(u);
-		System.err.println("用户性别");
-		System.err.println(u.getUserSex());
+		System.out.println("用户性别");
+		System.out.println(u.getUserSex());
 		if (session.getAttribute("addFail") == null)
 			session.setAttribute("addFail", 0);
 		if (user == null) {
@@ -145,7 +145,7 @@ public class AdminController {
 			// MultipartFile自带的解析方法
 			file.transferTo(dir);
 			String filePath = path + "\\" + fileName;
-			System.err.println(filePath);
+			System.out.println(filePath);
 			String name = new Date().toInstant().toString();
 			new Tool().upload(filePath, name);
 			u.setUserPhoto(String.valueOf("http://os8z6i0zb.bkt.clouddn.com/" + name));
@@ -155,8 +155,8 @@ public class AdminController {
 		//更新用户
 		u.setUserId(updateUserId);
 		userService.updateUser(u);
-		System.err.println("用户性别update");
-		System.err.println(u.getUserSex());
+		System.out.println("用户性别update");
+		System.out.println(u.getUserSex());
 		if (session.getAttribute("addFail") == null)
 			session.setAttribute("addFail", 0);
 		
@@ -208,7 +208,7 @@ public class AdminController {
 		}
 		
 		//分解字符串
-		System.err.println(deletePart);
+		System.out.println(deletePart);
 		String[] ids = deletePart.split("\\.");
 		
 		//删除
@@ -216,7 +216,7 @@ public class AdminController {
 		for(String iString : ids) {
 			if(iString == null) continue;
 			if(iString == "") continue;
-			System.err.println(iString);
+			System.out.println(iString);
 			u.setUserId(Integer.parseInt(iString));
 			userService.delete(u);
 		}

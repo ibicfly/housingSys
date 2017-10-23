@@ -1356,8 +1356,8 @@
             }
             %>>
             <%
-            System.err.println(ok1);
-            System.err.println(ok2);
+            System.out.println(ok1);
+            System.out.println(ok2);
             if(ok1 != 0 && ok2 != 0) {
             	out.print("已关注房源");
             }

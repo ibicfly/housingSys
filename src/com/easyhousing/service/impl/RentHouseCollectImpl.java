@@ -20,7 +20,7 @@ public class RentHouseCollectImpl implements RentHouseCollect{
 		userCollectRentHouse.setUserId(userId);
 		//userCollectRentHouse.setCollectTime(collectTime);
 		userCollectRentHouseDao.insertUserCollectRentHouse(userCollectRentHouse);
-		System.err.println("collectrenthouse ok!");
+		System.out.println("collectrenthouse ok!");
 	}
 
 	@Override

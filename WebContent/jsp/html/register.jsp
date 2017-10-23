@@ -194,7 +194,7 @@
         </div>
         <div class="col-md-4 column">
         </div>
-        <div style="color: white;font-size: 13px;font-weight: 100;position:fixed; bottom:10px; left:550px; font-size:14px; text-align:center;">Copyright 2017-2018©重庆大学632技术小组版权所有</div>
+        <div style="color: white;font-size: 13px;font-weight: 100;position:fixed; bottom:10px; left:550px; font-size:14px; text-align:center;">Copyright 2017-2018</div>
       </div>
       <div class="row clearfix">
         <div class="col-md-12 column">

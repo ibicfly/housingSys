@@ -127,7 +127,7 @@ public class adminBuildingController {
 		}
 		
 		//分解获得的字符
-		System.err.println(deleteBuildingPart);
+		System.out.println(deleteBuildingPart);
 		String[] ids = deleteBuildingPart.split("\\.");
 		
 		BuildingInfo buildingInfo = new BuildingInfo();
@@ -135,7 +135,7 @@ public class adminBuildingController {
 		for(String iString : ids) {
 			if(iString == null) continue;
 			if(iString == "") continue;
-			System.err.println(iString);
+			System.out.println(iString);
 			buildingInfo.setBuildingId(Integer.parseInt(iString));
 			buildingInfoDao.deleteBuildingInfo(buildingInfo);
 		}
@@ -182,7 +182,7 @@ public class adminBuildingController {
 			}
 		}
 		
-		//System.err.println(updateBuildingDealId);
+		//System.out.println(updateBuildingDealId);
 		//更新
 		
 		buildingDeal.setBuildingDealId(updateBuildingDealId);
@@ -217,7 +217,7 @@ public class adminBuildingController {
 		buildingDeal.setBuildingDealId(delBuildingDealId);
 		buildingDealDao.deleteBuildingDeal(buildingDeal);
 		
-		//System.err.println(delBuildingDealId);
+		//System.out.println(delBuildingDealId);
 		
 		//更新楼盘信息列表
 		List<BuildingDeal> buildingDealList = buildingDealDao.selectAll();
@@ -240,7 +240,7 @@ public class adminBuildingController {
 				deleteBuildingDealPart = value;
 			}
 		}
-		//System.err.println(deleteBuildingDealPart);
+		//System.out.println(deleteBuildingDealPart);
 		//分割删除id
 		String[] ids = deleteBuildingDealPart.split("\\.");
 		
@@ -249,7 +249,7 @@ public class adminBuildingController {
 		for(String iString : ids) {
 			if(iString == null) continue;
 			if(iString == "") continue;
-			System.err.println(iString);
+			System.out.println(iString);
 			buildingDeal.setBuildingDealId(Integer.parseInt(iString));
 			buildingDealDao.deleteBuildingDeal(buildingDeal);
 		}

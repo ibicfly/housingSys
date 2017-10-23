@@ -1,3 +1,4 @@
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page import="com.easyhousing.model.RentHouse"%>
 <%@page import="java.util.*"%>
 <%@page import="java.lang.Math"%>
@@ -880,8 +881,9 @@
           <ul id="qybox">
             <li class="Switch">
             <%
+            //使用class1标识区域
             strtemp = (String)s.getAttribute("class1");
-            System.err.print("id" + strtemp);
+            System.out.print("id" + strtemp);
             %>
               <strong>区域:</strong>
               <a class= "
@@ -975,7 +977,7 @@
               <strong>租金:</strong>
               <%
               strtemp = (String)s.getAttribute("class2");
-           	  System.err.print("id" + strtemp);
+           	  System.out.print("id" + strtemp);
               %>
               <a class="
               <%
@@ -1031,7 +1033,7 @@
               <strong>户型:</strong>
               <%
               strtemp = (String)s.getAttribute("class3");
-           	  System.err.print("id" + strtemp);
+           	  System.out.print("id" + strtemp);
               %>
               <a class="
               <%
@@ -1078,8 +1080,8 @@
           <strong id="resultNum">
           <% 
             
-      		List<RentHouse>list = (List<RentHouse>)s.getAttribute("list");
-      		System.err.print(list.size());
+      		List<RentHouse> list = (List<RentHouse>)s.getAttribute("list");
+      		System.out.print(list.size());
       		out.print(list.size());
       	  %>
           </strong>
@@ -1095,13 +1097,15 @@
       <form action="rentHouseDetail.do">
       <ul class="mor_list">
       	<%
+      	//利用session进行分页处理
       	int st = (Integer)s.getAttribute("st");
       	int ed = Math.min(st + 5, list.size());
       	List<String> picUrl = (List<String>)s.getAttribute("rentHousePicList");
       	for(int iter = st; iter < ed; iter++) {
       		RentHouse i = list.get(iter);
       		int icheck = i.getRentHouseCheck();
-      		if(icheck != 1) continue;
+      		if(icheck != 1)
+      		{
       	%>
       	<li>
           <a onclick="clickArea4('<% out.print(list.get(iter).getRentHouseId()); %>');" href=${pageContext.request.contextPath}/rentHouseDetail.do class="data_link" target="_blank"></a>
@@ -1156,14 +1160,15 @@
             <p>
               <strong>
               <%
-              out.print(i.getRentHousePrice());
+              	out.print(i.getRentHousePrice());
               %>
               </strong>元/月
             </p>
             3室2厅
           </div>
         </li>
-        <%}%>
+        <%}}%>
+        	
       </ul>
       </form>
      <div id="pagination" class="pagination simple-pagination">

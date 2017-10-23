@@ -872,7 +872,7 @@ List<BuildingInfo> list = (List<BuildingInfo>)s.getAttribute("buildingList");
           <li class="Switch">
             <%
             strtemp = (String)s.getAttribute("buildingClass1");
-            System.err.print("id" + strtemp);
+            System.out.print("id" + strtemp);
             %>
               <strong>区域:</strong>
               <a class= "
@@ -957,7 +957,7 @@ List<BuildingInfo> list = (List<BuildingInfo>)s.getAttribute("buildingList");
             <strong>售价:</strong>
             <%
               strtemp = (String)s.getAttribute("buildingClass2");
-           	  System.err.print("id" + strtemp);
+           	  System.out.print("id" + strtemp);
               %>
               <a class="
               <%
