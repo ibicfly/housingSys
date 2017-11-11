@@ -65,7 +65,7 @@ public class BuildingSelectController {
 		int lowPrice = Integer.parseInt((String)session.getAttribute("buildingLowPrice"));
 		int highPrice = Integer.parseInt((String)session.getAttribute("buildingHighPrice"));
 		
-		List<BuildingInfo>list = buildingSearch.searchBuilding(address, lowPrice, highPrice);
+		List<BuildingInfo> list = buildingSearch.searchBuilding(address, lowPrice, highPrice);
 		
 		//查询结果
 		List<String> buildingPicList = new ArrayList<>();
@@ -76,7 +76,7 @@ public class BuildingSelectController {
 			}
 			else {
 				buildingPicList.add(t.get(0));
-				System.out.println(t.get(0));
+				System.out.println("图片链接"+t.get(0));
 			}
 		}
 		

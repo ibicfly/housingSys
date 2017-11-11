@@ -819,9 +819,9 @@
 	          <span>
 	            <a href=${pageContext.request.contextPath}/jsp/html/homepage.jsp class="href">首页</a>&nbsp&nbsp&nbsp
 	          </span>
-	          <span>
+<!-- 	          <span>
 	            <a href=${pageContext.request.contextPath}/jsp/html/homepage.jsp class="href">二手房</a>&nbsp&nbsp&nbsp
-	          </span>
+	          </span> -->
 	          <span>
 	            <a href=${pageContext.request.contextPath}/buildingSelect.do class="href">新房</a>&nbsp&nbsp&nbsp
 	          </span>
@@ -855,14 +855,14 @@
             <input type="hidden" value="1" id="pageIndex">
           </div>
           </form>
-          <div class="subsh_r fr">
+ <!--          <div class="subsh_r fr">
             <a href=${pageContext.request.contextPath}/mapSearch.do class="al">
               <span>
                 <b>地图找房</b>
                 <i>地图</i>
               </span>
             </a>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
@@ -1103,9 +1103,7 @@
       	List<String> picUrl = (List<String>)s.getAttribute("rentHousePicList");
       	for(int iter = st; iter < ed; iter++) {
       		RentHouse i = list.get(iter);
-      		int icheck = i.getRentHouseCheck();
-      		if(icheck != 1)
-      		{
+      		
       	%>
       	<li>
           <a onclick="clickArea4('<% out.print(list.get(iter).getRentHouseId()); %>');" href=${pageContext.request.contextPath}/rentHouseDetail.do class="data_link" target="_blank"></a>
@@ -1167,7 +1165,7 @@
             3室2厅
           </div>
         </li>
-        <%}}%>
+        <%}%>
         	
       </ul>
       </form>

@@ -43,7 +43,7 @@ CREATE TABLE IF NOT EXISTS `Administrator` (
 --
 
 INSERT INTO `Administrator` (`administratorDepartment`, `administratorId`, `administratorName`, `administratorPassword`, `administratorSex`) VALUES
-('梅六305', 1, 'admin', 'team632', '女');
+('测试机关', 1, 'admin', 'team632', '女');
 
 -- --------------------------------------------------------
 
@@ -67,8 +67,8 @@ CREATE TABLE IF NOT EXISTS `Agent` (
 
 INSERT INTO `Agent` (`agentId`, `picUrl`, `agentName`, `agentEmail`, `agentPhoneNumber`, `agentSex`) VALUES
 (1, '1421', 'sbgzy', '1231231@qq.com', '123124214', '男'),
-(2132315, 'http://os8z6i0zb.bkt.clouddn.com/2017-07-04T10:52:56.766Z', '213231231', '455354', '231231423', '男'),
-(20141791, 'http://os8z6i0zb.bkt.clouddn.com/defaultPhoto.png', '梁先锋', 'lainglsdi@163.com', '18059739987', '男');
+(2132315, 'http://oxnvfyqo7.bkt.clouddn.com/defaultPhoto.png', '213231231', '455354', '231231423', '男'),
+(20141791, 'http://oxnvfyqo7.bkt.clouddn.com/defaultPhoto.png', '梁先锋', 'lainglsdi@163.com', '18059739987', '男');
 
 -- --------------------------------------------------------
 
@@ -94,7 +94,7 @@ CREATE TABLE IF NOT EXISTS `BuildingDeal` (
 --
 
 INSERT INTO `BuildingDeal` (`agentId`, `buildingId`, `userId`, `buildingDealPerPrice`, `buildingDealTotalPrice`, `buildingDealId`, `buildingDealTime`, `buildingLayout`, `buildingArea`) VALUES
-(20141791, 3, 6, 632, 632632632, 2, '2017-07-02 22:12:10', '1室0厅1厕', NULL);
+(20141791, 3, 2, 632, 632632632, 2, '2017-07-02 22:12:10', '1室0厅1厕', NULL);
 
 -- --------------------------------------------------------
 
@@ -121,8 +121,8 @@ CREATE TABLE IF NOT EXISTS `BuildingInfo` (
 --
 
 INSERT INTO `BuildingInfo` (`buildingAddress`, `buildingId`, `buildingName`, `buildingDecoration`, `buildingMaxArea`, `buildingMinArea`, `buildingNeighbourhood`, `buildingReferencePrice`, `buildingSaleState`, `buildingTimeHanded`) VALUES
-('重庆大学', 2, '梅园', '精修', 111, 110, 'huxi', 305, '待售', '2017-06-27 00:00:00'),
-('重庆市沙坪坝区重庆大学虎溪校区松园3栋', 3, '松三', '简修', 20, 100, NULL, 632, '已售', '2011-11-10 00:00:00'),
+('福州大学', 2, '至诚校区', '精修', 111, 110, 'huxi', 305, '待售', '2017-06-27 00:00:00'),
+('福州市沙坪坝区重庆大学虎溪校区松园3栋', 3, '松三', '简修', 20, 100, NULL, 632, '已售', '2011-11-10 00:00:00'),
 ('\r\n金州大道重光立交', 4, '恒大世纪城', '精装', 116, 63, '', 110, '在售', '2019-06-30 00:00:00'),
 ('照母山植物园旁', 5, '融创凡尔赛花园', '精装', 306, 306, '融创凡尔赛花园', 270, '在售', '2017-06-30 00:00:00'),
 ('金州大道北侧', 6, '北大资源博雅', '精装', 133, 133, NULL, 266, '在售', '2018-04-30 00:00:00'),
@@ -163,8 +163,7 @@ CREATE TABLE IF NOT EXISTS `BuildingPic` (
   `buildingPicUrl` varchar(200) NOT NULL DEFAULT '',
   `buildingPicType` varchar(20) DEFAULT NULL,
   `picId` int(11) NOT NULL AUTO_INCREMENT,
-  PRIMARY KEY (`picId`),
-  UNIQUE KEY `buildingPicUrl` (`buildingPicUrl`)
+  PRIMARY KEY (`picId`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=202 ;
 
 --
@@ -172,41 +171,41 @@ CREATE TABLE IF NOT EXISTS `BuildingPic` (
 --
 
 INSERT INTO `BuildingPic` (`buildingId`, `buildingPicInsertTime`, `buildingPicUrl`, `buildingPicType`, `picId`) VALUES
-(15, NULL, 'http://os8z6i0zb.bkt.clouddn.com/08c3171e-c3ec-4445-8d94-5764454e75f0.jpg.239x174.jpg', NULL, 97),
-(13, NULL, 'http://os8z6i0zb.bkt.clouddn.com/136c3fc4-8ebc-48d6-bee5-505b975d42cf.jpg.239x174.jpg', NULL, 98),
-(13, '2017-07-02 16:33:35', 'http://os8z6i0zb.bkt.clouddn.com/e4187395-7945-4ba5-8719-ecfe3b535d1f.jpg.239x174.jpg', NULL, 99),
-(12, '2017-07-02 17:14:13', 'http://os8z6i0zb.bkt.clouddn.com/e18404a6-08c2-4f86-b1d8-fdb3d1f69634.jpg.239x174.jpg', NULL, 100),
-(11, '2017-07-02 17:20:07', 'http://os8z6i0zb.bkt.clouddn.com/dedc0565-4e19-4f2b-b5ec-6a369a529acb.jpg.239x174.jpg', NULL, 101),
-(10, '2017-07-03 21:07:12', 'http://os8z6i0zb.bkt.clouddn.com/d2b7e780-4124-40c1-8590-849cf34ce542.jpg.239x174.jpg', NULL, 102),
-(9, '2017-07-04 00:00:00', 'http://os8z6i0zb.bkt.clouddn.com/cb73d5b7-855b-4745-93d9-91c72d302dad.jpg.239x174.jpg', NULL, 103),
-(8, '2017-07-04 00:00:00', 'http://os8z6i0zb.bkt.clouddn.com/c9827156-e0be-4da2-8b8f-9dc659dea6d2.jpg.239x174.jpg', NULL, 104),
-(5, '2017-07-04 00:00:00', 'http://os8z6i0zb.bkt.clouddn.com/afbdd6be-554d-491a-80b1-0810b95c99a9.jpg.239x174.jpg', NULL, 105),
-(4, '2017-07-04 00:00:00', 'http://os8z6i0zb.bkt.clouddn.com/a52315cc-9af9-4371-a59d-ae72d1fcc3c7.jpg.239x174.jpg', NULL, 106),
-(3, '2017-07-04 00:00:00', 'http://os8z6i0zb.bkt.clouddn.com/83671b16-2f6c-4b55-99c3-3e8c7ce08377.jpg.239x174.jpg', NULL, 107),
-(2, '2017-07-04 00:00:00', 'http://os8z6i0zb.bkt.clouddn.com/795f17f1-7ffb-4a7f-b489-07e743ea3069.jpg.239x174.jpg', NULL, 108),
-(1, '2017-07-04 00:00:00', 'http://os8z6i0zb.bkt.clouddn.com/7850ee8c-0c1f-4c8d-af10-01c5754faa01.jpg.239x174.jpg', NULL, 109),
-(1, NULL, 'http://os8z6i0zb.bkt.clouddn.com/loupan1.jpg', NULL, 179),
-(2, NULL, 'http://os8z6i0zb.bkt.clouddn.com/loupan2.jpg', NULL, 180),
-(3, NULL, 'http://os8z6i0zb.bkt.clouddn.com/loupan3.jpg', NULL, 181),
-(4, NULL, 'http://os8z6i0zb.bkt.clouddn.com/loupan4.jpg', NULL, 182),
-(5, NULL, 'http://os8z6i0zb.bkt.clouddn.com/loupan5.jpg', NULL, 183),
-(6, NULL, 'http://os8z6i0zb.bkt.clouddn.com/loupan6.jpg', NULL, 184),
-(7, NULL, 'http://os8z6i0zb.bkt.clouddn.com/loupan7.jpg', NULL, 185),
-(8, NULL, 'http://os8z6i0zb.bkt.clouddn.com/loupan8.jpg', NULL, 186),
-(9, NULL, 'http://os8z6i0zb.bkt.clouddn.com/loupan9.jpg', NULL, 187),
-(10, NULL, 'http://os8z6i0zb.bkt.clouddn.com/loupan10.jpg', NULL, 188),
-(11, NULL, 'http://os8z6i0zb.bkt.clouddn.com/loupan11.jpg', NULL, 189),
-(12, NULL, 'http://os8z6i0zb.bkt.clouddn.com/loupan12.jpg', NULL, 190),
-(13, NULL, 'http://os8z6i0zb.bkt.clouddn.com/loupan13.jpg', NULL, 191),
-(14, NULL, 'http://os8z6i0zb.bkt.clouddn.com/loupan14.jpg', NULL, 192),
-(15, NULL, 'http://os8z6i0zb.bkt.clouddn.com/loupan15.jpg', NULL, 193),
-(1, NULL, 'http://os8z6i0zb.bkt.clouddn.com/y1.jpg', NULL, 194),
-(2, NULL, 'http://os8z6i0zb.bkt.clouddn.com/y2.jpg', NULL, 195),
-(3, NULL, 'http://os8z6i0zb.bkt.clouddn.com/y3.jpg', NULL, 196),
-(4, NULL, 'http://os8z6i0zb.bkt.clouddn.com/y4.jpg', NULL, 197),
-(1, NULL, 'http://os8z6i0zb.bkt.clouddn.com/2017-07-04T12:26:24.589Z', '卧室', 198),
-(1, NULL, 'http://os8z6i0zb.bkt.clouddn.com/2017-07-04T12:28:36.911Z', 'woshi', 199),
-(0, NULL, 'http://os8z6i0zb.bkt.clouddn.com/defaultPhoto.png', NULL, 200);
+(15, NULL, 'http://oxnvfyqo7.bkt.clouddn.com/y1.jpg', NULL, 97),
+(13, NULL, 'http://oxnvfyqo7.bkt.clouddn.com/y2.jpg', NULL, 98),
+(13, '2017-07-02 16:33:35', 'http://oxnvfyqo7.bkt.clouddn.com/y3.jpg', NULL, 99),
+(12, '2017-07-02 17:14:13', 'http://oxnvfyqo7.bkt.clouddn.com/y4.jpg', NULL, 100),
+(11, '2017-07-02 17:20:07', 'http://oxnvfyqo7.bkt.clouddn.com/y1.jpg', NULL, 101),
+(10, '2017-07-03 21:07:12', 'http://oxnvfyqo7.bkt.clouddn.com/y2.jpg', NULL, 102),
+(9, '2017-07-04 00:00:00', 'http://oxnvfyqo7.bkt.clouddn.com/y3.jpg', NULL, 103),
+(8, '2017-07-04 00:00:00', 'http://oxnvfyqo7.bkt.clouddn.com/y4.jpg', NULL, 104),
+(5, '2017-07-04 00:00:00', 'http://oxnvfyqo7.bkt.clouddn.com/y1.jpg', NULL, 105),
+(4, '2017-07-04 00:00:00', 'http://oxnvfyqo7.bkt.clouddn.com/y2.jpg', NULL, 106),
+(3, '2017-07-04 00:00:00', 'http://oxnvfyqo7.bkt.clouddn.com/y3.jpg', NULL, 107),
+(2, '2017-07-04 00:00:00', 'http://oxnvfyqo7.bkt.clouddn.com/y4.jpg', NULL, 108),
+(1, '2017-07-04 00:00:00', 'http://oxnvfyqo7.bkt.clouddn.com/y1.jpg', NULL, 109),
+(1, NULL, 'http://oxnvfyqo7.bkt.clouddn.com/y1.jpg', NULL, 179),
+(2, NULL, 'http://oxnvfyqo7.bkt.clouddn.com/y2.jpg', NULL, 180),
+(3, NULL, 'http://oxnvfyqo7.bkt.clouddn.com/y3.jpg', NULL, 181),
+(4, NULL, 'http://oxnvfyqo7.bkt.clouddn.com/y4.jpg', NULL, 182),
+(5, NULL, 'http://oxnvfyqo7.bkt.clouddn.com/y1.jpg', NULL, 183),
+(6, NULL, 'http://oxnvfyqo7.bkt.clouddn.com/y2.jpg', NULL, 184),
+(7, NULL, 'http://oxnvfyqo7.bkt.clouddn.com/y3.jpg', NULL, 185),
+(8, NULL, 'http://oxnvfyqo7.bkt.clouddn.com/y4.jpg', NULL, 186),
+(9, NULL, 'http://oxnvfyqo7.bkt.clouddn.com/y1.jpg', NULL, 187),
+(10, NULL, 'http://oxnvfyqo7.bkt.clouddn.com/y2.jpg', NULL, 188),
+(11, NULL, 'http://oxnvfyqo7.bkt.clouddn.com/y3.jpg', NULL, 189),
+(12, NULL, 'http://oxnvfyqo7.bkt.clouddn.com/y4.jpg', NULL, 190),
+(13, NULL, 'http://oxnvfyqo7.bkt.clouddn.com/y1.jpg', NULL, 191),
+(14, NULL, 'http://oxnvfyqo7.bkt.clouddn.com/y2.jpg', NULL, 192),
+(15, NULL, 'http://oxnvfyqo7.bkt.clouddn.com/y3.jpg', NULL, 193),
+(1, NULL, 'http://oxnvfyqo7.bkt.clouddn.com/y1.jpg', NULL, 194),
+(2, NULL, 'http://oxnvfyqo7.bkt.clouddn.com/y2.jpg', NULL, 195),
+(3, NULL, 'http://oxnvfyqo7.bkt.clouddn.com/y3.jpg', NULL, 196),
+(4, NULL, 'http://oxnvfyqo7.bkt.clouddn.com/y4.jpg', NULL, 197),
+(1, NULL, 'http://oxnvfyqo7.bkt.clouddn.com/defaultPhoto.png', '卧室', 198),
+(1, NULL, 'http://oxnvfyqo7.bkt.clouddn.com/defaultPhoto.png', 'woshi', 199),
+(0, NULL, 'http://oxnvfyqo7.bkt.clouddn.com/defaultPhoto.png', NULL, 200);
 
 -- --------------------------------------------------------
 
@@ -228,10 +227,10 @@ CREATE TABLE IF NOT EXISTS `BuyHouseComment` (
 --
 
 INSERT INTO `BuyHouseComment` (`buildingId`, `userId`, `buyHouseCommentId`, `userComment`, `userCommentDate`) VALUES
-(3, 6, 3, '可惜没有电梯', '2017-07-04 10:22:01'),
-(14, 48, 4, '来看看', '2017-07-05 15:28:25'),
-(14, 48, 5, '接着看看', '2017-07-05 15:28:45'),
-(5, 49, 6, '房子很好', '2017-07-05 19:35:23');
+(3, 2, 3, '可惜没有电梯', '2017-07-04 10:22:01'),
+(14, 2, 4, '来看看', '2017-07-05 15:28:25'),
+(14, 2, 5, '接着看看', '2017-07-05 15:28:45'),
+(5, 2, 6, '房子很好', '2017-07-05 19:35:23');
 
 -- --------------------------------------------------------
 
@@ -318,9 +317,9 @@ CREATE TABLE IF NOT EXISTS `OrderRentHouse` (
 --
 
 INSERT INTO `OrderRentHouse` (`agentId`, `orderId`, `orderTime`, `rentHouseId`, `userId`, `orderStatus`, `userPhoneNumber`) VALUES
-(20141791, 2, '2017-06-26 17:30:18', 6, 6, '未处理', '18059739987'),
-(0, 3, '2017-07-08 00:00:00', 0, 0, NULL, '18059739987'),
-(0, 4, '2017-07-08 00:00:00', 5, 6, '未处理', '18059739987');
+(20141791, 2, '2017-06-26 17:30:18', 6, 2, '未处理', '18059739987'),
+(0, 3, '2017-07-08 00:00:00', 0, 2, NULL, '18059739987'),
+(0, 4, '2017-07-08 00:00:00', 5, 2, '未处理', '18059739987');
 
 -- --------------------------------------------------------
 
@@ -400,10 +399,10 @@ CREATE TABLE IF NOT EXISTS `RentHouseComment` (
 --
 
 INSERT INTO `RentHouseComment` (`rentHouseId`, `userComment`, `userId`, `userCommentDate`, `rentHouseCommentId`) VALUES
-(5, '喜欢~', 6, '2017-07-03 16:35:00', 6),
+(5, '喜欢~', 2, '2017-07-03 16:35:00', 6),
 (5, '评论框有毒啊~', 2, '2017-07-03 12:22:31', 8),
-(5, 'hello', 48, '2017-07-05 15:24:09', 18),
-(5, '可以', 49, '2017-07-05 19:40:10', 20);
+(5, 'hello', 2, '2017-07-05 15:24:09', 18),
+(5, '可以', 2, '2017-07-05 19:40:10', 20);
 
 -- --------------------------------------------------------
 
@@ -427,7 +426,7 @@ CREATE TABLE IF NOT EXISTS `RentHouseDeal` (
 --
 
 INSERT INTO `RentHouseDeal` (`agentId`, `rentHouseId`, `userId`, `rentTime`, `rentId`, `rentPrice`, `rentHouseDay`) VALUES
-(1, 6, 6, '2017-06-02 20:47:46', 2, 2000, 33);
+(1, 6, 2, '2017-06-02 20:47:46', 2, 2000, 33);
 
 -- --------------------------------------------------------
 
@@ -441,9 +440,9 @@ CREATE TABLE IF NOT EXISTS `RentHousePic` (
   `rentHouseId` int(11) NOT NULL,
   `rentHousePicId` int(11) NOT NULL AUTO_INCREMENT,
   PRIMARY KEY (`rentHousePicId`),
-  UNIQUE KEY `picUrl` (`picUrl`),
-  UNIQUE KEY `picUrl_2` (`picUrl`),
-  UNIQUE KEY `picUrl_3` (`picUrl`),
+--  UNIQUE KEY `picUrl` (`picUrl`),
+--  UNIQUE KEY `picUrl_2` (`picUrl`),
+--  UNIQUE KEY `picUrl_3` (`picUrl`),
   UNIQUE KEY `rentHousePicId` (`rentHousePicId`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=94 ;
 
@@ -452,94 +451,94 @@ CREATE TABLE IF NOT EXISTS `RentHousePic` (
 --
 
 INSERT INTO `RentHousePic` (`insertTime`, `picUrl`, `rentHouseId`, `rentHousePicId`) VALUES
-(NULL, 'http://os8z6i0zb.bkt.clouddn.com/h6.jpg', 32, 0),
-('2017-07-08 00:00:00', 'http://os8z6i0zb.bkt.clouddn.com/Pic1', 5, 1),
-(NULL, 'http://os8z6i0zb.bkt.clouddn.com/Pic2', 5, 2),
-(NULL, 'http://os8z6i0zb.bkt.clouddn.com/Pic3', 5, 3),
-(NULL, 'http://os8z6i0zb.bkt.clouddn.com/Pic4', 5, 4),
-('2017-07-02 16:33:35', 'http://os8z6i0zb.bkt.clouddn.com/2017-07-02T08:33:34.043Z', 21, 5),
-('2017-07-02 17:14:13', 'http://os8z6i0zb.bkt.clouddn.com/2017-07-02T09:14:12.199Z', 22, 6),
-('2017-07-02 17:20:07', 'http://os8z6i0zb.bkt.clouddn.com/2017-07-02T09:20:05.501Z', 23, 7),
-('2017-07-03 21:07:12', 'http://os8z6i0zb.bkt.clouddn.com/2017-07-03T13:07:11.947Z', 24, 8),
-('2017-07-04 00:00:00', 'http://os8z6i0zb.bkt.clouddn.com/28.jpg', 26, 9),
-('2017-07-04 00:00:00', 'http://os8z6i0zb.bkt.clouddn.com/27.jpg', 27, 10),
-('2017-07-04 00:00:00', 'http://os8z6i0zb.bkt.clouddn.com/26.jpg', 28, 11),
-(NULL, 'http://os8z6i0zb.bkt.clouddn.com/r4.jpg', 30, 12),
-('2017-07-04 00:00:00', 'http://os8z6i0zb.bkt.clouddn.com/27.1.jpg', 27, 13),
-('2017-07-04 00:00:00', 'http://os8z6i0zb.bkt.clouddn.com/27.2.jpg', 27, 14),
-('2017-07-04 00:00:00', 'http://os8z6i0zb.bkt.clouddn.com/27.3.jpg', 27, 15),
-('2017-07-04 00:00:00', 'http://os8z6i0zb.bkt.clouddn.com/26.1.jpg', 26, 16),
-('2017-07-04 00:00:00', 'http://os8z6i0zb.bkt.clouddn.com/26.2.jpg', 26, 17),
-('2017-07-04 00:00:00', 'http://os8z6i0zb.bkt.clouddn.com/26.3.jpg', 26, 18),
-('2017-07-04 00:00:00', 'http://os8z6i0zb.bkt.clouddn.com/28.1.jpg', 28, 19),
-('2017-07-04 00:00:00', 'http://os8z6i0zb.bkt.clouddn.com/28.2.jpg', 28, 20),
-(NULL, 'http://os8z6i0zb.bkt.clouddn.com/h5.jpg', 32, 21),
-('2017-07-04 00:00:00', 'http://os8z6i0zb.bkt.clouddn.com/28.3.jpg', 28, 22),
-(NULL, 'http://os8z6i0zb.bkt.clouddn.com/h7.jpg', 32, 23),
-(NULL, 'http://os8z6i0zb.bkt.clouddn.com/h8.jpg', 32, 24),
-(NULL, 'http://os8z6i0zb.bkt.clouddn.com/r1.jpg', 30, 25),
-(NULL, 'http://os8z6i0zb.bkt.clouddn.com/r2.jpg', 30, 26),
-(NULL, 'http://os8z6i0zb.bkt.clouddn.com/r3.jpg', 30, 27),
-(NULL, 'http://os8z6i0zb.bkt.clouddn.com/a1.jpg', 31, 28),
-(NULL, 'http://os8z6i0zb.bkt.clouddn.com/j4.jpg', 33, 29),
-('2017-07-04 00:00:00', 'http://os8z6i0zb.bkt.clouddn.com/j1.jpg', 33, 30),
-('2017-07-04 00:00:00', 'http://os8z6i0zb.bkt.clouddn.com/j2.jpg', 33, 31),
-('2017-07-04 00:00:00', 'http://os8z6i0zb.bkt.clouddn.com/j3.jpg', 33, 32),
-('2017-07-04 00:00:00', 'http://os8z6i0zb.bkt.clouddn.com/m1.jpg', 34, 33),
-(NULL, 'http://os8z6i0zb.bkt.clouddn.com/m2.jpg', 34, 34),
-(NULL, 'http://os8z6i0zb.bkt.clouddn.com/m3.jpg', 34, 35),
-(NULL, 'http://os8z6i0zb.bkt.clouddn.com/y5.jpg', 36, 36),
-(NULL, 'http://os8z6i0zb.bkt.clouddn.com/y6.jpg', 36, 37),
-('2017-07-04 00:00:00', 'http://os8z6i0zb.bkt.clouddn.com/35.jpg', 35, 38),
-('2017-07-04 00:00:00', 'http://os8z6i0zb.bkt.clouddn.com/35.1.jpg', 35, 39),
-('2017-07-04 00:00:00', 'http://os8z6i0zb.bkt.clouddn.com/35.2.jpg', 35, 40),
-('2017-07-04 00:00:00', 'http://os8z6i0zb.bkt.clouddn.com/35.3.jpg', 35, 41),
-(NULL, 'http://os8z6i0zb.bkt.clouddn.com/h1.jpg', 6, 43),
-(NULL, 'http://os8z6i0zb.bkt.clouddn.com/h2.jpg', 6, 44),
-(NULL, 'http://os8z6i0zb.bkt.clouddn.com/h3.jpg', 6, 45),
-(NULL, 'http://os8z6i0zb.bkt.clouddn.com/h4.jpg', 6, 46),
-(NULL, 'http://os8z6i0zb.bkt.clouddn.com/b1.jpg', 7, 47),
-(NULL, 'http://os8z6i0zb.bkt.clouddn.com/b2.jpg', 7, 48),
-(NULL, 'http://os8z6i0zb.bkt.clouddn.com/b3.jpg\n', 7, 49),
-(NULL, 'http://os8z6i0zb.bkt.clouddn.com/b4.jpg', 7, 50),
-('2017-07-04 00:00:00', 'http://os8z6i0zb.bkt.clouddn.com/8.jpg', 8, 51),
-('2017-07-04 00:00:00', 'http://os8z6i0zb.bkt.clouddn.com/8.1.jpg', 8, 52),
-('2017-07-04 00:00:00', 'http://os8z6i0zb.bkt.clouddn.com/8.2.jpg', 8, 53),
-('2017-07-04 00:00:00', 'http://os8z6i0zb.bkt.clouddn.com/8.3.jpg', 8, 54),
-('2017-07-04 00:00:00', 'http://os8z6i0zb.bkt.clouddn.com/9.jpg', 9, 55),
-('2017-07-04 00:00:00', 'http://os8z6i0zb.bkt.clouddn.com/9.1.jpg', 9, 56),
-('2017-07-04 00:00:00', 'http://os8z6i0zb.bkt.clouddn.com/9.2.jpg', 9, 57),
-('2017-07-04 00:00:00', 'http://os8z6i0zb.bkt.clouddn.com/9.3.jpg', 9, 58),
-('2017-07-04 00:00:00', 'http://os8z6i0zb.bkt.clouddn.com/10.jpg', 10, 59),
-('2017-07-04 00:00:00', 'http://os8z6i0zb.bkt.clouddn.com/10.1.jpg', 10, 60),
-('2017-07-04 00:00:00', 'http://os8z6i0zb.bkt.clouddn.com/10.2.jpg', 10, 61),
-('2017-07-04 00:00:00', 'http://os8z6i0zb.bkt.clouddn.com/10.3.jpg', 10, 62),
-(NULL, 'http://os8z6i0zb.bkt.clouddn.com/4.jpg', 37, 63),
-(NULL, 'http://os8z6i0zb.bkt.clouddn.com/3.jpg', 37, 64),
-(NULL, 'http://os8z6i0zb.bkt.clouddn.com/2.jpg', 37, 65),
-(NULL, 'http://os8z6i0zb.bkt.clouddn.com/1.jpg', 37, 66),
-(NULL, 'http://os8z6i0zb.bkt.clouddn.com/6.jpg', 38, 67),
-(NULL, 'http://os8z6i0zb.bkt.clouddn.com/5.jpg', 38, 68),
-(NULL, 'http://os8z6i0zb.bkt.clouddn.com/7.jpg', 38, 69),
-(NULL, 'http://os8z6i0zb.bkt.clouddn.com/z1.jpg', 40, 73),
-(NULL, 'http://os8z6i0zb.bkt.clouddn.com/z2.jpg', 40, 74),
-(NULL, 'http://os8z6i0zb.bkt.clouddn.com/z3.jpg', 40, 75),
-(NULL, 'http://os8z6i0zb.bkt.clouddn.com/z4.jpg', 40, 76),
-(NULL, 'http://os8z6i0zb.bkt.clouddn.com/z8.jpg', 41, 77),
-(NULL, 'http://os8z6i0zb.bkt.clouddn.com/z9.jpg', 41, 78),
-(NULL, 'http://os8z6i0zb.bkt.clouddn.com/z10.jpg', 41, 79),
-(NULL, 'http://os8z6i0zb.bkt.clouddn.com/z11.jpg', 41, 80),
-(NULL, 'http://os8z6i0zb.bkt.clouddn.com/w1.jpg', 42, 81),
-(NULL, 'http://os8z6i0zb.bkt.clouddn.com/w2.jpg', 42, 82),
-(NULL, 'http://os8z6i0zb.bkt.clouddn.com/w3.jpg', 42, 83),
-(NULL, 'http://os8z6i0zb.bkt.clouddn.com/w4.jpg', 42, 84),
-(NULL, 'http://os8z6i0zb.bkt.clouddn.com/w5.jpg', 42, 85),
-(NULL, 'http://os8z6i0zb.bkt.clouddn.com/a2.jpg', 31, 88),
-(NULL, 'http://os8z6i0zb.bkt.clouddn.com/a3.jpg', 31, 89),
-(NULL, 'http://os8z6i0zb.bkt.clouddn.com/a4.jpg', 31, 90),
-(NULL, 'http://os8z6i0zb.bkt.clouddn.com/m4.jpg', 34, 91),
-(NULL, 'http://os8z6i0zb.bkt.clouddn.com/y7.jpg', 36, 92),
-(NULL, 'http://os8z6i0zb.bkt.clouddn.com/y8.jpg', 36, 93);
+(NULL, 'http://oxnvfyqo7.bkt.clouddn.com/28.jpg', 32, 0),
+('2017-07-08 00:00:00', 'http://oxnvfyqo7.bkt.clouddn.com/28.png', 5, 1),
+(NULL, 'http://oxnvfyqo7.bkt.clouddn.com/28.png', 5, 2),
+(NULL, 'http://oxnvfyqo7.bkt.clouddn.com/28.png', 5, 3),
+(NULL, 'http://oxnvfyqo7.bkt.clouddn.com/28.png', 5, 4),
+('2017-07-02 16:33:35', 'http://oxnvfyqo7.bkt.clouddn.com/28.png', 21, 5),
+('2017-07-02 17:14:13', 'http://oxnvfyqo7.bkt.clouddn.com/28.png',22, 6),
+('2017-07-02 17:20:07', 'http://oxnvfyqo7.bkt.clouddn.com/28.png', 23, 7),
+('2017-07-03 21:07:12', 'http://oxnvfyqo7.bkt.clouddn.com/28.png', 24, 8),
+('2017-07-04 00:00:00', 'http://oxnvfyqo7.bkt.clouddn.com/28.jpg', 26, 9),
+('2017-07-04 00:00:00', 'http://oxnvfyqo7.bkt.clouddn.com/28.jpg', 27, 10),
+('2017-07-04 00:00:00', 'http://oxnvfyqo7.bkt.clouddn.com/28.jpg', 28, 11),
+(NULL, 'http://oxnvfyqo7.bkt.clouddn.com/28.jpg', 30, 12),
+('2017-07-04 00:00:00', 'http://oxnvfyqo7.bkt.clouddn.com/28.jpg', 27, 13),
+('2017-07-04 00:00:00', 'http://oxnvfyqo7.bkt.clouddn.com/28.jpg', 27, 14),
+('2017-07-04 00:00:00', 'http://oxnvfyqo7.bkt.clouddn.com/28.jpg', 27, 15),
+('2017-07-04 00:00:00', 'http://oxnvfyqo7.bkt.clouddn.com/28.jpg', 26, 16),
+('2017-07-04 00:00:00', 'http://oxnvfyqo7.bkt.clouddn.com/28.jpg', 26, 17),
+('2017-07-04 00:00:00', 'http://oxnvfyqo7.bkt.clouddn.com/28.jpg', 26, 18),
+('2017-07-04 00:00:00', 'http://oxnvfyqo7.bkt.clouddn.com/28.jpg', 28, 19),
+('2017-07-04 00:00:00', 'http://oxnvfyqo7.bkt.clouddn.com/28.jpg', 28, 20),
+(NULL, 'http://oxnvfyqo7.bkt.clouddn.com/28.jpg', 32, 21),
+('2017-07-04 00:00:00', 'http://oxnvfyqo7.bkt.clouddn.com/28.jpg', 28, 22),
+(NULL, 'http://oxnvfyqo7.bkt.clouddn.com/28.jpg', 32, 23),
+(NULL, 'http://oxnvfyqo7.bkt.clouddn.com/28.jpg', 32, 24),
+(NULL, 'http://oxnvfyqo7.bkt.clouddn.com/28.jpg', 30, 25),
+(NULL, 'http://oxnvfyqo7.bkt.clouddn.com/28.jpg', 30, 26),
+(NULL, 'http://oxnvfyqo7.bkt.clouddn.com/28.jpg', 30, 27),
+(NULL, 'http://oxnvfyqo7.bkt.clouddn.com/28.jpg', 31, 28),
+(NULL, 'http://oxnvfyqo7.bkt.clouddn.com/28.jpg', 33, 29),
+('2017-07-04 00:00:00', 'http://oxnvfyqo7.bkt.clouddn.com/28.jpg', 33, 30),
+('2017-07-04 00:00:00', 'http://oxnvfyqo7.bkt.clouddn.com/28.jpg', 33, 31),
+('2017-07-04 00:00:00', 'http://oxnvfyqo7.bkt.clouddn.com/28.jpg', 33, 32),
+('2017-07-04 00:00:00', 'http://oxnvfyqo7.bkt.clouddn.com/28.jpg', 34, 33),
+(NULL, 'http://oxnvfyqo7.bkt.clouddn.com/28.jpg', 34, 34),
+(NULL, 'http://oxnvfyqo7.bkt.clouddn.com/28.jpg', 34, 35),
+(NULL, 'http://oxnvfyqo7.bkt.clouddn.com/28.jpg', 36, 36),
+(NULL, 'http://oxnvfyqo7.bkt.clouddn.com/28.jpg', 36, 37),
+('2017-07-04 00:00:00', 'http://oxnvfyqo7.bkt.clouddn.com/28.jpg', 35, 38),
+('2017-07-04 00:00:00', 'http://oxnvfyqo7.bkt.clouddn.com/28.jpg', 35, 39),
+('2017-07-04 00:00:00', 'http://oxnvfyqo7.bkt.clouddn.com/28.jpg', 35, 40),
+('2017-07-04 00:00:00', 'http://oxnvfyqo7.bkt.clouddn.com/28.jpg', 35, 41),
+(NULL, 'http://oxnvfyqo7.bkt.clouddn.com/28.jpg', 6, 43),
+(NULL, 'http://oxnvfyqo7.bkt.clouddn.com/28.jpg', 6, 44),
+(NULL, 'http://oxnvfyqo7.bkt.clouddn.com/28.jpg', 6, 45),
+(NULL, 'http://oxnvfyqo7.bkt.clouddn.com/28.jpg', 6, 46),
+(NULL, 'http://oxnvfyqo7.bkt.clouddn.com/28.jpg', 7, 47),
+(NULL, 'http://oxnvfyqo7.bkt.clouddn.com/28.jpg', 7, 48),
+(NULL, 'http://oxnvfyqo7.bkt.clouddn.com/28.jpg', 7, 49),
+(NULL, 'http://oxnvfyqo7.bkt.clouddn.com/28.jpg', 7, 50),
+('2017-07-04 00:00:00', 'http://oxnvfyqo7.bkt.clouddn.com/28.jpg', 8, 51),
+('2017-07-04 00:00:00', 'http://oxnvfyqo7.bkt.clouddn.com/28.jpg', 8, 52),
+('2017-07-04 00:00:00', 'http://oxnvfyqo7.bkt.clouddn.com/28.jpg', 8, 53),
+('2017-07-04 00:00:00', 'http://oxnvfyqo7.bkt.clouddn.com/28.jpg', 8, 54),
+('2017-07-04 00:00:00', 'http://oxnvfyqo7.bkt.clouddn.com/28.jpg', 9, 55),
+('2017-07-04 00:00:00', 'http://oxnvfyqo7.bkt.clouddn.com/28.jpg', 9, 56),
+('2017-07-04 00:00:00', 'http://oxnvfyqo7.bkt.clouddn.com/28.jpg', 9, 57),
+('2017-07-04 00:00:00', 'http://oxnvfyqo7.bkt.clouddn.com/28.jpg', 9, 58),
+('2017-07-04 00:00:00', 'http://oxnvfyqo7.bkt.clouddn.com/28.jpg', 10, 59),
+('2017-07-04 00:00:00', 'http://oxnvfyqo7.bkt.clouddn.com/28.jpg', 10, 60),
+('2017-07-04 00:00:00', 'http://oxnvfyqo7.bkt.clouddn.com/28.jpg', 10, 61),
+('2017-07-04 00:00:00', 'http://oxnvfyqo7.bkt.clouddn.com/28.jpg', 10, 62),
+(NULL, 'http://oxnvfyqo7.bkt.clouddn.com/28.jpg', 37, 63),
+(NULL, 'http://oxnvfyqo7.bkt.clouddn.com/28.jpg', 37, 64),
+(NULL, 'http://oxnvfyqo7.bkt.clouddn.com/28.jpg', 37, 65),
+(NULL, 'http://oxnvfyqo7.bkt.clouddn.com/28.jpg', 37, 66),
+(NULL, 'http://oxnvfyqo7.bkt.clouddn.com/28.jpg', 38, 67),
+(NULL, 'http://oxnvfyqo7.bkt.clouddn.com/28.jpg', 38, 68),
+(NULL, 'http://oxnvfyqo7.bkt.clouddn.com/28.jpg', 38, 69),
+(NULL, 'http://oxnvfyqo7.bkt.clouddn.com/28.jpg', 40, 73),
+(NULL, 'http://oxnvfyqo7.bkt.clouddn.com/28.jpg', 40, 74),
+(NULL, 'http://oxnvfyqo7.bkt.clouddn.com/28.jpg', 40, 75),
+(NULL, 'http://oxnvfyqo7.bkt.clouddn.com/28.jpg', 40, 76),
+(NULL, 'http://oxnvfyqo7.bkt.clouddn.com/28.jpg', 41, 77),
+(NULL, 'http://oxnvfyqo7.bkt.clouddn.com/28.jpg', 41, 78),
+(NULL, 'http://oxnvfyqo7.bkt.clouddn.com/28.jpg', 41, 79),
+(NULL, 'http://oxnvfyqo7.bkt.clouddn.com/28.jpg', 41, 80),
+(NULL, 'http://oxnvfyqo7.bkt.clouddn.com/28.jpg', 42, 81),
+(NULL, 'http://oxnvfyqo7.bkt.clouddn.com/28.jpg', 42, 82),
+(NULL, 'http://oxnvfyqo7.bkt.clouddn.com/28.jpg', 42, 83),
+(NULL, 'http://oxnvfyqo7.bkt.clouddn.com/28.jpg', 42, 84),
+(NULL, 'http://oxnvfyqo7.bkt.clouddn.com/28.jpg', 42, 85),
+(NULL, 'http://oxnvfyqo7.bkt.clouddn.com/28.jpg', 31, 88),
+(NULL, 'http://oxnvfyqo7.bkt.clouddn.com/28.jpg', 31, 89),
+(NULL, 'http://oxnvfyqo7.bkt.clouddn.com/28.jpg', 31, 90),
+(NULL, 'http://oxnvfyqo7.bkt.clouddn.com/28.jpg', 34, 91),
+(NULL, 'http://oxnvfyqo7.bkt.clouddn.com/28.jpg', 36, 92),
+(NULL, 'http://oxnvfyqo7.bkt.clouddn.com/28.jpg', 36, 93);
 
 -- --------------------------------------------------------
 
@@ -597,16 +596,8 @@ CREATE TABLE IF NOT EXISTS `User` (
 --
 
 INSERT INTO `User` (`userId`, `username`, `name`, `userPassword`, `userSex`, `userEmail`, `userPhoneNumber`, `userPhoto`) VALUES
-(2, 'gzy', 'null', '632', 'null', 'null', 'null', 'http://os8z6i0zb.bkt.clouddn.com/defaultPhoto.png'),
-(3, 'SBgzy', 'wcc', '1996511', '男', '972115233@qq.com', '13370762548', 'http://os8z6i0zb.bkt.clouddn.com/2017-07-05T11:35:36.321Z'),
-(6, 'guoziyao', '买不起房的郭先生', 'guoziyao', '男', '751744014@qq.com', '18059739987', 'http://os8z6i0zb.bkt.clouddn.com/2017-07-04T11:41:01.891Z'),
-(8, 'guoguoguo', NULL, '666', NULL, NULL, NULL, 'http://os8z6i0zb.bkt.clouddn.com/defaultPhoto.png'),
-(9, 'ThomasDrTang', '思博唐博士', '666666', NULL, NULL, NULL, 'http://os8z6i0zb.bkt.clouddn.com/2017-07-01T06:17:55.548Z'),
-(10, 'zzzzz', NULL, '123456', NULL, NULL, NULL, 'http://os8z6i0zb.bkt.clouddn.com/2017-07-01T06:19:51.087Z'),
-(11, 'liangxianfeng', '梁先锋', 'liangxianfeng', '男', '', '', 'http://os8z6i0zb.bkt.clouddn.com/2017-07-01T06:28:38.629Z'),
-(43, '121345324', 'SBgzy', '1996511', 'on', '234235235', '2532523', 'http://os8z6i0zb.bkt.clouddn.com/2017-07-04T01:13:06.174Z'),
-(44, '334551', 'SBgzy', '1996511', '男', '4', '4', 'http://os8z6i0zb.bkt.clouddn.com/defaultPhoto.png'),
-(49, 'zhangzhiqiao', NULL, 'z123456', NULL, NULL, NULL, 'http://os8z6i0zb.bkt.clouddn.com/2017-07-05T11:30:35.803Z');
+(2, 'zdn2', 'zdn2', 'zdn', '男', '97123123@qq.com', '18200000', 'http://oxnvfyqo7.bkt.clouddn.com/defaultPhoto.png'),
+(3, 'zdn', 'wcc', 'zdn', '男', '972115233@qq.com', '18300000', 'http://oxnvfyqo7.bkt.clouddn.com/defaultPhoto.png');
 
 -- --------------------------------------------------------
 
@@ -625,9 +616,8 @@ CREATE TABLE IF NOT EXISTS `UserCollectBuilding` (
 --
 
 INSERT INTO `UserCollectBuilding` (`userId`, `buildingId`, `collectTime`) VALUES
-(6, 2, '2017-07-05 01:05:43'),
-(48, 14, '2017-07-05 15:28:49'),
-(49, 2, '2017-07-05 19:25:42');
+(2, 2, '2017-07-05 01:05:43'),
+(2, 14, '2017-07-05 15:28:49');
 
 -- --------------------------------------------------------
 
@@ -647,11 +637,11 @@ CREATE TABLE IF NOT EXISTS `UserCollectRentHouse` (
 --
 
 INSERT INTO `UserCollectRentHouse` (`userId`, `rentHouseId`, `collectTime`) VALUES
-(6, 5, NULL),
-(6, 6, '2017-07-01 00:00:00'),
-(6, 9, NULL),
-(48, 23, NULL),
-(49, 5, NULL);
+(2, 5, NULL),
+(2, 6, '2017-07-01 00:00:00'),
+(3, 9, NULL),
+(2, 23, NULL),
+(3, 5, NULL);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

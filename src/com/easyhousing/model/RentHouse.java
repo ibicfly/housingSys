@@ -24,7 +24,6 @@ public class RentHouse implements Serializable {
 	private String rentHouseUnitNumber;
 	private String communityName;
 	private Date rentHousePublishTime;
-	private int rentHouseCheck;
 	
 	public int getRentHouseId() {
 		return rentHouseId;
@@ -139,11 +138,5 @@ public class RentHouse implements Serializable {
 	}
 	public void setCommunityName(String communityName) {
 		this.communityName = communityName;
-	}
-	public int getRentHouseCheck() {
-		return rentHouseCheck;
-	}
-	public void setRentHouseCheck(int rentHouseCheck) {
-		this.rentHouseCheck = rentHouseCheck;
 	}
 }

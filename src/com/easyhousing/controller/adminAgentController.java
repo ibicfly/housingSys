@@ -38,7 +38,7 @@ public class adminAgentController {
 	public ModelAndView adminAddAgent(HttpServletRequest request, Agent agent) {
 		ModelAndView modelAndView = new ModelAndView();
 		HttpSession session = request.getSession();
-		agent.setPicUrl("http://os8z6i0zb.bkt.clouddn.com/defaultPhoto.png"); //设置默认头像
+		agent.setPicUrl("http://oxnvfyqo7.bkt.clouddn.com/defaultPhoto.png"); //设置默认头像
 
 		//插入用户上传的图片链接地址
 		try {
@@ -59,7 +59,7 @@ public class adminAgentController {
 			System.out.println(filePath);
 			String name = new Date().toInstant().toString();
 			new Tool().upload(filePath, name);
-			agent.setPicUrl(String.valueOf("http://os8z6i0zb.bkt.clouddn.com/" + name));
+			agent.setPicUrl(String.valueOf("http://oxnvfyqo7.bkt.clouddn.com/" + name));
 		} catch (Exception e) {
 			
 		}
@@ -108,7 +108,7 @@ public class adminAgentController {
 			System.out.println(filePath);
 			String name = new Date().toInstant().toString();
 			new Tool().upload(filePath, name);
-			agent.setPicUrl(String.valueOf("http://os8z6i0zb.bkt.clouddn.com/" + name));
+			agent.setPicUrl(String.valueOf("http://oxnvfyqo7.bkt.clouddn.com/" + name));
 		} catch (Exception e) {
 			
 		}

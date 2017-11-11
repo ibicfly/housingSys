@@ -631,17 +631,15 @@
 
           <!-- 左上角的导航 -->
 
-
           <div class="collapse navbar-collapse nav-justified" id="bs-example-navbar-collapse-1">
             <div class="col-md-offset-3 column">
               <ul class="nav navbar-nav">
                 <li style="margin-right:150px;margin-left:50px;"><a href=${pageContext.request.contextPath}/jsp/html/homepage.jsp>主页<span
                   class="sr-only">(current)</span></a></li>
 
-                <li data-toggle="modal" data-target="#about"><a href="https://github.com/632team/EasyHousing">关于</a></li>
+                <li data-toggle="modal" data-target="#about"><a href="#">关于</a></li>
               </ul>
             </div>
-
 
             <ul class="nav navbar-nav navbar-right">
               <li data-toggle="modal" data-target="#signin-signup-tab" id="signin-button"><a href=${pageContext.request.contextPath}/logout.do>注销</a></li>
@@ -667,8 +665,8 @@
           <li role="presentation" class="active"><a href=${pageContext.request.contextPath}/jsp/html/MyHome/collection.jsp>我的收藏</a></li>
           <li role="presentation"><a href=${pageContext.request.contextPath}/jsp/html/MyHome/myHouse.jsp>我的房子</a></li>
           <li role="presentation"><a href=${pageContext.request.contextPath}/jsp/html/MyHome/comment.jsp>我的评论</a></li>
-          <!--<li role="presentation"><a href=${pageContext.request.contextPath}/jsp/html/MyHome/application.jsp>我的申请</a></li>-->
-          <li role="presentation"><a href=${pageContext.request.contextPath}/jsp/html/MyHome/dealHistory.jsp>成交记录</a></li>
+          <!--<li role="presentation"><a href=${pageContext.request.contextPath}/jsp/html/MyHome/application.jsp>我的申请</a></li>
+          <li role="presentation"><a href=${pageContext.request.contextPath}/jsp/html/MyHome/dealHistory.jsp>成交记录</a></li>-->
         </ul>
       </div>
       <div class="main-right fr">

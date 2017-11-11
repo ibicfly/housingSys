@@ -246,7 +246,6 @@ public class AdminRentController {
 		}
 		
 		RentHouse rentHouse = rentHouseDao.selectRentHouseById(okRentHouseId);
-		rentHouse.setRentHouseCheck(1);
 		rentHouseDao.updateRentHouse(rentHouse);
 		
 		
@@ -269,7 +268,6 @@ public class AdminRentController {
 		}
 		
 		RentHouse rentHouse = rentHouseDao.selectRentHouseById(noRentHouseId);
-		rentHouse.setRentHouseCheck(2);
 		rentHouseDao.updateRentHouse(rentHouse);
 		
 		

@@ -461,8 +461,8 @@
     <div class="headbox">
       <div class="headerbg">
         <div class="header">
-          <a href=${pageContext.request.contextPath}/jsp/html/homepage.jsp>
-            <img src=${pageContext.request.contextPath}/jsp/images/homepage/logo1.png class="logo">
+          <a href="${pageContext.request.contextPath}/jsp/html/homepage.jsp">
+            <img src="${pageContext.request.contextPath}/jsp/images/homepage/logo1.png" class="logo">
           </a>
           <div class="city">
             <!--重庆-->
@@ -471,10 +471,10 @@
           <span>
               <%HttpSession s = request.getSession();
               if (s.getAttribute("user") == null) {
-            	  out.println("<a href=/EasyHousing/jsp/html/logIn.jsp class=\"href\">登录</a>");
+            	  out.println("<a href='/EasyHousing/jsp/html/logIn.jsp' class=\"href\">登录</a>");
               }
               else {
-            	  out.println("<a href=/EasyHousing/userCenter.do class=\"href\">个人中心</a>");
+            	  out.println("<a href='/EasyHousing/userCenter.do' class=\"href\">个人中心</a>");
               } %>
           </span>
           /
@@ -495,9 +495,9 @@
             <span>
               <a href=${pageContext.request.contextPath}/jsp/html/homepage.jsp class="href">首页</a>
             </span>
-            <span>
+ <!--            <span>
               <a href=${pageContext.request.contextPath}/jsp/html/homepage.jsp class="href">二手房</a>
-            </span>
+            </span> -->
             <span>
               <a href=${pageContext.request.contextPath}/buildingSelect.do class="href">新房</a>
             </span>
@@ -571,6 +571,7 @@
       <h3>找新房</h3>
       </a>
     </strong>
+    <!-- 
       <strong>
        <a href=${pageContext.request.contextPath}/mapSearch.do>
       <div>
@@ -579,7 +580,7 @@
       </div>
       <h3>地图找房</h3>
       </a>
-    </strong>
+    </strong> -->
     </div>
   </div>
   <div class="home_nh">

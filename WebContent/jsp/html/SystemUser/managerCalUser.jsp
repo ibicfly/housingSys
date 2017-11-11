@@ -112,7 +112,7 @@
                 <td>男</td>
                 <td>13000000000</td>
                 <td>admin@mail.com</td>
-                <td class="text-l">http://os8z6i0zb.bkt.clouddn.com/defaultPhoto.png</td>
+                <td class="text-l">http://oxnvfyqo7.bkt.clouddn.com/defaultPhoto.png</td>
 
                 <td class="td-manage">
 

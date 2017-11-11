@@ -104,7 +104,7 @@
                 <td class="sorting_1" value="5">5</td>
                 <!--<td><u style="cursor:pointer" class="text-primary">20141791</u></td>-->
                 <td>卧室</td>
-                <td>http://os8z6i0zb.bkt.clouddn.com/Pic1</td>
+                <td>http://oxnvfyqo7.bkt.clouddn.com/Pic1.jpg</td>
                 <td>2017-07-08 00:00:00</td>
 
                 <td class="td-manage">

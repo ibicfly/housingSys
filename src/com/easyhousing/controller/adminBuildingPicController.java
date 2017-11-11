@@ -40,7 +40,7 @@ public class adminBuildingPicController {
 		HttpSession session = request.getSession();
 		
 		//设置默认的图片地址
-		buildingPic.setBuildingPicUrl("http://os8z6i0zb.bkt.clouddn.com/defaultPhoto.png");
+		buildingPic.setBuildingPicUrl("http://oxnvfyqo7.bkt.clouddn.com/defaultPhoto.png");
 
 		// 得到文件
 		String path = request.getSession().getServletContext().getRealPath("upload");
@@ -61,7 +61,7 @@ public class adminBuildingPicController {
 			System.out.println(filePath);
 			String name = new Date().toInstant().toString();
 			new Tool().upload(filePath, name);
-			buildingPic.setBuildingPicUrl(String.valueOf("http://os8z6i0zb.bkt.clouddn.com/" + name));
+			buildingPic.setBuildingPicUrl(String.valueOf("http://oxnvfyqo7.bkt.clouddn.com/" + name));
 		} catch (Exception e) {
 			
 		}

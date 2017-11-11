@@ -808,9 +808,9 @@ List<BuildingInfo> list = (List<BuildingInfo>)s.getAttribute("buildingList");
 	          <span>
 	            <a href=${pageContext.request.contextPath}/jsp/html/homepage.jsp class="href">首页</a>&nbsp&nbsp&nbsp
 	          </span>
-	          <span>
+	<!--      <span>
 	            <a href=${pageContext.request.contextPath}/jsp/html/homepage.jsp class="href">二手房</a>&nbsp&nbsp&nbsp
-	          </span>
+	          </span> -->
 	          <span>
 	            <a href=${pageContext.request.contextPath}/buildingSelect.do class="href" style="color: #8fcafe">新房</a>&nbsp&nbsp&nbsp
 	          </span>
@@ -845,6 +845,7 @@ List<BuildingInfo> list = (List<BuildingInfo>)s.getAttribute("buildingList");
             <input type="hidden" value="1" id="pageIndex">
           </div>
           </form>
+          <!-- 
         <div class="subsh_r fr">
           <a href=${pageContext.request.contextPath}/mapSearch.do class="al">
               <span>
@@ -852,24 +853,24 @@ List<BuildingInfo> list = (List<BuildingInfo>)s.getAttribute("buildingList");
                 <i>地图</i>
               </span>
           </a>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>
   <div class="container bodywhitew">
     <div class="current">
       当前位置：
-      <a href="#" target="_blank">易购房</a>
+      <a href="${pageContext.request.contextPath}/jsp/html/homepage.jsp" >易购房</a>
       >
       <span>
-          <a href="#" target="_blank">新房</a>
+          <a href="${pageContext.request.contextPath}/buildingSelect.do" >新房</a>
         </span>
     </div>
     <div class="nv_list">
 
       <div class="nv_menu nv_menut" style="display: block;">
         <ul id="qybox">
-          <li class="Switch">
+          <li class="Switch"> 
             <%
             strtemp = (String)s.getAttribute("buildingClass1");
             System.out.print("id" + strtemp);

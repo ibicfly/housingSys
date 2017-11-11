@@ -14,13 +14,13 @@
 
   <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
   <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <link href="./cropper/cropper.min.css" rel="stylesheet">
-  <link href="./sitelogo/sitelogo.css" rel="stylesheet">
+  <link href="${pageContext.request.contextPath}/jsp/html/MyHome/cropper/cropper.min.css" rel="stylesheet">
+  <link href="${pageContext.request.contextPath}/jsp/html/MyHome/sitelogo/sitelogo.css" rel="stylesheet">
 
-  <script src="./cropper/cropper.min.js"></script>
-  <script src="./sitelogo/sitelogo.js"></script>
-  <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
-  <script type="text/javascript" src="js/cropbox.js"></script>
+  <script src="${pageContext.request.contextPath}/jsp/html/MyHome/cropper/cropper.min.js"></script>
+  <script src="${pageContext.request.contextPath}/jsp/html/MyHome/sitelogo/sitelogo.js"></script>
+  <script type="text/javascript" src="${pageContext.request.contextPath}/jsp/jquery-3.2.1.js"></script>
+  <script type="text/javascript" src="${pageContext.request.contextPath}/jsp/html/MyHome/js/cropbox.js"></script>
 
   <style>
     .container p {
@@ -425,7 +425,7 @@
                 <li style="margin-right:150px;margin-left:50px;"><a href=${pageContext.request.contextPath}/jsp/html/homepage.jsp>主页<span
                   class="sr-only">(current)</span></a></li>
 
-                <li data-toggle="modal" data-target="#about"><a href="https://github.com/632team/EasyHousing">关于</a></li>
+                <li data-toggle="modal" data-target="#about"><a href="#">关于</a></li>
               </ul>
             </div>
 
@@ -453,8 +453,8 @@
           <li role="presentation"><a href=${pageContext.request.contextPath}/jsp/html/MyHome/collection.jsp>我的收藏</a></li>
           <li role="presentation"><a href=${pageContext.request.contextPath}/jsp/html/MyHome/myHouse.jsp>我的房子</a></li>
           <li role="presentation"><a href=${pageContext.request.contextPath}/jsp/html/MyHome/comment.jsp>我的评论</a></li>
-          <!-- <li role="presentation"><a href=${pageContext.request.contextPath}/jsp/html/MyHome/application.jsp>我的申请</a></li> -->
-          <li role="presentation"><a href=${pageContext.request.contextPath}/jsp/html/MyHome/dealHistory.jsp>成交记录</a></li>
+          <!-- <li role="presentation"><a href=${pageContext.request.contextPath}/jsp/html/MyHome/application.jsp>我的申请</a></li>
+          <li role="presentation"><a href=${pageContext.request.contextPath}/jsp/html/MyHome/dealHistory.jsp>成交记录</a></li> -->
         </ul>
       </div>
       <div class="main-right fr">
@@ -593,7 +593,7 @@
 				-->
 				 <div class="container"
 					 style="  width: 400px;margin: 40px auto 0 0;position: relative;font-family: 微软雅黑;font-size: 12px;">
-					  <img name="myImg" id = "myImg"  src="" style="display: block; width:300px; height: 300px">
+					  <img name="myImg" id = "myImg"  src="<%out.print(user.getUserPhoto());%>" style="display: block; width:300px; height: 300px">
 					  <br/><br/>
 					  <input type="file" name="upload-file" id="imgFile" onchange="changeImg()"  class=""  style="">
 					  <br/>

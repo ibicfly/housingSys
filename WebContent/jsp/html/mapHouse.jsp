@@ -469,9 +469,9 @@ for (int i = 0; i < mapRentHouseList.size(); ++i) {
 	          <span>
 	            <a href=${pageContext.request.contextPath}/jsp/html/homepage.jsp class="href">首页</a>&nbsp&nbsp&nbsp
 	          </span>
-	          <span>
+<!-- 	          <span>
 	            <a href=${pageContext.request.contextPath}/jsp/html/homepage.jsp class="href">二手房</a>&nbsp&nbsp&nbsp
-	          </span>
+	          </span> -->
 	          <span>
 	            <a href=${pageContext.request.contextPath}/buildingSelect.do class="href" style="color: #8fcafe">新房</a>&nbsp&nbsp&nbsp
 	          </span>
@@ -573,26 +573,26 @@ for (int i = 0; i < mapRentHouseList.size(); ++i) {
   }
   initdata();
 	var BASEDATA = [
-        {id:"",imgsrc:"http://os8z6i0zb.bkt.clouddn.com/1.jpg",title:"奥亚酒店",content:"北苑路169号",point:"116.422792|40.009471",isOpen:0,icon:"http://api.map.baidu.com/images/markers.png"},
-        {id:"",imgsrc:"http://os8z6i0zb.bkt.clouddn.com/1.jpg",title:"珀丽酒店",content:"将台西路8号",point:"116.484289|39.97936",isOpen:0,icon:"http://api.map.baidu.com/images/markers.png"},
-        {id:"",imgsrc:"http://os8z6i0zb.bkt.clouddn.com/1.jpg",title:"贵国酒店",content:"左家庄1号",point:"116.454494|39.964011",isOpen:0,icon:"http://api.map.baidu.com/images/markers.png"},
-        {id:"",imgsrc:"http://os8z6i0zb.bkt.clouddn.com/1.jpg",title:"科通酒店",content:"民族园路8号院2号楼",point:"116.394601|39.987925",isOpen:0,icon:"http://api.map.baidu.com/images/markers.png"},
-        {id:"",imgsrc:"http://os8z6i0zb.bkt.clouddn.com/1.jpg",title:"将台酒店",content:"酒仙桥路甲12号",point:"116.496024|39.976864",isOpen:0,icon:"http://api.map.baidu.com/images/markers.png"},
-        {id:"",imgsrc:"http://os8z6i0zb.bkt.clouddn.com/1.jpg",title:"成宏酒店",content:"北四环东路惠新东桥西北侧",point:"116.429445|39.995392",isOpen:0,icon:"http://api.map.baidu.com/images/markers.png"},
-        {id:"",imgsrc:"http://os8z6i0zb.bkt.clouddn.com/1.jpg",title:"华商酒店",content:"延静西里2号",point:"116.488962|39.921939",isOpen:0,icon:"http://api.map.baidu.com/images/markers.png"},
-        {id:"",imgsrc:"http://os8z6i0zb.bkt.clouddn.com/1.jpg",title:"标华酒店",content:"北京市 朝阳区红庙路柴家湾1号",point:"116.489284|39.92104",isOpen:0,icon:"http://api.map.baidu.com/images/markers.png"},
-        {id:"",imgsrc:"http://os8z6i0zb.bkt.clouddn.com/1.jpg",title:"万程酒店",content:"天坛路89号",point:"116.411762|39.89457",isOpen:0,icon:"http://api.map.baidu.com/images/markers.png"},
-        {id:"",imgsrc:"http://os8z6i0zb.bkt.clouddn.com/1.jpg",title:"黎昌酒店",content:"永定门外彭庄乙58号",point:"116.393532|39.876272",isOpen:0,icon:"http://api.map.baidu.com/images/markers.png"},
-        {id:"",imgsrc:"http://os8z6i0zb.bkt.clouddn.com/1.jpg",title:"北京图书馆",content:"北京市海淀区白石桥路39号",point:"116.329593|39.952398",isOpen:0,icon:"http://api.map.baidu.com/images/markers.png"},
-        {id:"",imgsrc:"http://os8z6i0zb.bkt.clouddn.com/1.jpg",title:"海淀图书馆",content:"丹棱街16西门",point:"116.315551|39.984388",isOpen:0,icon:"http://api.map.baidu.com/images/markers.png"},
-        {id:"",imgsrc:"http://os8z6i0zb.bkt.clouddn.com/1.jpg",title:"北京图书馆",content:"北京市西城区文津街附近",point:"116.391713|39.929007",isOpen:0,icon:"http://api.map.baidu.com/images/markers.png"},
-        {id:"",imgsrc:"http://os8z6i0zb.bkt.clouddn.com/1.jpg",title:"首都图书馆",content:"东三环南路88号",point:"116.469899|39.87684",isOpen:0,icon:"http://api.map.baidu.com/images/markers.png"},
-        {id:"",imgsrc:"http://os8z6i0zb.bkt.clouddn.com/1.jpg",title:"国家图书馆",content:"中关村南大街33号",point:"116.331292|39.949031",isOpen:0,icon:"http://api.map.baidu.com/images/markers.png"},
-        {id:"",imgsrc:"http://os8z6i0zb.bkt.clouddn.com/1.jpg",title:"崇文区图书馆",content:"北京市崇文区花市大街113号（乐天玛特超市旁）的敕建火德真君庙内",point:"116.427671|39.903568",isOpen:0,icon:"http://api.map.baidu.com/images/markers.png"},
-        {id:"",imgsrc:"http://os8z6i0zb.bkt.clouddn.com/1.jpg",title:"朝阳区图书馆",content:"北京市朝阳区朝外小庄金台里17号",point:"116.47766|39.922295",isOpen:0,icon:"http://api.map.baidu.com/images/markers.png"},
-        {id:"",imgsrc:"http://os8z6i0zb.bkt.clouddn.com/1.jpg",title:"宣武区图书馆",content:"教子胡同8号",point:"116.374561|39.894302",isOpen:0,icon:"http://api.map.baidu.com/images/markers.png"},
-        {id:"",imgsrc:"http://os8z6i0zb.bkt.clouddn.com/1.jpg",title:"东城区图书馆",content:"交道口东大街85号",point:"116.41927|39.9474",isOpen:0,icon:"http://api.map.baidu.com/images/markers.png"},
-        {id:"",imgsrc:"http://os8z6i0zb.bkt.clouddn.com/1.jpg",title:"西城区图书馆",content:"北京市西城区后广平胡同26号",point:"116.368099|39.942332",isOpen:0,icon:"http://api.map.baidu.com/images/markers.png"}
+        {id:"",imgsrc:"http://oxnvfyqo7.bkt.clouddn.com/1.jpg",title:"奥亚酒店",content:"北苑路169号",point:"116.422792|40.009471",isOpen:0,icon:"http://api.map.baidu.com/images/markers.png"},
+        {id:"",imgsrc:"http://oxnvfyqo7.bkt.clouddn.com/1.jpg",title:"珀丽酒店",content:"将台西路8号",point:"116.484289|39.97936",isOpen:0,icon:"http://api.map.baidu.com/images/markers.png"},
+        {id:"",imgsrc:"http://oxnvfyqo7.bkt.clouddn.com/1.jpg",title:"贵国酒店",content:"左家庄1号",point:"116.454494|39.964011",isOpen:0,icon:"http://api.map.baidu.com/images/markers.png"},
+        {id:"",imgsrc:"http://oxnvfyqo7.bkt.clouddn.com/1.jpg",title:"科通酒店",content:"民族园路8号院2号楼",point:"116.394601|39.987925",isOpen:0,icon:"http://api.map.baidu.com/images/markers.png"},
+        {id:"",imgsrc:"http://oxnvfyqo7.bkt.clouddn.com/1.jpg",title:"将台酒店",content:"酒仙桥路甲12号",point:"116.496024|39.976864",isOpen:0,icon:"http://api.map.baidu.com/images/markers.png"},
+        {id:"",imgsrc:"http://oxnvfyqo7.bkt.clouddn.com/1.jpg",title:"成宏酒店",content:"北四环东路惠新东桥西北侧",point:"116.429445|39.995392",isOpen:0,icon:"http://api.map.baidu.com/images/markers.png"},
+        {id:"",imgsrc:"http://oxnvfyqo7.bkt.clouddn.com/1.jpg",title:"华商酒店",content:"延静西里2号",point:"116.488962|39.921939",isOpen:0,icon:"http://api.map.baidu.com/images/markers.png"},
+        {id:"",imgsrc:"http://oxnvfyqo7.bkt.clouddn.com/1.jpg",title:"标华酒店",content:"北京市 朝阳区红庙路柴家湾1号",point:"116.489284|39.92104",isOpen:0,icon:"http://api.map.baidu.com/images/markers.png"},
+        {id:"",imgsrc:"http://oxnvfyqo7.bkt.clouddn.com/1.jpg",title:"万程酒店",content:"天坛路89号",point:"116.411762|39.89457",isOpen:0,icon:"http://api.map.baidu.com/images/markers.png"},
+        {id:"",imgsrc:"http://oxnvfyqo7.bkt.clouddn.com/1.jpg",title:"黎昌酒店",content:"永定门外彭庄乙58号",point:"116.393532|39.876272",isOpen:0,icon:"http://api.map.baidu.com/images/markers.png"},
+        {id:"",imgsrc:"http://oxnvfyqo7.bkt.clouddn.com/1.jpg",title:"北京图书馆",content:"北京市海淀区白石桥路39号",point:"116.329593|39.952398",isOpen:0,icon:"http://api.map.baidu.com/images/markers.png"},
+        {id:"",imgsrc:"http://oxnvfyqo7.bkt.clouddn.com/1.jpg",title:"海淀图书馆",content:"丹棱街16西门",point:"116.315551|39.984388",isOpen:0,icon:"http://api.map.baidu.com/images/markers.png"},
+        {id:"",imgsrc:"http://oxnvfyqo7.bkt.clouddn.com/1.jpg",title:"北京图书馆",content:"北京市西城区文津街附近",point:"116.391713|39.929007",isOpen:0,icon:"http://api.map.baidu.com/images/markers.png"},
+        {id:"",imgsrc:"http://oxnvfyqo7.bkt.clouddn.com/1.jpg",title:"首都图书馆",content:"东三环南路88号",point:"116.469899|39.87684",isOpen:0,icon:"http://api.map.baidu.com/images/markers.png"},
+        {id:"",imgsrc:"http://oxnvfyqo7.bkt.clouddn.com/1.jpg",title:"国家图书馆",content:"中关村南大街33号",point:"116.331292|39.949031",isOpen:0,icon:"http://api.map.baidu.com/images/markers.png"},
+        {id:"",imgsrc:"http://oxnvfyqo7.bkt.clouddn.com/1.jpg",title:"崇文区图书馆",content:"北京市崇文区花市大街113号（乐天玛特超市旁）的敕建火德真君庙内",point:"116.427671|39.903568",isOpen:0,icon:"http://api.map.baidu.com/images/markers.png"},
+        {id:"",imgsrc:"http://oxnvfyqo7.bkt.clouddn.com/1.jpg",title:"朝阳区图书馆",content:"北京市朝阳区朝外小庄金台里17号",point:"116.47766|39.922295",isOpen:0,icon:"http://api.map.baidu.com/images/markers.png"},
+        {id:"",imgsrc:"http://oxnvfyqo7.bkt.clouddn.com/1.jpg",title:"宣武区图书馆",content:"教子胡同8号",point:"116.374561|39.894302",isOpen:0,icon:"http://api.map.baidu.com/images/markers.png"},
+        {id:"",imgsrc:"http://oxnvfyqo7.bkt.clouddn.com/1.jpg",title:"东城区图书馆",content:"交道口东大街85号",point:"116.41927|39.9474",isOpen:0,icon:"http://api.map.baidu.com/images/markers.png"},
+        {id:"",imgsrc:"http://oxnvfyqo7.bkt.clouddn.com/1.jpg",title:"西城区图书馆",content:"北京市西城区后广平胡同26号",point:"116.368099|39.942332",isOpen:0,icon:"http://api.map.baidu.com/images/markers.png"}
      ]
     function searchMap() {
 

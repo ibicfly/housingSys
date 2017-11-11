@@ -1219,9 +1219,9 @@
             <span>
               <a href=${pageContext.request.contextPath}/jsp/html/homepage.jsp class="hrf">首页</a>
             </span>
-          <span>
+<!--           <span>
               <a href="homepage.html" class="hrf">二手房</a>
-            </span>
+            </span> -->
           <span>
               <a href=${pageContext.request.contextPath}/buildingSelect.do class="hrf">新房</a>
             </span>
@@ -1253,14 +1253,14 @@
             <input type="hidden" value="1" id="pageIndex">
           </div>
           </form>
-          <div class="subsh_r fr">
+<!--           <div class="subsh_r fr">
             <a href=${pageContext.request.contextPath}/mapSearch.do class="al">
                 <span>
                   <b>地图找房</b>
                   <i>地图</i>
                 </span>
             </a>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>

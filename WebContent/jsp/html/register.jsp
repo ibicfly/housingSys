@@ -173,7 +173,7 @@
                 <label>
                   <input type="checkbox" class="check-agreed alwayCheck" validate="isChecked" validatename="协议" checked="checked" onclick="pressCheckBox()" id="checkBoxId" >
                   <span>我已阅读并同意</span>
-                  <a href="https://github.com/632team/EasyHousing/blob/master/README.md" target="_blank">《EasyHousing使用协议》</a>
+                  <a href="#" target="_blank">《EasyHousing使用协议》</a>
                 </label><br>
                 <font color="#FF0000">${requestScope.failuremessage}</font>
                 <font color="#FF0000">${requestScope.successmessage}</font>

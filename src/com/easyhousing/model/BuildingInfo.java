@@ -1,8 +1,9 @@
 package com.easyhousing.model;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class BuildingInfo {
+public class BuildingInfo implements Serializable {
 	
 	private String buildingAddress;
 	private int buildingId;

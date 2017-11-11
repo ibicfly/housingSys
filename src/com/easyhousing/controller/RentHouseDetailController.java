@@ -107,9 +107,10 @@ public class RentHouseDetailController {
 			Collect tmp = new Collect();
 			User u = new User();
 			u.setUserId(i.getUserId());
-			tmp.name = userDao.selectUserByUserId(u).getName();
+			User temp=userDao.selectUserByUserId(u.getUserId());
+			tmp.name = temp.getName();
 			tmp.comment = i.getUserComment();
-			tmp.picUrl = userDao.selectUserByUserId(u).getUserPhoto();
+			tmp.picUrl = temp.getUserPhoto();
 			tmp.decoration = i.getUserCommentDate().toString();
 			lc.add(tmp);
 		}
@@ -174,9 +175,10 @@ public class RentHouseDetailController {
 			Collect tmp = new Collect();
 			User u = new User();
 			u.setUserId(i.getUserId());
-			tmp.name = userDao.selectUserByUserId(u).getName();
+			User temp=userDao.selectUserByUserId(u.getUserId());
+			tmp.name = temp.getName();
 			tmp.comment = i.getUserComment();
-			tmp.picUrl = userDao.selectUserByUserId(u).getUserPhoto();
+			tmp.picUrl = temp.getUserPhoto();
 			tmp.decoration = i.getUserCommentDate().toString();
 			lc.add(tmp);
 		}

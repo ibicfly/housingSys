@@ -159,7 +159,7 @@ public class UserController {
 		User nowu = new User();
 		nowu.setUsername(u.getUsername());
 		nowu.setUserPassword(u.getUserPassword());
-		nowu.setUserPhoto("http://os8z6i0zb.bkt.clouddn.com/defaultPhoto.png"); // 初始默认用户头像为默认头像
+		nowu.setUserPhoto("http://oxnvfyqo7.bkt.clouddn.com/defaultPhoto.png"); // 初始默认用户头像为默认头像
 		
 		User user = userService.login(nowu);
 		if (user == null) {
@@ -200,7 +200,6 @@ public class UserController {
 			in.room = tmp.getRentHouseRoom();
 			in.toilet = tmp.getRentHouseToilet();
 			in.price = tmp.getRentHousePrice();
-			in.check = tmp.getRentHouseCheck();
 			rentHouseApplication.add(in);
 		}
 		s.setAttribute("rentHouseApplication", rentHouseApplication);
@@ -237,7 +236,6 @@ public class UserController {
 		try {
 			u.setRentHousePublishTime(new Date());
 			u.setRentHouseAddress(u.getRentHouseProvince()+"市"+u.getRentHouseRegion()+u.getCommunityName()+u.getRentHouseUnitNumber());
-			u.setRentHouseCheck(0);
 			rentHouseDao.insertRentHouse(u);
 			RentHouse_Characteristics tmp = new RentHouse_Characteristics();
 			tmp.setCharacteristicsId(((User)s.getAttribute("user")).getUserId());
@@ -257,11 +255,11 @@ public class UserController {
 				in.room = tt.getRentHouseRoom();
 				in.toilet = tt.getRentHouseToilet();
 				in.price = tt.getRentHousePrice();
-				in.check = tt.getRentHouseCheck();
 				rentHouseApplication.add(in);
 			}
 			s.setAttribute("rentHouseApplication", rentHouseApplication);
 		} catch (Exception e) {
+			e.printStackTrace();
 			modelAndView.addObject("rentMessage", "委托失败。");
 		}
 		
@@ -288,7 +286,7 @@ public class UserController {
 	        	
 	        	RentHousePic rhp = new RentHousePic();
 	        	// 我的七牛云默认地址前缀
-	        	rhp.setPicUrl(String.valueOf("http://os8z6i0zb.bkt.clouddn.com/" + name));
+	        	rhp.setPicUrl(String.valueOf("http://oxnvfyqo7.bkt.clouddn.com/" + name));
 	        	rhp.setInsertTime(new Date());
 	        	rhp.setRentHouseId(u.getRentHouseId());
 	        	rentHousePicDao.insertRentHousePic(rhp);
@@ -375,7 +373,7 @@ public class UserController {
         	System.out.println(filePath);
         	String name = new Date().toInstant().toString();
         	new Tool().upload(filePath, name);
-        	user.setUserPhoto(String.valueOf("http://os8z6i0zb.bkt.clouddn.com/" + name));
+        	user.setUserPhoto(String.valueOf("http://oxnvfyqo7.bkt.clouddn.com/" + name));
         	userService.updateUser(user);
         } catch (Exception e) {
         	modelAndView.addObject("infoMessage", "上传头像失败TAT");

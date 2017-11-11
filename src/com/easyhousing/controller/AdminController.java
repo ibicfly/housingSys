@@ -70,7 +70,7 @@ public class AdminController {
 		ModelAndView modelAndView = new ModelAndView();
 		HttpSession session = request.getSession();
 		//设置默认头像
-		u.setUserPhoto("http://os8z6i0zb.bkt.clouddn.com/defaultPhoto.png");
+		u.setUserPhoto("http://oxnvfyqo7.bkt.clouddn.com/defaultPhoto.png");
 
 		try {
 			// 得到文件
@@ -90,7 +90,7 @@ public class AdminController {
 			System.out.println(filePath);
 			String name = new Date().toInstant().toString();
 			new Tool().upload(filePath, name);
-			u.setUserPhoto(String.valueOf("http://os8z6i0zb.bkt.clouddn.com/" + name));
+			u.setUserPhoto(String.valueOf("http://oxnvfyqo7.bkt.clouddn.com/" + name));
 		} catch (Exception e) {
 			
 		}
@@ -119,7 +119,7 @@ public class AdminController {
 		Cookie[] cookies = request.getCookies();
 		
 		//设置默认头像
-		u.setUserPhoto("http://os8z6i0zb.bkt.clouddn.com/defaultPhoto.png");
+		u.setUserPhoto("http://oxnvfyqo7.bkt.clouddn.com/defaultPhoto.png");
 		
 		//获取更改的id
 		int updateUserId = 0;
@@ -148,7 +148,7 @@ public class AdminController {
 			System.out.println(filePath);
 			String name = new Date().toInstant().toString();
 			new Tool().upload(filePath, name);
-			u.setUserPhoto(String.valueOf("http://os8z6i0zb.bkt.clouddn.com/" + name));
+			u.setUserPhoto(String.valueOf("http://oxnvfyqo7.bkt.clouddn.com/" + name));
 		} catch (Exception e) {
 		}
 		

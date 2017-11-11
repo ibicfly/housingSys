@@ -1396,9 +1396,9 @@ SimpleDateFormat sdf = new SimpleDateFormat("yyyy年MM月dd日");
 	          <span>
 	            <a href=${pageContext.request.contextPath}/jsp/html/homepage.jsp class="href">首页</a>&nbsp&nbsp&nbsp
 	          </span>
-	          <span>
+<!-- 	          <span>
 	            <a href=${pageContext.request.contextPath}/jsp/html/homepage.jsp class="href">二手房</a>&nbsp&nbsp&nbsp
-	          </span>
+	          </span> -->
 	          <span>
 	            <a href=${pageContext.request.contextPath}/buildingSelect.do class="href" style="color: #8fcafe">新房</a>&nbsp&nbsp&nbsp
 	          </span>
@@ -1431,6 +1431,7 @@ SimpleDateFormat sdf = new SimpleDateFormat("yyyy年MM月dd日");
             <input type="hidden" value="1" id="pageIndex">
           </div>
           </form>
+          <!-- 
         <div class="subsh_r fr">
           <a href=${pageContext.request.contextPath}/mapSearch.do class="al">
               <span>
@@ -1438,7 +1439,7 @@ SimpleDateFormat sdf = new SimpleDateFormat("yyyy年MM月dd日");
                 <i>地图</i>
               </span>
           </a>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>

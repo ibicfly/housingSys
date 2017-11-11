@@ -122,8 +122,6 @@ List<RentHouse> rentHouseList = (List<RentHouse>)session.getAttribute("rentHouse
               <%
               for(int i = 0; i < rentHouseList.size(); i++) {
             	  RentHouse irentHouse = rentHouseList.get(i);
-            	  int icheck = irentHouse.getRentHouseCheck();
-            	  if(icheck != 0) continue;
               %>
               <tr role="row" class="odd">
                 <td><label><input type="checkbox" name="checkbox" id="<%=irentHouse.getRentHouseId()%>" value="<%=irentHouse.getRentHouseId()%>"><span class="lbl"></span></label></td>

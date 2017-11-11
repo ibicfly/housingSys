@@ -96,9 +96,9 @@ public class buildingDetailController {
 			Collect tmp = new Collect();
 			User u = new User();
 			u.setUserId(i.getUserId());
-			tmp.name = userDao.selectUserByUserId(u).getName();
+			tmp.name = userDao.selectUserByUserId(u.getUserId()).getName();
 			tmp.comment = i.getUserComment();
-			tmp.picUrl = userDao.selectUserByUserId(u).getUserPhoto();
+			tmp.picUrl = userDao.selectUserByUserId(u.getUserId()).getUserPhoto();
 			tmp.decoration = i.getUserCommentDate().toString();
 			lc.add(tmp);
 		}
