@@ -587,7 +587,7 @@
     <div class="nhscon">
       <div class="nhtitle">
         <strong>
-          <b>重庆新楼盘</b>
+          <b>福州</b>
           全在EasyHousing
         </strong>
       </div>

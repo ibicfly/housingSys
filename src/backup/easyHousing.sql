@@ -9,9 +9,9 @@
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
-
-CREATE DATABASE `easyHousing` ;
-use 'easyHousing';
+drop database easyHousing;
+CREATE  DATABASE easyHousing ;
+use easyHousing;
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -19,53 +19,53 @@ use 'easyHousing';
 /*!40101 SET NAMES utf8 */;
 
 --
--- Database: `easyHousing`
+-- Database: 'easyHousing'
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `Administrator`
+-- Table structure for table 'Administrator'
 --
 
-CREATE TABLE IF NOT EXISTS `Administrator` (
-  `administratorDepartment` varchar(20) DEFAULT NULL,
-  `administratorId` int(11) NOT NULL AUTO_INCREMENT,
-  `administratorName` varchar(15) NOT NULL,
-  `administratorPassword` varchar(20) NOT NULL,
-  `administratorSex` varchar(5) DEFAULT NULL,
-  PRIMARY KEY (`administratorName`),
-  UNIQUE KEY `administratorId` (`administratorId`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+CREATE TABLE IF NOT EXISTS Administrator (
+  administratorDepartment varchar(64) DEFAULT NULL,
+  administratorId int(11) NOT NULL AUTO_INCREMENT,
+  administratorName varchar(15) NOT NULL,
+  administratorPassword varchar(64) NOT NULL,
+  administratorSex varchar(5) DEFAULT NULL,
+  PRIMARY KEY (administratorName),
+  UNIQUE KEY administratorId (administratorId)
+) ;
 
 --
--- Dumping data for table `Administrator`
+-- Dumping data for table 'Administrator'
 --
 
-INSERT INTO `Administrator` (`administratorDepartment`, `administratorId`, `administratorName`, `administratorPassword`, `administratorSex`) VALUES
-('测试机关', 1, 'admin', 'team632', '女');
+INSERT INTO Administrator (administratorDepartment,administratorId, administratorName, administratorPassword,administratorSex) VALUES
+('测试机关',1,'admin','team632','女');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `Agent`
+-- Table structure for table 'Agent'
 --
 
-CREATE TABLE IF NOT EXISTS `Agent` (
-  `agentId` int(11) NOT NULL,
-  `picUrl` varchar(200) DEFAULT NULL,
-  `agentName` varchar(20) DEFAULT NULL,
-  `agentEmail` varchar(20) DEFAULT NULL,
-  `agentPhoneNumber` varchar(20) DEFAULT NULL,
-  `agentSex` varchar(15) DEFAULT NULL,
-  PRIMARY KEY (`agentId`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+CREATE TABLE IF NOT EXISTS Agent (
+  agentId int(11) NOT NULL,
+  picUrl varchar(200) DEFAULT NULL,
+  agentName varchar(64) DEFAULT NULL,
+  agentEmail varchar(64) DEFAULT NULL,
+  agentPhoneNumber varchar(64) DEFAULT NULL,
+  agentSex varchar(15) DEFAULT NULL,
+  PRIMARY KEY (agentId)
+) ;
 
 --
--- Dumping data for table `Agent`
+-- Dumping data for table 'Agent'
 --
 
-INSERT INTO `Agent` (`agentId`, `picUrl`, `agentName`, `agentEmail`, `agentPhoneNumber`, `agentSex`) VALUES
+INSERT INTO Agent (agentId, picUrl, agentName, agentEmail, agentPhoneNumber, agentSex) VALUES
 (1, '1421', 'sbgzy', '1231231@qq.com', '123124214', '男'),
 (2132315, 'http://oxnvfyqo7.bkt.clouddn.com/defaultPhoto.png', '213231231', '455354', '231231423', '男'),
 (20141791, 'http://oxnvfyqo7.bkt.clouddn.com/defaultPhoto.png', '梁先锋', 'lainglsdi@163.com', '18059739987', '男');
@@ -73,104 +73,104 @@ INSERT INTO `Agent` (`agentId`, `picUrl`, `agentName`, `agentEmail`, `agentPhone
 -- --------------------------------------------------------
 
 --
--- Table structure for table `BuildingDeal`
+-- Table structure for table 'BuildingDeal'
 --
 
-CREATE TABLE IF NOT EXISTS `BuildingDeal` (
-  `agentId` int(11) DEFAULT NULL,
-  `buildingId` int(11) DEFAULT NULL,
-  `userId` int(11) DEFAULT NULL,
-  `buildingDealPerPrice` int(11) DEFAULT NULL,
-  `buildingDealTotalPrice` int(11) DEFAULT NULL,
-  `buildingDealId` int(11) NOT NULL AUTO_INCREMENT,
-  `buildingDealTime` datetime DEFAULT NULL,
-  `buildingLayout` varchar(20) DEFAULT NULL,
-  `buildingArea` int(11) DEFAULT NULL,
-  PRIMARY KEY (`buildingDealId`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=6 ;
+CREATE TABLE IF NOT EXISTS BuildingDeal (
+  agentId int(11) DEFAULT NULL,
+  buildingId int(11) DEFAULT NULL,
+  userId int(11) DEFAULT NULL,
+  buildingDealPerPrice int(11) DEFAULT NULL,
+  buildingDealTotalPrice int(11) DEFAULT NULL,
+  buildingDealId int(11) NOT NULL AUTO_INCREMENT,
+  buildingDealTime datetime DEFAULT NULL,
+  buildingLayout varchar(64) DEFAULT NULL,
+  buildingArea int(11) DEFAULT NULL,
+  PRIMARY KEY (buildingDealId)
+);
 
 --
--- Dumping data for table `BuildingDeal`
+-- Dumping data for table 'BuildingDeal'
 --
 
-INSERT INTO `BuildingDeal` (`agentId`, `buildingId`, `userId`, `buildingDealPerPrice`, `buildingDealTotalPrice`, `buildingDealId`, `buildingDealTime`, `buildingLayout`, `buildingArea`) VALUES
+INSERT INTO BuildingDeal (agentId, buildingId, userId, buildingDealPerPrice, buildingDealTotalPrice, buildingDealId, buildingDealTime, buildingLayout, buildingArea) VALUES
 (20141791, 3, 2, 632, 632632632, 2, '2017-07-02 22:12:10', '1室0厅1厕', NULL);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `BuildingInfo`
+-- Table structure for table 'BuildingInfo'
 --
 
-CREATE TABLE IF NOT EXISTS `BuildingInfo` (
-  `buildingAddress` varchar(200) NOT NULL,
-  `buildingId` int(11) NOT NULL AUTO_INCREMENT,
-  `buildingName` varchar(200) NOT NULL,
-  `buildingDecoration` varchar(20) DEFAULT NULL,
-  `buildingMaxArea` int(11) DEFAULT NULL,
-  `buildingMinArea` int(11) DEFAULT NULL,
-  `buildingNeighbourhood` varchar(50) DEFAULT NULL,
-  `buildingReferencePrice` int(11) DEFAULT NULL,
-  `buildingSaleState` varchar(50) DEFAULT NULL,
-  `buildingTimeHanded` datetime DEFAULT NULL,
-  PRIMARY KEY (`buildingId`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=17 ;
+CREATE TABLE IF NOT EXISTS BuildingInfo (
+  buildingAddress varchar(200) NOT NULL,
+  buildingId int(11) NOT NULL AUTO_INCREMENT,
+  buildingName varchar(200) NOT NULL,
+  buildingDecoration varchar(64) DEFAULT NULL,
+  buildingMaxArea int(11) DEFAULT NULL,
+  buildingMinArea int(11) DEFAULT NULL,
+  buildingNeighbourhood varchar(50) DEFAULT NULL,
+  buildingReferencePrice int(11) DEFAULT NULL,
+  buildingSaleState varchar(50) DEFAULT NULL,
+  buildingTimeHanded datetime DEFAULT NULL,
+  PRIMARY KEY (buildingId)
+)  ;
 
 --
--- Dumping data for table `BuildingInfo`
+-- Dumping data for table 'BuildingInfo'
 --
 
-INSERT INTO `BuildingInfo` (`buildingAddress`, `buildingId`, `buildingName`, `buildingDecoration`, `buildingMaxArea`, `buildingMinArea`, `buildingNeighbourhood`, `buildingReferencePrice`, `buildingSaleState`, `buildingTimeHanded`) VALUES
+INSERT INTO BuildingInfo (buildingAddress, buildingId, buildingName, buildingDecoration, buildingMaxArea, buildingMinArea, buildingNeighbourhood, buildingReferencePrice, buildingSaleState, buildingTimeHanded) VALUES
 ('福州大学', 2, '至诚校区', '精修', 111, 110, 'huxi', 305, '待售', '2017-06-27 00:00:00'),
 ('福州市沙坪坝区重庆大学虎溪校区松园3栋', 3, '松三', '简修', 20, 100, NULL, 632, '已售', '2011-11-10 00:00:00'),
-('\r\n金州大道重光立交', 4, '恒大世纪城', '精装', 116, 63, '', 110, '在售', '2019-06-30 00:00:00'),
+('金州大道重光立交', 4, '恒大世纪城', '精装', 116, 63, '', 110, '在售', '2019-06-30 00:00:00'),
 ('照母山植物园旁', 5, '融创凡尔赛花园', '精装', 306, 306, '融创凡尔赛花园', 270, '在售', '2017-06-30 00:00:00'),
 ('金州大道北侧', 6, '北大资源博雅', '精装', 133, 133, NULL, 266, '在售', '2018-04-30 00:00:00'),
-('\r\n渝北区空港大道', 7, '桥达蓝湾半岛', '精装', 73, 73, NULL, 61, '在售', '2018-12-30 00:00:00'),
-('\r\n石桥铺石杨路附近', 8, '金辉优步大道', '精装', 78, 78, NULL, 125, '在售', '2018-12-27 00:00:00'),
-('\r\n龙腾大道（陈家坪展览中心正对面）', 9, '通用晶城', '精装', 55, 58, NULL, 84, '在售', '2017-07-28 00:00:00'),
+('渝北区空港大道', 7, '桥达蓝湾半岛', '精装', 73, 73, NULL, 61, '在售', '2018-12-30 00:00:00'),
+('石桥铺石杨路附近', 8, '金辉优步大道', '精装', 78, 78, NULL, 125, '在售', '2018-12-27 00:00:00'),
+('龙腾大道（陈家坪展览中心正对面）', 9, '通用晶城', '精装', 55, 58, NULL, 84, '在售', '2017-07-28 00:00:00'),
 ('西部新城陶家商圈', 10, '旭城公园府邸', '精装', 78, 78, NULL, 40, '在售', '2017-10-27 00:00:00'),
 ('北京城建龙樾湾', 11, '松三', '简修', NULL, NULL, NULL, 632, '已售', '2011-11-10 00:00:00'),
 ('西海岸', 12, '龙腾大道（陈家坪展览中心正对面）', '精装', 46, 88, NULL, 84, '在售', '2017-11-17 00:00:00'),
 ('九龙坡-石桥铺石杨路附近（原啤酒厂地块，永辉超市对面）', 13, '华宇锦绣花城', '精装', 78, 88, NULL, 130, '在售', '2018-05-11 00:00:00'),
-('\r\n九龙坡-西部新城陶家商圈（陶家百可广场旁，陶家老街站）', 14, '旭城公园府邸', '精装', 55, 100, NULL, 120, '在售', '2017-07-28 00:00:00');
+('九龙坡-西部新城陶家商圈（陶家百可广场旁，陶家老街站）', 14, '旭城公园府邸', '精装', 55, 100, NULL, 120, '在售', '2017-07-28 00:00:00');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `BuildingLayout`
+-- Table structure for table 'BuildingLayout'
 --
 
-CREATE TABLE IF NOT EXISTS `BuildingLayout` (
-  `buildingId` int(11) NOT NULL,
-  `buildingLayoutPicUrl` varchar(200) DEFAULT NULL,
-  `buildingLayoutReferencePrice` int(11) DEFAULT NULL,
-  `buildingLayout` varchar(20) NOT NULL,
-  `buildingLayoutSoldOut` tinyint(1) NOT NULL,
-  `buildingLayoutPerPrice` int(11) NOT NULL,
-  PRIMARY KEY (`buildingId`,`buildingLayout`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+CREATE TABLE IF NOT EXISTS BuildingLayout (
+  buildingId int(11) NOT NULL,
+  buildingLayoutPicUrl varchar(200) DEFAULT NULL,
+  buildingLayoutReferencePrice int(11) DEFAULT NULL,
+  buildingLayout varchar(64) NOT NULL,
+  buildingLayoutSoldOut tinyint(1) NOT NULL,
+  buildingLayoutPerPrice int(11) NOT NULL,
+  PRIMARY KEY (buildingId,buildingLayout)
+) ;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `BuildingPic`
+-- Table structure for table 'BuildingPic'
 --
 
-CREATE TABLE IF NOT EXISTS `BuildingPic` (
-  `buildingId` int(11) DEFAULT NULL,
-  `buildingPicInsertTime` datetime DEFAULT NULL,
-  `buildingPicUrl` varchar(200) NOT NULL DEFAULT '',
-  `buildingPicType` varchar(20) DEFAULT NULL,
-  `picId` int(11) NOT NULL AUTO_INCREMENT,
-  PRIMARY KEY (`picId`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=202 ;
+CREATE TABLE IF NOT EXISTS BuildingPic (
+  buildingId int(11) DEFAULT NULL,
+  buildingPicInsertTime datetime DEFAULT NULL,
+  buildingPicUrl varchar(200)  DEFAULT '',
+  buildingPicType varchar(64) DEFAULT NULL,
+  picId int(11) NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY (picId)
+)  ;
 
 --
--- Dumping data for table `BuildingPic`
+-- Dumping data for table 'BuildingPic'
 --
 
-INSERT INTO `BuildingPic` (`buildingId`, `buildingPicInsertTime`, `buildingPicUrl`, `buildingPicType`, `picId`) VALUES
+INSERT INTO BuildingPic (buildingId, buildingPicInsertTime, buildingPicUrl, buildingPicType, picId) VALUES
 (15, NULL, 'http://oxnvfyqo7.bkt.clouddn.com/y1.jpg', NULL, 97),
 (13, NULL, 'http://oxnvfyqo7.bkt.clouddn.com/y2.jpg', NULL, 98),
 (13, '2017-07-02 16:33:35', 'http://oxnvfyqo7.bkt.clouddn.com/y3.jpg', NULL, 99),
@@ -210,23 +210,23 @@ INSERT INTO `BuildingPic` (`buildingId`, `buildingPicInsertTime`, `buildingPicUr
 -- --------------------------------------------------------
 
 --
--- Table structure for table `BuyHouseComment`
+-- Table structure for table 'BuyHouseComment'
 --
 
-CREATE TABLE IF NOT EXISTS `BuyHouseComment` (
-  `buildingId` int(11) DEFAULT NULL,
-  `userId` int(11) NOT NULL,
-  `buyHouseCommentId` int(11) NOT NULL AUTO_INCREMENT,
-  `userComment` varchar(300) NOT NULL,
-  `userCommentDate` datetime NOT NULL,
-  PRIMARY KEY (`buyHouseCommentId`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7 ;
+CREATE TABLE IF NOT EXISTS BuyHouseComment (
+  buildingId int(11) DEFAULT NULL,
+  userId int(11) NOT NULL,
+  buyHouseCommentId int(11) NOT NULL AUTO_INCREMENT,
+  userComment varchar(300) NOT NULL,
+  userCommentDate datetime NOT NULL,
+  PRIMARY KEY (buyHouseCommentId)
+);
 
 --
--- Dumping data for table `BuyHouseComment`
+-- Dumping data for table 'BuyHouseComment'
 --
 
-INSERT INTO `BuyHouseComment` (`buildingId`, `userId`, `buyHouseCommentId`, `userComment`, `userCommentDate`) VALUES
+INSERT INTO BuyHouseComment (buildingId, userId, buyHouseCommentId, userComment, userCommentDate) VALUES
 (3, 2, 3, '可惜没有电梯', '2017-07-04 10:22:01'),
 (14, 2, 4, '来看看', '2017-07-05 15:28:25'),
 (14, 2, 5, '接着看看', '2017-07-05 15:28:45'),
@@ -235,88 +235,88 @@ INSERT INTO `BuyHouseComment` (`buildingId`, `userId`, `buyHouseCommentId`, `use
 -- --------------------------------------------------------
 
 --
--- Table structure for table `Characteristics`
+-- Table structure for table 'Characteristics'
 --
 
-CREATE TABLE IF NOT EXISTS `Characteristics` (
-  `characteristicsId` int(11) NOT NULL,
-  `description` varchar(20) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+CREATE TABLE IF NOT EXISTS Characteristics (
+  characteristicsId int(11) NOT NULL,
+  description varchar(64) NOT NULL
+);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `Community`
+-- Table structure for table 'Community'
 --
 
-CREATE TABLE IF NOT EXISTS `Community` (
-  `communityId` int(11) NOT NULL AUTO_INCREMENT,
-  `communityBuildingNum` int(11) DEFAULT NULL,
-  `communityBuildTime` datetime DEFAULT NULL,
-  `communityDeveloper` varchar(100) DEFAULT NULL,
-  `communityHouseNum` int(11) DEFAULT NULL,
-  `communityPrice` float NOT NULL,
-  `communityPropertyCompany` varchar(100) DEFAULT NULL,
-  `communityPropertyFee` float DEFAULT NULL,
-  `communityName` varchar(50) DEFAULT NULL,
-  `communityAddress` varchar(100) DEFAULT NULL,
-  PRIMARY KEY (`communityId`),
-  KEY `communityId` (`communityId`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+CREATE TABLE IF NOT EXISTS Community (
+  communityId int(11) NOT NULL AUTO_INCREMENT,
+  communityBuildingNum int(11) DEFAULT NULL,
+  communityBuildTime datetime DEFAULT NULL,
+  communityDeveloper varchar(100) DEFAULT NULL,
+  communityHouseNum int(11) DEFAULT NULL,
+  communityPrice float NOT NULL,
+  communityPropertyCompany varchar(100) DEFAULT NULL,
+  communityPropertyFee float DEFAULT NULL,
+  communityName varchar(50) DEFAULT NULL,
+  communityAddress varchar(100) DEFAULT NULL,
+  PRIMARY KEY (communityId),
+  KEY communityId (communityId)
+)  ;
 
 --
--- Dumping data for table `Community`
+-- Dumping data for table 'Community'
 --
 
-INSERT INTO `Community` (`communityId`, `communityBuildingNum`, `communityBuildTime`, `communityDeveloper`, `communityHouseNum`, `communityPrice`, `communityPropertyCompany`, `communityPropertyFee`, `communityName`, `communityAddress`) VALUES
+INSERT INTO Community (communityId, communityBuildingNum, communityBuildTime, communityDeveloper, communityHouseNum, communityPrice, communityPropertyCompany, communityPropertyFee, communityName, communityAddress) VALUES
 (2, 0, NULL, NULL, 0, 0, NULL, 0, '66666小区', NULL);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `OrderBuilding`
+-- Table structure for table 'OrderBuilding'
 --
 
-CREATE TABLE IF NOT EXISTS `OrderBuilding` (
-  `buildingId` int(11) NOT NULL,
-  `userId` int(11) NOT NULL,
-  `orderId` int(11) NOT NULL AUTO_INCREMENT,
-  `orderTime` varchar(50) NOT NULL,
-  `agentId` int(11) NOT NULL,
-  `orderStatus` varchar(20) NOT NULL,
-  `userPhoneNumber` varchar(20) NOT NULL,
-  PRIMARY KEY (`orderId`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+CREATE TABLE IF NOT EXISTS OrderBuilding (
+  buildingId int(11) NOT NULL,
+  userId int(11) NOT NULL,
+  orderId int(11) NOT NULL AUTO_INCREMENT,
+  orderTime varchar(50) NOT NULL,
+  agentId int(11) NOT NULL,
+  orderStatus varchar(64) NOT NULL,
+  userPhoneNumber varchar(64) NOT NULL,
+  PRIMARY KEY (orderId)
+) ;
 
 --
--- Dumping data for table `OrderBuilding`
+-- Dumping data for table 'OrderBuilding'
 --
 
-INSERT INTO `OrderBuilding` (`buildingId`, `userId`, `orderId`, `orderTime`, `agentId`, `orderStatus`, `userPhoneNumber`) VALUES
+INSERT INTO OrderBuilding (buildingId, userId, orderId, orderTime, agentId, orderStatus, userPhoneNumber) VALUES
 (2, 6, 2, '2017-06-26 17:11:39', 1, '未处理', '18059739987');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `OrderRentHouse`
+-- Table structure for table 'OrderRentHouse'
 --
 
-CREATE TABLE IF NOT EXISTS `OrderRentHouse` (
-  `agentId` int(11) DEFAULT NULL,
-  `orderId` int(11) NOT NULL AUTO_INCREMENT,
-  `orderTime` varchar(50) DEFAULT NULL,
-  `rentHouseId` int(11) NOT NULL,
-  `userId` int(11) NOT NULL,
-  `orderStatus` varchar(20) DEFAULT NULL,
-  `userPhoneNumber` varchar(20) NOT NULL,
-  PRIMARY KEY (`orderId`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
+CREATE TABLE IF NOT EXISTS OrderRentHouse (
+  agentId int(11) DEFAULT NULL,
+  orderId int(11) NOT NULL AUTO_INCREMENT,
+  orderTime varchar(50) DEFAULT NULL,
+  rentHouseId int(11) NOT NULL,
+  userId int(11) NOT NULL,
+  orderStatus varchar(64) DEFAULT NULL,
+  userPhoneNumber varchar(64) NOT NULL,
+  PRIMARY KEY (orderId)
+);
 
 --
--- Dumping data for table `OrderRentHouse`
+-- Dumping data for table 'OrderRentHouse'
 --
 
-INSERT INTO `OrderRentHouse` (`agentId`, `orderId`, `orderTime`, `rentHouseId`, `userId`, `orderStatus`, `userPhoneNumber`) VALUES
+INSERT INTO OrderRentHouse (agentId, orderId, orderTime, rentHouseId, userId, orderStatus, userPhoneNumber) VALUES
 (20141791, 2, '2017-06-26 17:30:18', 6, 2, '未处理', '18059739987'),
 (0, 3, '2017-07-08 00:00:00', 0, 2, NULL, '18059739987'),
 (0, 4, '2017-07-08 00:00:00', 5, 2, '未处理', '18059739987');
@@ -324,37 +324,37 @@ INSERT INTO `OrderRentHouse` (`agentId`, `orderId`, `orderTime`, `rentHouseId`, 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `RentHouse`
+-- Table structure for table 'RentHouse'
 --
 
-CREATE TABLE IF NOT EXISTS `RentHouse` (
-  `rentHouseId` int(11) NOT NULL AUTO_INCREMENT,
-  `communityId` int(11) DEFAULT NULL,
-  `rentHouseAddress` varchar(100) DEFAULT NULL,
-  `rentHouseArea` float DEFAULT NULL,
-  `rentHouseBuildTime` datetime DEFAULT NULL,
-  `rentHouseFloor` int(11) DEFAULT NULL,
-  `rentHouseFloorAttribute` varchar(20) DEFAULT NULL,
-  `rentHouseHall` int(11) DEFAULT NULL,
-  `rentHouseRoom` int(11) DEFAULT NULL,
-  `rentHouseSubway` varchar(100) DEFAULT NULL,
-  `rentHouseToilet` int(11) DEFAULT NULL,
-  `rentHouseToward` varchar(10) DEFAULT NULL,
-  `rentHousePrice` int(11) DEFAULT NULL,
-  `rentHouseProvince` varchar(20) DEFAULT NULL,
-  `rentHouseRegion` varchar(20) DEFAULT NULL,
-  `rentHouseAllFloor` int(11) DEFAULT NULL,
-  `communityName` varchar(50) DEFAULT NULL,
-  `rentHouseUnitNumber` varchar(20) DEFAULT NULL,
-  `rentHousePublishTime` datetime DEFAULT NULL,
-  PRIMARY KEY (`rentHouseId`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=46 ;
+CREATE TABLE IF NOT EXISTS RentHouse (
+  rentHouseId int(11) NOT NULL AUTO_INCREMENT,
+  communityId int(11) DEFAULT NULL,
+  rentHouseAddress varchar(100) DEFAULT NULL,
+  rentHouseArea float DEFAULT NULL,
+  rentHouseBuildTime datetime DEFAULT NULL,
+  rentHouseFloor int(11) DEFAULT NULL,
+  rentHouseFloorAttribute varchar(64) DEFAULT NULL,
+  rentHouseHall int(11) DEFAULT NULL,
+  rentHouseRoom int(11) DEFAULT NULL,
+  rentHouseSubway varchar(100) DEFAULT NULL,
+  rentHouseToilet int(11) DEFAULT NULL,
+  rentHouseToward varchar(10) DEFAULT NULL,
+  rentHousePrice int(11) DEFAULT NULL,
+  rentHouseProvince varchar(64) DEFAULT NULL,
+  rentHouseRegion varchar(64) DEFAULT NULL,
+  rentHouseAllFloor int(11) DEFAULT NULL,
+  communityName varchar(50) DEFAULT NULL,
+  rentHouseUnitNumber varchar(64) DEFAULT NULL,
+  rentHousePublishTime datetime DEFAULT NULL,
+  PRIMARY KEY (rentHouseId)
+);
 
 --
--- Dumping data for table `RentHouse`
+-- Dumping data for table 'RentHouse'
 --
 
-INSERT INTO `RentHouse` (`rentHouseId`, `communityId`, `rentHouseAddress`, `rentHouseArea`, `rentHouseBuildTime`, `rentHouseFloor`, `rentHouseFloorAttribute`, `rentHouseHall`, `rentHouseRoom`, `rentHouseSubway`, `rentHouseToilet`, `rentHouseToward`, `rentHousePrice`, `rentHouseProvince`, `rentHouseRegion`, `rentHouseAllFloor`, `communityName`, `rentHouseUnitNumber`, `rentHousePublishTime`) VALUES
+INSERT INTO RentHouse (rentHouseId, communityId, rentHouseAddress, rentHouseArea, rentHouseBuildTime, rentHouseFloor, rentHouseFloorAttribute, rentHouseHall, rentHouseRoom, rentHouseSubway, rentHouseToilet, rentHouseToward, rentHousePrice, rentHouseProvince, rentHouseRegion, rentHouseAllFloor, communityName, rentHouseUnitNumber, rentHousePublishTime) VALUES
 (5, 0, '重庆市渝北区加州城市花园', 182, '2016-01-04 00:00:00', 1, '低楼层', 2, 4, '6号线', 2, '西南', 4000, '重庆市', '渝北', 26, '加州城市花园', '5', '2017-07-02 00:00:00'),
 (6, 0, '重庆市江北区华立天地豪园', 171, '2002-03-13 00:00:00', 21, '高楼层', 2, 4, NULL, 2, '南', 2400, '重庆市', '江北', 35, '华立天地豪园', '4', '2017-07-02 00:00:00'),
 (7, 0, '重庆市渝北区北城国际中心', 83, '2017-02-28 00:00:00', 5, '低楼层', 1, 2, NULL, 1, NULL, 2500, '', '', 0, '', '', '2017-07-03 00:00:00'),
@@ -382,23 +382,23 @@ INSERT INTO `RentHouse` (`rentHouseId`, `communityId`, `rentHouseAddress`, `rent
 -- --------------------------------------------------------
 
 --
--- Table structure for table `RentHouseComment`
+-- Table structure for table 'RentHouseComment'
 --
 
-CREATE TABLE IF NOT EXISTS `RentHouseComment` (
-  `rentHouseId` int(11) NOT NULL,
-  `userComment` varchar(300) NOT NULL,
-  `userId` int(11) NOT NULL,
-  `userCommentDate` datetime NOT NULL,
-  `rentHouseCommentId` int(11) NOT NULL AUTO_INCREMENT,
-  PRIMARY KEY (`rentHouseCommentId`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=21 ;
+CREATE TABLE IF NOT EXISTS RentHouseComment (
+  rentHouseId int(11) NOT NULL,
+  userComment varchar(300) NOT NULL,
+  userId int(11) NOT NULL,
+  userCommentDate datetime NOT NULL,
+  rentHouseCommentId int(11) NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY (rentHouseCommentId)
+);
 
 --
--- Dumping data for table `RentHouseComment`
+-- Dumping data for table 'RentHouseComment'
 --
 
-INSERT INTO `RentHouseComment` (`rentHouseId`, `userComment`, `userId`, `userCommentDate`, `rentHouseCommentId`) VALUES
+INSERT INTO RentHouseComment (rentHouseId, userComment, userId, userCommentDate, rentHouseCommentId) VALUES
 (5, '喜欢~', 2, '2017-07-03 16:35:00', 6),
 (5, '评论框有毒啊~', 2, '2017-07-03 12:22:31', 8),
 (5, 'hello', 2, '2017-07-05 15:24:09', 18),
@@ -407,50 +407,47 @@ INSERT INTO `RentHouseComment` (`rentHouseId`, `userComment`, `userId`, `userCom
 -- --------------------------------------------------------
 
 --
--- Table structure for table `RentHouseDeal`
+-- Table structure for table 'RentHouseDeal'
 --
 
-CREATE TABLE IF NOT EXISTS `RentHouseDeal` (
-  `agentId` int(11) NOT NULL,
-  `rentHouseId` int(11) NOT NULL,
-  `userId` int(11) NOT NULL,
-  `rentTime` datetime NOT NULL,
-  `rentId` int(11) NOT NULL AUTO_INCREMENT,
-  `rentPrice` float NOT NULL,
-  `rentHouseDay` int(11) NOT NULL,
-  PRIMARY KEY (`rentId`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=13 ;
+CREATE TABLE IF NOT EXISTS RentHouseDeal (
+  agentId int(11) NOT NULL,
+  rentHouseId int(11) NOT NULL,
+  userId int(11) NOT NULL,
+  rentTime datetime NOT NULL,
+  rentId int(11) NOT NULL AUTO_INCREMENT,
+  rentPrice float NOT NULL,
+  rentHouseDay int(11) NOT NULL,
+  PRIMARY KEY (rentId)
+)  ;
 
 --
--- Dumping data for table `RentHouseDeal`
+-- Dumping data for table 'RentHouseDeal'
 --
 
-INSERT INTO `RentHouseDeal` (`agentId`, `rentHouseId`, `userId`, `rentTime`, `rentId`, `rentPrice`, `rentHouseDay`) VALUES
+INSERT INTO RentHouseDeal (agentId, rentHouseId, userId, rentTime, rentId, rentPrice, rentHouseDay) VALUES
 (1, 6, 2, '2017-06-02 20:47:46', 2, 2000, 33);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `RentHousePic`
+-- Table structure for table 'RentHousePic'
 --
 
-CREATE TABLE IF NOT EXISTS `RentHousePic` (
-  `insertTime` datetime DEFAULT NULL,
-  `picUrl` varchar(200) NOT NULL,
-  `rentHouseId` int(11) NOT NULL,
-  `rentHousePicId` int(11) NOT NULL AUTO_INCREMENT,
-  PRIMARY KEY (`rentHousePicId`),
---  UNIQUE KEY `picUrl` (`picUrl`),
---  UNIQUE KEY `picUrl_2` (`picUrl`),
---  UNIQUE KEY `picUrl_3` (`picUrl`),
-  UNIQUE KEY `rentHousePicId` (`rentHousePicId`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=94 ;
+CREATE TABLE IF NOT EXISTS RentHousePic (
+  insertTime datetime DEFAULT NULL,
+  picUrl varchar(200) NOT NULL,
+  rentHouseId int(11) NOT NULL,
+  rentHousePicId int(11) NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY (rentHousePicId),
+  UNIQUE KEY rentHousePicId (rentHousePicId)
+) ;
 
 --
--- Dumping data for table `RentHousePic`
+-- Dumping data for table 'RentHousePic'
 --
 
-INSERT INTO `RentHousePic` (`insertTime`, `picUrl`, `rentHouseId`, `rentHousePicId`) VALUES
+INSERT INTO RentHousePic (insertTime, picUrl, rentHouseId, rentHousePicId) VALUES
 (NULL, 'http://oxnvfyqo7.bkt.clouddn.com/28.jpg', 32, 0),
 ('2017-07-08 00:00:00', 'http://oxnvfyqo7.bkt.clouddn.com/28.png', 5, 1),
 (NULL, 'http://oxnvfyqo7.bkt.clouddn.com/28.png', 5, 2),
@@ -543,100 +540,100 @@ INSERT INTO `RentHousePic` (`insertTime`, `picUrl`, `rentHouseId`, `rentHousePic
 -- --------------------------------------------------------
 
 --
--- Table structure for table `RentHouse_Characteristics`
+-- Table structure for table 'RentHouse_Characteristics'
 --
 
-CREATE TABLE IF NOT EXISTS `RentHouse_Characteristics` (
-  `rentHouseId` int(11) NOT NULL,
-  `characteristicsId` int(11) NOT NULL,
-  PRIMARY KEY (`rentHouseId`,`characteristicsId`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+CREATE TABLE IF NOT EXISTS RentHouse_Characteristics (
+  rentHouseId int(11) NOT NULL,
+  characteristicsId int(11) NOT NULL,
+  PRIMARY KEY (rentHouseId,characteristicsId)
+);
 
 --
--- Dumping data for table `RentHouse_Characteristics`
+-- Dumping data for table 'RentHouse_Characteristics'
 --
 
-INSERT INTO `RentHouse_Characteristics` (`rentHouseId`, `characteristicsId`) VALUES
+INSERT INTO RentHouse_Characteristics (rentHouseId, characteristicsId) VALUES
 (23, 6);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `RentHouse_Community`
+-- Table structure for table 'RentHouse_Community'
 --
 
-CREATE TABLE IF NOT EXISTS `RentHouse_Community` (
-  `communityId` int(11) NOT NULL,
-  `rentHouseId` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+CREATE TABLE IF NOT EXISTS RentHouse_Community (
+  communityId int(11) NOT NULL,
+  rentHouseId int(11) NOT NULL
+) ;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `User`
+-- Table structure for table 'User'
 --
 
-CREATE TABLE IF NOT EXISTS `User` (
-  `userId` int(11) NOT NULL AUTO_INCREMENT,
-  `username` varchar(15) NOT NULL,
-  `name` varchar(30) DEFAULT '',
-  `userPassword` varchar(15) NOT NULL,
-  `userSex` varchar(8) DEFAULT NULL,
-  `userEmail` varchar(30) DEFAULT '',
-  `userPhoneNumber` varchar(30) DEFAULT '',
-  `userPhoto` varchar(200) NOT NULL,
-  PRIMARY KEY (`userId`),
-  UNIQUE KEY `username` (`username`),
-  UNIQUE KEY `userEmail` (`userEmail`),
-  UNIQUE KEY `userPhoneNumber` (`userPhoneNumber`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=52 ;
+CREATE TABLE IF NOT EXISTS User (
+  userId int(11) NOT NULL AUTO_INCREMENT,
+  username varchar(15) NOT NULL,
+  name varchar(30) DEFAULT '',
+  userPassword varchar(15) NOT NULL,
+  userSex varchar(8) DEFAULT NULL,
+  userEmail varchar(30) DEFAULT '',
+  userPhoneNumber varchar(30) DEFAULT '',
+  userPhoto varchar(200) NOT NULL,
+  PRIMARY KEY (userId),
+  UNIQUE KEY username (username),
+  UNIQUE KEY userEmail (userEmail),
+  UNIQUE KEY userPhoneNumber (userPhoneNumber)
+) ;
 
 --
--- Dumping data for table `User`
+-- Dumping data for table 'User'
 --
 
-INSERT INTO `User` (`userId`, `username`, `name`, `userPassword`, `userSex`, `userEmail`, `userPhoneNumber`, `userPhoto`) VALUES
+INSERT INTO User (userId, username, name, userPassword, userSex, userEmail, userPhoneNumber, userPhoto) VALUES
 (2, 'zdn2', 'zdn2', 'zdn', '男', '97123123@qq.com', '18200000', 'http://oxnvfyqo7.bkt.clouddn.com/defaultPhoto.png'),
 (3, 'zdn', 'wcc', 'zdn', '男', '972115233@qq.com', '18300000', 'http://oxnvfyqo7.bkt.clouddn.com/defaultPhoto.png');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `UserCollectBuilding`
+-- Table structure for table 'UserCollectBuilding'
 --
 
-CREATE TABLE IF NOT EXISTS `UserCollectBuilding` (
-  `userId` int(11) NOT NULL,
-  `buildingId` int(11) NOT NULL,
-  `collectTime` datetime DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+CREATE TABLE IF NOT EXISTS UserCollectBuilding (
+  userId int(11) NOT NULL,
+  buildingId int(11) NOT NULL,
+  collectTime datetime DEFAULT NULL
+);
 
 --
--- Dumping data for table `UserCollectBuilding`
+-- Dumping data for table 'UserCollectBuilding'
 --
 
-INSERT INTO `UserCollectBuilding` (`userId`, `buildingId`, `collectTime`) VALUES
+INSERT INTO UserCollectBuilding (userId, buildingId, collectTime) VALUES
 (2, 2, '2017-07-05 01:05:43'),
 (2, 14, '2017-07-05 15:28:49');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `UserCollectRentHouse`
+-- Table structure for table 'UserCollectRentHouse'
 --
 
-CREATE TABLE IF NOT EXISTS `UserCollectRentHouse` (
-  `userId` int(11) NOT NULL,
-  `rentHouseId` int(11) NOT NULL,
-  `collectTime` datetime DEFAULT NULL,
-  PRIMARY KEY (`userId`,`rentHouseId`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+CREATE TABLE IF NOT EXISTS UserCollectRentHouse (
+  userId int(11) NOT NULL,
+  rentHouseId int(11) NOT NULL,
+  collectTime datetime DEFAULT NULL,
+  PRIMARY KEY (userId,rentHouseId)
+);
 
 --
--- Dumping data for table `UserCollectRentHouse`
+-- Dumping data for table 'UserCollectRentHouse'
 --
 
-INSERT INTO `UserCollectRentHouse` (`userId`, `rentHouseId`, `collectTime`) VALUES
+INSERT INTO UserCollectRentHouse (userId, rentHouseId, collectTime) VALUES
 (2, 5, NULL),
 (2, 6, '2017-07-01 00:00:00'),
 (3, 9, NULL),
