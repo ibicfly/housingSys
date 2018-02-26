@@ -527,7 +527,7 @@ for (int i = 0; i < mapRentHouseList.size(); ++i) {
       } else {
           points.push(point);
       }
-    },"重庆市");
+    },"福州市");
 
   }
   function  initdata() {

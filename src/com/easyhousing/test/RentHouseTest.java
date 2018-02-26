@@ -16,7 +16,7 @@ public class RentHouseTest {
 		ApplicationContext ac = new ClassPathXmlApplicationContext("bean.xml");
 		RentHouseDao dao = (RentHouseDao) ac.getBean("rentHouseDao");
 		RentHouse c = new RentHouse();
-		c.setRentHouseAddress("重庆市渝北区北城国际中心");
+		c.setRentHouseAddress("福州市国际中心");
 		c.setRentHousePrice(2500);
 		c.setRentHouseArea(83);
 		c.setRentHouseRoom(2);

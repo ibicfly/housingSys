@@ -465,7 +465,7 @@
             <img src="${pageContext.request.contextPath}/jsp/images/homepage/logo1.png" class="logo">
           </a>
           <div class="city">
-            <!--重庆-->
+            <!--福州-->
           </div>
           <div class="nav1 navml">
           <span>

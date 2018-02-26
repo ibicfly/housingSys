@@ -1609,7 +1609,7 @@ SimpleDateFormat sdf = new SimpleDateFormat("yyyy年MM月dd日");
             </p>
             <p class="desc-p clear">
               <span class="label">物业公司：</span>
-              <span class="label-val">重庆正大物业公司</span>
+              <span class="label-val">福州正大物业公司</span>
             </p>
             <!--  
             <p class="desc-p clear">

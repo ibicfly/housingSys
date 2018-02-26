@@ -297,8 +297,8 @@
 <!--底部样式-->
 
 <div class="footer_style" id="footerstyle">
-  <p class="l_f">版权所有：重庆大学team632</p>
-  <p class="r_f">地址：重庆市沙坪坝大学城重庆大学虎溪校区 邮编：401331 技术支持：XXXX</p>
+  <p class="l_f">版权所有：zdn</p>
+  <p class="r_f">地址：福建省福州市鼓山18景 技术支持：XXXX</p>
 </div>
 <!--修改密码样式-->
 
