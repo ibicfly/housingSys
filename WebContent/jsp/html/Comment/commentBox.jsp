@@ -84,7 +84,7 @@ SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 </script>
 
 <!--点击评论创建评论条-->
-<!--
+
 <script type="text/javascript">
   $('.commentAll').on('click', '.plBtn', function () {
     var myDate = new Date();
@@ -126,7 +126,7 @@ SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
     }
   });
 </script>
--->
+
 <!--点击回复动态创建回复块-->
 
 </body>
