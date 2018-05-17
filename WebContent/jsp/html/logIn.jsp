@@ -18,7 +18,7 @@
       font-size:62.5%;font: 500 1.5em/1.8 PingFang SC, Lantinghei SC, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, sans;
     }
     .login-wrap {
-      background: url(${pageContext.request.contextPath}/jsp/images/login/login-background.jpg);
+      background: url(<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/images/login/login-background.jpg);
       overflow: hidden;
       width: 100%;
       height: 100%;
@@ -37,7 +37,7 @@
       margin-left: -108px;
     }
     .login-body{
-      background: url(${pageContext.request.contextPath}/jsp/images/login/bg-pixiu.png) no-repeat;
+      background: url(<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/images/login/bg-pixiu.png) no-repeat;
       background-size: 100% 100%;
       width: 383px;
       height: 383px;
@@ -98,15 +98,15 @@
     <div class="swiper-container swiper-container-horizontal">
       <div class="swiper-wrapper" >
         <div class="swiper-slide">
-          <img src=${pageContext.request.contextPath}/jsp/images/login/login-swiper01.jpg>
+          <img src=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/images/login/login-swiper01.jpg>
         </div>
       </div>
     </div>
     <div class="login-body">
-      <form action=${pageContext.request.contextPath}/login.do class="cmxform" id="signupForm" method="post">
+      <form action=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>login.do class="cmxform" id="signupForm" method="post">
         <h1>快来这里看房吧</h1>
         <div class="form-group">
-          <input id="mobile" class="form-control input-lg"  name="username" type="text"  placeholder="请输入用户名或邮箱或手机号"style="font-size: 16px" value="">
+          <input id="mobile" class="form-control input-lg"  name="username" type="text"  placeholder="请输入用户名"style="font-size: 16px" value="">
         </div>
         <div class="form-group">
           <input id="password" class="form-control input-lg"  name="userPassword" type="password"  placeholder="请输入密码" style="font-size: 16px"value="">
@@ -116,7 +116,7 @@
         </div>
         <div class="form-group" style="margin-top:24px;">
           <button class="btn form-btn login-btn" type="submit">登 录</button>
-          <a id="login-join-a" class="btn form-btn" href=${pageContext.request.contextPath}/jsp/html/register.jsp>加入EasyHousing</a>
+          <a id="login-join-a" class="btn form-btn" href=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/register.jsp>加入EasyHousing</a>
         </div>
         <font color="#FF0000">${requestScope.message}</font>
       </form>

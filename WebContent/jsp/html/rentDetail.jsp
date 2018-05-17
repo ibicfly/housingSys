@@ -603,7 +603,7 @@
   text-align: center;
   height: 33px;
   line-height: 33px;
-  background: url(${pageContext.request.contextPath}/jsp/images/rentWindow/djimg23.png) no-repeat right center;
+  background: url(<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/images/rentWindow/djimg23.png) no-repeat right center;
   display: block;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -677,7 +677,7 @@
   height: 33px;
   float: right;
   font-size: 0;
-  background: url(${pageContext.request.contextPath}/jsp/images/rentWindow/djimg24.png) no-repeat center center;
+  background: url(<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/images/rentWindow/djimg24.png) no-repeat center center;
   border: none;
   }
   input[type="button"], input[type="file"], input[type="submit"], input[type="reset"] {
@@ -735,7 +735,7 @@
   }
   .subsh_r .al span {
   padding-left: 15px;
-  background: url(${pageContext.request.contextPath}/jsp/images/rentWindow/djimg25.png) no-repeat left center;
+  background: url(<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/images/rentWindow/djimg25.png) no-repeat left center;
 
   }
   .subsh_r a span {
@@ -1032,7 +1032,7 @@
   top: 0;
   left: 0;
   z-index: 1;
-  background: url(${pageContext.request.contextPath}/jsp/img/detail/loading.gif) center no-repeat;
+  background: url(<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/img/detail/loading.gif) center no-repeat;
   }
   .overview .content {
   display: inline-block;
@@ -1082,7 +1082,7 @@
   position: absolute;
   right: -25px;
   top: -31px;
-  background: url(${pageContext.request.contextPath}/jsp/img/detail/isRemove.png) no-repeat;
+  background: url(<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/img/detail/isRemove.png) no-repeat;
   }
   .zf-content .zf-room p.lf {
   float: left;
@@ -1190,7 +1190,7 @@
     <div class="headerbg listhead">
       <div class="header">
         <a href="#">
-          <img src="${pageContext.request.contextPath}/jsp/images/rentWindow/logo1.png" class="logo" >
+          <img src="<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/images/rentWindow/logo1.png" class="logo" >
         </a>
         <div class="nav1 navml">
          <span>
@@ -1217,16 +1217,16 @@
            </div>
         <div class="nav navml">
             <span>
-              <a href=${pageContext.request.contextPath}/jsp/html/homepage.jsp class="hrf">首页</a>
+              <a href=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/homepage.jsp class="hrf">首页</a>
             </span>
 <!--           <span>
               <a href="homepage.html" class="hrf">二手房</a>
             </span> -->
           <span>
-              <a href=${pageContext.request.contextPath}/buildingSelect.do class="hrf">新房</a>
+              <a href=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>buildingSelect.do class="hrf">新房</a>
             </span>
           <span>
-              <a href=${pageContext.request.contextPath}/rentHouseSelect.do class="hrf" style="color: #8fcafe">租房</a>
+              <a href=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>rentHouseSelect.do class="hrf" style="color: #8fcafe">租房</a>
             </span>
         </div>
       </div>
@@ -1235,7 +1235,7 @@
     <div class="wsrrent">
       <div class="container">
         <div class="subsh subsher">
-          <form action=${pageContext.request.contextPath}/globalSearch.do method="post" id="searchForm">
+          <form action=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>globalSearch.do method="post" id="searchForm">
           <div class="subsh_l fl">
             <div class="sd_sel fl">
             <input hidden=true id="keyword" value="新房" name="which"></input>
@@ -1245,7 +1245,7 @@
 					<li class="sel">租房</li>
 				</ul>
             </div>
-            <input type="text" name="content" placeholder="请输入小区、地铁、区域开始找房" class="text" id="autoSearchText" maxlength="20" autocomplete="off">
+            <input type="text" name="content" placeholder="请输入小区、区域开始找房" class="text" id="autoSearchText" maxlength="20" autocomplete="off">
             <div id="autoSearchItem" style="height: 285px; visibility: hidden;">
               <ul class="menu_v"></ul>
             </div>
@@ -1254,7 +1254,7 @@
           </div>
           </form>
 <!--           <div class="subsh_r fr">
-            <a href=${pageContext.request.contextPath}/mapSearch.do class="al">
+            <a href=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>mapSearch.do class="al">
                 <span>
                   <b>地图找房</b>
                   <i>地图</i>
@@ -1268,7 +1268,7 @@
       <div class="container">
         <div class="fl l-txt">
           <i class="icon"></i>&nbsp;
-          <a href=${pageContext.request.contextPath}/rentHouseSelect.do>易购房</a>
+          <a href=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>rentHouseSelect.do>易购房</a>
           <!-- <span class="stp">&nbsp;&gt;&nbsp;</span>
           <a href="https://cq.lianjia.com/zufang/">重庆租房</a>
           <span class="stp">&nbsp;&gt;&nbsp;</span>
@@ -1291,7 +1291,7 @@
 		  </div>
 		  <div class="theme-popbod dform">
 			  <form class="theme-signin" name="loginform" 
-			  action=${pageContext.request.contextPath}/sendRentHouseOrder.do 
+			  action=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>sendRentHouseOrder.do 
 			  method="post">
 			  <ol>
 			  <li>用户ID：<input class="ipt" type="text" name="userId" value="<%=(((User)s.getAttribute("user")).getUserId()) %>" size="20" readonly="true" style="background-color:gray;"></li>
@@ -1321,7 +1321,7 @@
             %>
                      <!--  巴教村社区 3室1厅 2300元-->
             </h1>
-            <div class="sub">这个经纪人很懒，没写核心卖点</div>
+            <!-- <div class="sub">这个经纪人很懒，没写核心卖点</div> -->
           </div>
           <div class="btnContainer ">
           
@@ -1419,14 +1419,16 @@
             <p class="lf"><i>楼层：</i><%out.print(irentHouse.getRentHouseFloorAttribute()); %> (共<%out.print(irentHouse.getRentHouseAllFloor()); %>层)</p>
             <p class="lf"><i>房屋朝向：</i><%out.print(irentHouse.getRentHouseToward()); %></p>
             <div class="clear"></div>
-            <p><i>地铁：</i><%out.print(irentHouse.getRentHouseSubway()); %></p>
+            <!-- <p><i>地铁：</i><%out.print(irentHouse.getRentHouseSubway()); %></p>
             <p><i>小区：</i><a href="https://cq.lianjia.com/xiaoqu/3611060655470/">巴教村社区</a>
               - <a href="https://cq.lianjia.com/zufang/c3611060655470/">1套出租中</a></p>
-            <p><i>位置：</i><a href="https://cq.lianjia.com/zufang/yuzhong/">渝中</a> <a href="https://cq.lianjia.com/zufang/lianglukou/">两路口</a></p>
+            <p><i>位置：</i><a href="https://cq.lianjia.com/zufang/yuzhong/">渝中</a>
+             <a href="https://cq.lianjia.com/zufang/lianglukou/">两路口</a></p> -->
             <p class="lf"><i>时间：</i><%=(((new Date()).getTime() - irentHouse.getRentHousePublishTime().getTime() +1000000)/(3600*24*1000)) %>天前发布</p>      <div class="clear"></div>
+          	
           </div>
-          <div class="brokerInfo" log-mod="zufang_detail_diamond-first">
-            <div class="noData">暂无相关经纪人，请直接联系客服  10109666</div>
+        <div class="brokerInfo" log-mod="zufang_detail_diamond-first">
+            <div class="noData">请联系客服18212340987</div>
           </div>
           <!--<div class="houseRecord">-->
             <!--<span class="houseNum">链家编号：106100440279</span>-->
@@ -1443,19 +1445,19 @@
         <!--<script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js"></script>-->
         <!-- UY END -->
         <!--
-        <form action=${pageContext.request.contextPath}/userCommentRentHouse.do method="post">
+        <form action=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>userCommentRentHouse.do method="post">
 	        <textarea style="width: 95%; height:100px; margin-left: 20px; margin-right: 20px" onfocus="on_focus(this)" onblur="on_blur(this)" placeholder="您可以在这里输入您的评论："></textarea>
 	        <button class="commentPress" style="float: right; margin-right:25px;">评论</button>
 	    </form>
 	    -->
         
 
-		<!--用户评论-->
+		<!--用户评论
       <div class="mod-wrap" style="width: 1000px;  margin-top:20px;  background-color: white;">
         <iframe id="iframe" style="border: 0px; width: 100%; background-color: rgb(255, 255, 255); height: 473px; "
-              name="iframe" frameborder="0" src="/EasyHousing/jsp/html/Comment/commentBox.jsp"></iframe>
+              name="iframe" frameborder="0" src="/EasyHousing/jsp/html/Comment/commentBox2.jsp"></iframe>
       </div>
-        
+        -->
         
       </div>
   </body>

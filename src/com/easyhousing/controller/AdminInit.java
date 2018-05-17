@@ -66,8 +66,9 @@ public class AdminInit {
 		List<User> userList = userService.selectAllUser();
 		session.setAttribute("userListSize", userList.size());
 		
-		List<BuildingDeal> buildingDealList = buildingDealDao.selectAll();
-		session.setAttribute("buildingDealListSize", buildingDealList.size());
+		List<BuildingInfo> buildingInfoList = buildingInfoDao.selectAll();
+		session.setAttribute("buildingInfoListSize", buildingInfoList.size());
+		
 		
 		List<RentHouseDeal> rentHouseDealList = rentHouseDealDao.selectAll();
 		session.setAttribute("rentHouseDealListSize", rentHouseDealList.size());

@@ -13,7 +13,6 @@
   <link rel="stylesheet" href="../../css/SystemUser/style.css">
   <link rel="stylesheet" href="css/codemirror.css">
   <link rel="stylesheet" href="css/ace.min.css">
-  <link rel="stylesheet" href="css/font-awesome.min.css">
   <script src="js/jquery.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script src="js/typeahead-bs2.min.js"></script>

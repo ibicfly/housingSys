@@ -4,9 +4,9 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Loading</title>
+<title>请刷新查看最新评论！！！</title>
 </head>
 <body>
-<strong>Loading......</strong>
+<strong>请刷新查看最新评论！！！</strong>
 </body>
 </html>

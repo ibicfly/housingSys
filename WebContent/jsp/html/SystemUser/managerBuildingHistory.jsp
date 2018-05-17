@@ -13,24 +13,23 @@ List<BuildingDeal> buildingDealList = (List<BuildingDeal>)s.getAttribute("buildi
   <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
   <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href=${pageContext.request.contextPath}/jsp/html/SystemUser/css/bootstrap.min.css>
-  <link rel="stylesheet" href=${pageContext.request.contextPath}/jsp/html/SystemUser/css/dataTables.bootstrap.min.css>
-  <link rel="stylesheet" href=${pageContext.request.contextPath}/jsp/html/SystemUser/css/style.css>
-  <link rel="stylesheet" href=${pageContext.request.contextPath}/jsp/html/SystemUser/css/codemirror.css>
-  <link rel="stylesheet" href=${pageContext.request.contextPath}/jsp/html/SystemUser/css/ace.min.css>
-  <link rel="stylesheet" href=${pageContext.request.contextPath}/jsp/html/SystemUser/css/font-awesome.min.css>
-  <script src=${pageContext.request.contextPath}/jsp/html/SystemUser/js/jquery.min.js></script>
-  <script src=${pageContext.request.contextPath}/jsp/html/SystemUser/js/bootstrap.min.js></script>
-  <script src=${pageContext.request.contextPath}/jsp/html/SystemUser/js/typeahead-bs2.min.js></script>
-  <script src=${pageContext.request.contextPath}/jsp/html/SystemUser/js/jquery.dataTables.min.js></script>
-  <script src=${pageContext.request.contextPath}/jsp/html/SystemUser/js/jquery.dataTables.bootstrap.js></script>
-  <script src=${pageContext.request.contextPath}/jsp/html/SystemUser/js/H-ui.js></script>
-  <script src=${pageContext.request.contextPath}/jsp/html/SystemUser/js/H-ui.admin.js></script>
-  <script src=${pageContext.request.contextPath}/jsp/html/SystemUser/js/layer.js></script>
-  <link rel="stylesheet" href=${pageContext.request.contextPath}/jsp/html/SystemUser/css/layer.css>
-  <script src=${pageContext.request.contextPath}/jsp/html/SystemUser/js/laydate.js></script>
-  <link rel="stylesheet" href=${pageContext.request.contextPath}/jsp/html/SystemUser/css/laydate.css>
-  <link rel="stylesheet" href=${pageContext.request.contextPath}/jsp/html/SystemUser/css/laydate(1).css>
+  <link rel="stylesheet" href=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/SystemUser/css/bootstrap.min.css>
+  <link rel="stylesheet" href=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/SystemUser/css/dataTables.bootstrap.min.css>
+  <link rel="stylesheet" href=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/SystemUser/css/style.css>
+  <link rel="stylesheet" href=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/SystemUser/css/codemirror.css>
+  <link rel="stylesheet" href=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/SystemUser/css/ace.min.css>
+  <script src=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/SystemUser/js/jquery.min.js></script>
+  <script src=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/SystemUser/js/bootstrap.min.js></script>
+  <script src=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/SystemUser/js/typeahead-bs2.min.js></script>
+  <script src=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/SystemUser/js/jquery.dataTables.min.js></script>
+  <script src=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/SystemUser/js/jquery.dataTables.bootstrap.js></script>
+  <script src=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/SystemUser/js/H-ui.js></script>
+  <script src=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/SystemUser/js/H-ui.admin.js></script>
+  <script src=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/SystemUser/js/layer.js></script>
+  <link rel="stylesheet" href=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/SystemUser/css/layer.css>
+  <script src=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/SystemUser/js/laydate.js></script>
+  <link rel="stylesheet" href=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/SystemUser/css/laydate.css>
+  <link rel="stylesheet" href=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/SystemUser/css/laydate(1).css>
 
   <style>
     .dataTable th.sorting_desc:after {
@@ -39,8 +38,8 @@ List<BuildingDeal> buildingDealList = (List<BuildingDeal>)s.getAttribute("buildi
       color: #307ecc;
     }
   </style>
-  <link rel="stylesheet" href=${pageContext.request.contextPath}/jsp/html/SystemUser/css/ace-rtl.min.css>
-  <link rel="stylesheet" href=${pageContext.request.contextPath}/jsp/html/SystemUser/css/ace-skins.min.css>
+  <link rel="stylesheet" href=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/SystemUser/css/ace-rtl.min.css>
+  <link rel="stylesheet" href=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/SystemUser/css/ace-skins.min.css>
 
 
 </head>
@@ -64,7 +63,7 @@ List<BuildingDeal> buildingDealList = (List<BuildingDeal>)s.getAttribute("buildi
       <div class="border clearfix" style="display: block">
                <span class="l_f">
                 <a href="javascript:ovid()" id="member_add" class="btn btn-warning">添加买房交易</a>
-                <a class="btn btn-danger" onclick="deletePart();" href=${pageContext.request.contextPath}/managerBuildingDealinit.do>批量删除</a>
+                <a class="btn btn-danger" onclick="deletePart();" href=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>managerBuildingDealinit.do>批量删除</a>
                </span>
         <!--<span class="r_f">共：<b>2345</b>条</span>-->
       </div>
@@ -148,7 +147,7 @@ List<BuildingDeal> buildingDealList = (List<BuildingDeal>)s.getAttribute("buildi
 
 
 <div class="add_menber" id="add_menber_style" style="display:none">
-  <form action=${pageContext.request.contextPath}/adminAddBuildingDeal.do id="addBuildingDeal" enctype="multipart/form-data" method="post">
+  <form action=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>adminAddBuildingDeal.do id="addBuildingDeal" enctype="multipart/form-data" method="post">
   <ul class=" page-content">
     <li>
       <label class="label_name">经纪人ID：</label>
@@ -199,7 +198,7 @@ List<BuildingDeal> buildingDealList = (List<BuildingDeal>)s.getAttribute("buildi
 </div>
 
 <div class="add_menber" id="update_menber_style" style="display:none">
-  <form action=${pageContext.request.contextPath}/adminUpdateBuildingDeal.do id="updateBuildingDeal" enctype="multipart/form-data" method="post">
+  <form action=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>adminUpdateBuildingDeal.do id="updateBuildingDeal" enctype="multipart/form-data" method="post">
   <ul class=" page-content">
     <li>
       <label class="label_name">经纪人ID：</label>
@@ -420,7 +419,7 @@ List<BuildingDeal> buildingDealList = (List<BuildingDeal>)s.getAttribute("buildi
 		$.ajax({
 			type : "GET",
 			async : false,
-			url : "${pageContext.request.contextPath}/deleteBuildingDealAjax.do"
+			url : "<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>deleteBuildingDealAjax.do"
 		})
 	}
 
@@ -428,7 +427,7 @@ function transpDelPart() {
 		$.ajax({
 			type : "GET",
 			async : false,
-			url : "${pageContext.request.contextPath}/deleteBuildingDealPartAjax.do"
+			url : "<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>deleteBuildingDealPartAjax.do"
 		})
 	}
 
@@ -441,7 +440,7 @@ function transpDelPart() {
 				ids += chckBox[index].value + ".";
 			}
 		}
-		alert(ids);
+		//alert(ids);
 		setCookie("deleteBuildingDealPart", ids, 365);
 		transpDelPart();
 	}

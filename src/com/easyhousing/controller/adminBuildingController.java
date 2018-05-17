@@ -24,7 +24,7 @@ import com.easyhousing.model.RentHouse;
 
 
 /**
- * 楼盘信息的增删改查，楼盘成交记录的增删改查
+ * 楼盘信息的增删改查，楼盘成交记录的增删改查（弃）
  */
 @Controller
 public class adminBuildingController {
@@ -34,12 +34,12 @@ public class adminBuildingController {
 
 	//增加楼盘信息 inputAddbuildingTimeHanded获取前端传来的时间
 	@RequestMapping(value = "adminAddBuilding.do", method = { RequestMethod.GET, RequestMethod.POST })
-	public ModelAndView adminAddBuilding(@RequestParam(value ="inputAddbuildingTimeHanded") @DateTimeFormat(pattern="yyyy-MM-dd") Date date,HttpServletRequest request, BuildingInfo buildingInfo) throws IllegalStateException, IOException {
+	public ModelAndView adminAddBuilding(@DateTimeFormat(pattern="yyyy-MM-dd") Date date,HttpServletRequest request, BuildingInfo buildingInfo) throws IllegalStateException, IOException {
 		ModelAndView modelAndView = new ModelAndView();
 		HttpSession session = request.getSession();
 
 		//将时间设置进表单中
-		buildingInfo.setBuildingTimeHanded(date);
+		buildingInfo.setBuildingTimeHanded(new Date());
 		buildingInfoDao.insertBuildingInfo(buildingInfo);
 		
 		//重新获取楼盘列表

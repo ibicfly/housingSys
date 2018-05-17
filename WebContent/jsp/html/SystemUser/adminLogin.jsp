@@ -18,7 +18,7 @@
       font-size:62.5%;font: 500 1.5em/1.8 PingFang SC, Lantinghei SC, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, sans;
     }
     .login-wrap {
-      background: url(${pageContext.request.contextPath}/jsp/images/login/login-background.jpg);
+      background: url(<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/images/login/login-background.jpg);
       overflow: hidden;
       width: 100%;
       height: 100%;
@@ -37,7 +37,7 @@
       margin-left: -108px;
     }
     .login-body{
-      background: url(${pageContext.request.contextPath}/jsp/images/login/bg-pixiu.png) no-repeat;
+      background: url(<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/images/login/bg-pixiu.png) no-repeat;
       background-size: 100% 100%;
       width: 383px;
       height: 383px;
@@ -98,12 +98,12 @@
     <div class="swiper-container swiper-container-horizontal">
       <div class="swiper-wrapper" >
         <div class="swiper-slide">
-          <img src=${pageContext.request.contextPath}/jsp/images/login/login-swiper01.jpg>
+          <img src=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/images/login/login-swiper01.jpg>
         </div>
       </div>
     </div>
     <div class="login-body">
-      <form action=${pageContext.request.contextPath}/adminLogin.do class="cmxform" id="signupForm" method="post">
+      <form action=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>adminLogin.do class="cmxform" id="signupForm" method="post">
         <h1>快来这里看房吧</h1>
         <div class="form-group">
           <input id="mobile" class="form-control input-lg"  name="administratorName" type="text"  placeholder="请输入用户名或邮箱或手机号" value="">

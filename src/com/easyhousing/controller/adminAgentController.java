@@ -23,7 +23,7 @@ import com.easyhousing.model.User;
 import com.easyhousing.util.Tool;
 
 /**
- * 经纪人管理（增加，删除，修改，查询，批量删除）
+ * 经纪人管理（增加，删除，修改，查询，批量删除）（后期放弃）
  */
 
 @Controller

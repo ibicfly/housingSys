@@ -13,24 +13,23 @@ List<BuildingPic> buildingPicList = (List<BuildingPic>)s.getAttribute("buildingP
   <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
   <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href=${pageContext.request.contextPath}/jsp/html/SystemUser/css/bootstrap.min.css>
-  <link rel="stylesheet" href=${pageContext.request.contextPath}/jsp/html/SystemUser/css/dataTables.bootstrap.min.css>
-  <link rel="stylesheet" href=${pageContext.request.contextPath}/jsp/html/SystemUser/css/style.css>
-  <link rel="stylesheet" href=${pageContext.request.contextPath}/jsp/html/SystemUser/css/codemirror.css>
-  <link rel="stylesheet" href=${pageContext.request.contextPath}/jsp/html/SystemUser/css/ace.min.css>
-  <link rel="stylesheet" href=${pageContext.request.contextPath}/jsp/html/SystemUser/css/font-awesome.min.css>
-  <script src=${pageContext.request.contextPath}/jsp/html/SystemUser/js/jquery.min.js></script>
-  <script src=${pageContext.request.contextPath}/jsp/html/SystemUser/js/bootstrap.min.js></script>
-  <script src=${pageContext.request.contextPath}/jsp/html/SystemUser/js/typeahead-bs2.min.js></script>
-  <script src=${pageContext.request.contextPath}/jsp/html/SystemUser/js/jquery.dataTables.min.js></script>
-  <script src=${pageContext.request.contextPath}/jsp/html/SystemUser/js/jquery.dataTables.bootstrap.js></script>
-  <script src=${pageContext.request.contextPath}/jsp/html/SystemUser/js/H-ui.js></script>
-  <script src=${pageContext.request.contextPath}/jsp/html/SystemUser/js/H-ui.admin.js></script>
-  <script src=${pageContext.request.contextPath}/jsp/html/SystemUser/js/layer.js></script>
-  <link rel="stylesheet" href=${pageContext.request.contextPath}/jsp/html/SystemUser/css/layer.css>
-  <script src=${pageContext.request.contextPath}/jsp/html/SystemUser/js/laydate.js></script>
-  <link rel="stylesheet" href=${pageContext.request.contextPath}/jsp/html/SystemUser/css/laydate.css>
-  <link rel="stylesheet" href=${pageContext.request.contextPath}/jsp/html/SystemUser/css/laydate(1).css>
+  <link rel="stylesheet" href=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/SystemUser/css/bootstrap.min.css>
+  <link rel="stylesheet" href=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/SystemUser/css/dataTables.bootstrap.min.css>
+  <link rel="stylesheet" href=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/SystemUser/css/style.css>
+  <link rel="stylesheet" href=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/SystemUser/css/codemirror.css>
+  <link rel="stylesheet" href=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/SystemUser/css/ace.min.css>
+  <script src=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/SystemUser/js/jquery.min.js></script>
+  <script src=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/SystemUser/js/bootstrap.min.js></script>
+  <script src=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/SystemUser/js/typeahead-bs2.min.js></script>
+  <script src=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/SystemUser/js/jquery.dataTables.min.js></script>
+  <script src=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/SystemUser/js/jquery.dataTables.bootstrap.js></script>
+  <script src=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/SystemUser/js/H-ui.js></script>
+  <script src=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/SystemUser/js/H-ui.admin.js></script>
+  <script src=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/SystemUser/js/layer.js></script>
+  <link rel="stylesheet" href=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/SystemUser/css/layer.css>
+  <script src=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/SystemUser/js/laydate.js></script>
+  <link rel="stylesheet" href=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/SystemUser/css/laydate.css>
+  <link rel="stylesheet" href=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/SystemUser/css/laydate(1).css>
 
   <style>
     .dataTable th.sorting_desc:after {
@@ -39,8 +38,8 @@ List<BuildingPic> buildingPicList = (List<BuildingPic>)s.getAttribute("buildingP
       color: #307ecc;
     }
   </style>
-  <link rel="stylesheet" href=${pageContext.request.contextPath}/jsp/html/SystemUser/css/ace-rtl.min.css>
-  <link rel="stylesheet" href=${pageContext.request.contextPath}/jsp/html/SystemUser/css/ace-skins.min.css>
+  <link rel="stylesheet" href=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/SystemUser/css/ace-rtl.min.css>
+  <link rel="stylesheet" href=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/SystemUser/css/ace-skins.min.css>
 
 
 </head>
@@ -144,7 +143,7 @@ List<BuildingPic> buildingPicList = (List<BuildingPic>)s.getAttribute("buildingP
   }
 </style>
 <div class="add_menber" id="add_menber_style" style="display:none">
-  <form action=${pageContext.request.contextPath}/adminAddBuildingPic.do id="addBuildingPic" enctype="multipart/form-data" method="post">
+  <form action=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>adminAddBuildingPic.do id="addBuildingPic" enctype="multipart/form-data" method="post">
   <ul class=" page-content">
 
     <li>
@@ -175,7 +174,7 @@ List<BuildingPic> buildingPicList = (List<BuildingPic>)s.getAttribute("buildingP
 </div>
 
 <div class="add_menber" id="update_menber_style" style="display:none">
-  <form action=${pageContext.request.contextPath}/adminUpdateBuildingPic.do id="updateBuildingPic" enctype="multipart/form-data" method="post">
+  <form action=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>adminUpdateBuildingPic.do id="updateBuildingPic" enctype="multipart/form-data" method="post">
   <ul class=" page-content">
 
     <li>

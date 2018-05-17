@@ -1,5 +1,6 @@
 package com.easyhousing.controller;
 
+import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -10,8 +11,10 @@ import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.easyhousing.dao.BuildingPicDao;
@@ -118,12 +121,31 @@ public class buildingDetailController {
 	
 	//用户评论
 	@RequestMapping(value="userCommentBuilding.do", method={RequestMethod.GET,RequestMethod.POST})
-	public String userCommentBuilding(HttpSession s, BuyHouseComment u) {
+	public String userCommentBuilding(HttpServletRequest request,HttpSession s,@RequestBody String comment) throws UnsupportedEncodingException {
+		try {
+			request.setCharacterEncoding("UTF-8");
+		} catch (UnsupportedEncodingException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		BuyHouseComment u=new BuyHouseComment();
 		u.setUserCommentDate(new Date());
 		u.setUserId(((User)s.getAttribute("user")).getUserId());
-	    u.setBuildingId(((BuildingInfo)s.getAttribute("buildingInfo")).getBuildingId());
+		if(s!=null&&s.getAttribute("buildingId")!=null)
+			u.setBuildingId((Integer)s.getAttribute("buildingId"));
+	    if(comment!=null)
+	    {
+	    	String temp=java.net.URLDecoder.decode(comment , "UTF-8");
+	    	temp=temp.substring(temp.indexOf("=")+1);
+	    	System.out.println("zhongwu request comment"+ temp);
+	    	u.setUserComment(temp);
+	    }else
+	    {
+	    	u.setUserComment("无留言");
+	    }
 		buyHouseCommentDao.insertBuyHouseComment(u);
-		return "Comment/loading";
+		System.out.println("zhongyu chenggong jieshou request"+request);
+		 return "Comment/loading";
 	}
 	
 	//用户收藏楼盘

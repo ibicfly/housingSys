@@ -26,7 +26,7 @@ SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
   <%
   if (s.getAttribute("user") != null) {
 	  %>
-	  <form action=${pageContext.request.contextPath}/userCommentRentHouse.do method="post">
+	  <form action=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>userCommentRentHouse.do method="post">
 	  <div class="reviewArea clearfix">
 	    <textarea class="content comment-input" placeholder="请在此处输入评论："
 	              onkeyup="keyUP(this)" name="userComment"></textarea>

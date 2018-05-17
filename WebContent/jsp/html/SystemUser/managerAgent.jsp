@@ -13,24 +13,23 @@ List<Agent> agentList = (List<Agent>)s.getAttribute("agentList");
   <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
   <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href=${pageContext.request.contextPath}/jsp/html/SystemUser/css/bootstrap.min.css>
-  <link rel="stylesheet" href=${pageContext.request.contextPath}/jsp/html/SystemUser/css/dataTables.bootstrap.min.css>
-  <link rel="stylesheet" href=${pageContext.request.contextPath}/jsp/html/SystemUser/css/style.css>
-  <link rel="stylesheet" href=${pageContext.request.contextPath}/jsp/html/SystemUser/css/codemirror.css>
-  <link rel="stylesheet" href=${pageContext.request.contextPath}/jsp/html/SystemUser/css/ace.min.css>
-  <link rel="stylesheet" href=${pageContext.request.contextPath}/jsp/html/SystemUser/css/font-awesome.min.css>
-  <script src=${pageContext.request.contextPath}/jsp/html/SystemUser/js/jquery.min.js></script>
-  <script src=${pageContext.request.contextPath}/jsp/html/SystemUser/js/bootstrap.min.js></script>
-  <script src=${pageContext.request.contextPath}/jsp/html/SystemUser/js/typeahead-bs2.min.js></script>
-  <script src=${pageContext.request.contextPath}/jsp/html/SystemUser/js/jquery.dataTables.min.js></script>
-  <script src=${pageContext.request.contextPath}/jsp/html/SystemUser/js/jquery.dataTables.bootstrap.js></script>
-  <script src=${pageContext.request.contextPath}/jsp/html/SystemUser/js/H-ui.js></script>
-  <script src=${pageContext.request.contextPath}/jsp/html/SystemUser/js/H-ui.admin.js></script>
-  <script src=${pageContext.request.contextPath}/jsp/html/SystemUser/js/layer.js></script>
-  <link rel="stylesheet" href=${pageContext.request.contextPath}/jsp/html/SystemUser/css/layer.css>
-  <script src=${pageContext.request.contextPath}/jsp/html/SystemUser/js/laydate.js></script>
-  <link rel="stylesheet" href=${pageContext.request.contextPath}/jsp/html/SystemUser/css/laydate.css>
-  <link rel="stylesheet" href=${pageContext.request.contextPath}/jsp/html/SystemUser/css/laydate(1).css>
+  <link rel="stylesheet" href=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/SystemUser/css/bootstrap.min.css>
+  <link rel="stylesheet" href=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/SystemUser/css/dataTables.bootstrap.min.css>
+  <link rel="stylesheet" href=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/SystemUser/css/style.css>
+  <link rel="stylesheet" href=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/SystemUser/css/codemirror.css>
+  <link rel="stylesheet" href=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/SystemUser/css/ace.min.css>
+  <script src=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/SystemUser/js/jquery.min.js></script>
+  <script src=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/SystemUser/js/bootstrap.min.js></script>
+  <script src=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/SystemUser/js/typeahead-bs2.min.js></script>
+  <script src=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/SystemUser/js/jquery.dataTables.min.js></script>
+  <script src=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/SystemUser/js/jquery.dataTables.bootstrap.js></script>
+  <script src=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/SystemUser/js/H-ui.js></script>
+  <script src=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/SystemUser/js/H-ui.admin.js></script>
+  <script src=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/SystemUser/js/layer.js></script>
+  <link rel="stylesheet" href=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/SystemUser/css/layer.css>
+  <script src=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/SystemUser/js/laydate.js></script>
+  <link rel="stylesheet" href=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/SystemUser/css/laydate.css>
+  <link rel="stylesheet" href=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/SystemUser/css/laydate(1).css>
 
   <style>
     .dataTable th.sorting_desc:after {
@@ -39,8 +38,8 @@ List<Agent> agentList = (List<Agent>)s.getAttribute("agentList");
       color: #307ecc;
     }
   </style>
-  <link rel="stylesheet" href=${pageContext.request.contextPath}/jsp/html/SystemUser/css/ace-rtl.min.css>
-  <link rel="stylesheet" href=${pageContext.request.contextPath}/jsp/html/SystemUser/css/ace-skins.min.css>
+  <link rel="stylesheet" href=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/SystemUser/css/ace-rtl.min.css>
+  <link rel="stylesheet" href=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/SystemUser/css/ace-skins.min.css>
   <script type="text/javascript">
     $(function(){
       var cid = $('#nav_list> li>.submenu');
@@ -217,7 +216,7 @@ List<Agent> agentList = (List<Agent>)s.getAttribute("agentList");
         <div class="border clearfix" style="display: block">
                <span class="l_f">
                 <a href="javascript:ovid()" id="member_add" class="btn btn-warning">添加经纪人</a>
-                <a class="btn btn-danger" onclick="deletePart();" href=${pageContext.request.contextPath}/managerAgentinit.do>批量删除</a>
+                <a class="btn btn-danger" onclick="deletePart();" href=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>managerAgentinit.do>批量删除</a>
                </span>
           <!--<span class="r_f">共：<b>2345</b>条</span>-->
         </div>
@@ -234,10 +233,10 @@ List<Agent> agentList = (List<Agent>)s.getAttribute("agentList");
                   class="lbl"></span></label>
                 </th>
                 <th width="80" tabindex="0" aria-controls="sample-table" rowspan="1"
-                    colspan="1" aria-sort="descending" aria-label="ID: 升序排列" style="width: 90px;">用户名
+                    colspan="1" aria-sort="descending" aria-label="ID: 升序排列" style="width: 90px;">昵称
                 </th>
                 <th width="100" tabindex="0" aria-controls="sample-table" rowspan="1" colspan="1"
-                    aria-label="用户名" style="width: 80px;">姓名
+                    aria-label="用户名" style="width: 80px;">账号
                 </th>
                 <th width="80" tabindex="0" aria-controls="sample-table" rowspan="1" colspan="1"
                     aria-label="性别" style="width: 60px;">性别
@@ -295,10 +294,10 @@ List<Agent> agentList = (List<Agent>)s.getAttribute("agentList");
 
 
 <div class="add_menber" id="add_menber_style" style="display:none">
-  <form action=${pageContext.request.contextPath}/adminAddAgent.do id="addAgent" enctype="multipart/form-data" method="post">
+  <form action=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>adminAddAgent.do id="addAgent" enctype="multipart/form-data" method="post">
   <ul class=" page-content">
-    <li><label class="label_name">用&nbsp;&nbsp;户 &nbsp;名：</label><span class="add_name"><input value="" name="agentId" type="text"  class="text_add"/></span><div class="prompt r_f"></div></li>
-    <li><label class="label_name">真实姓名：</label><span class="add_name"><input name="agentName" type="text"  class="text_add"/></span><div class="prompt r_f"></div></li>
+    <li><label class="label_name">账&nbsp;户：</label><span class="add_name"><input value="" name="agentId" type="text"  class="text_add"/></span><div class="prompt r_f"></div></li>
+    <li><label class="label_name">昵称：</label><span class="add_name"><input name="agentName" type="text"  class="text_add"/></span><div class="prompt r_f"></div></li>
         <li>
       <label class="label_name">性&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;别：</label><span class="add_name">
       <input name="agentSex" value="男" style="display: none"></input>
@@ -330,7 +329,7 @@ List<Agent> agentList = (List<Agent>)s.getAttribute("agentList");
 </div>
 
 <div class="add_menber" id="update_menber_style" style="display:none">
-  <form action=${pageContext.request.contextPath}/adminUpdateAgent.do id="updateAgent" enctype="multipart/form-data" method="post">
+  <form action=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>adminUpdateAgent.do id="updateAgent" enctype="multipart/form-data" method="post">
   <ul class=" page-content">
     <li><label class="label_name">真实姓名：</label><span class="add_name"><input name="agentName" type="text"  class="text_add"/></span><div class="prompt r_f"></div></li>
     <li>
@@ -529,7 +528,7 @@ List<Agent> agentList = (List<Agent>)s.getAttribute("agentList");
 		$.ajax({
 			type : "GET",
 			async : false,
-			url : "${pageContext.request.contextPath}/deleteAgentAjax.do"
+			url : "<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>deleteAgentAjax.do"
 		})
 	}
   
@@ -537,7 +536,7 @@ List<Agent> agentList = (List<Agent>)s.getAttribute("agentList");
 		$.ajax({
 			type : "GET",
 			async : false,
-			url : "${pageContext.request.contextPath}/deleteAgentPartAjax.do"
+			url : "<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>deleteAgentPartAjax.do"
 		})
 	}
 
@@ -550,7 +549,7 @@ List<Agent> agentList = (List<Agent>)s.getAttribute("agentList");
 				ids += chckBox[index].value + ".";
 			}
 		}
-		alert(ids);
+		//alert(ids);
 		setCookie("deleteAgentPart", ids, 365);
 		transpDelPart();
 	}

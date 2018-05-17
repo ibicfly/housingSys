@@ -14,13 +14,13 @@
 
   <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
   <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <link href="${pageContext.request.contextPath}/jsp/html/MyHome/cropper/cropper.min.css" rel="stylesheet">
-  <link href="${pageContext.request.contextPath}/jsp/html/MyHome/sitelogo/sitelogo.css" rel="stylesheet">
+  <link href="<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/MyHome/cropper/cropper.min.css" rel="stylesheet">
+  <link href="<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/MyHome/sitelogo/sitelogo.css" rel="stylesheet">
 
-  <script src="${pageContext.request.contextPath}/jsp/html/MyHome/cropper/cropper.min.js"></script>
-  <script src="${pageContext.request.contextPath}/jsp/html/MyHome/sitelogo/sitelogo.js"></script>
-  <script type="text/javascript" src="${pageContext.request.contextPath}/jsp/jquery-3.2.1.js"></script>
-  <script type="text/javascript" src="${pageContext.request.contextPath}/jsp/html/MyHome/js/cropbox.js"></script>
+  <script src="<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/MyHome/cropper/cropper.min.js"></script>
+  <script src="<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/MyHome/sitelogo/sitelogo.js"></script>
+  <script type="text/javascript" src="<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/jquery-3.2.1.js"></script>
+  <script type="text/javascript" src="<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/MyHome/js/cropbox.js"></script>
 
   <style>
     .container p {
@@ -412,7 +412,7 @@
               <span class="icon-bar"></span>
             </button>
 
-            <a class="navbar-brand" href=${pageContext.request.contextPath}/jsp/html/homepage.jsp>Easyhousing</a>
+            <a class="navbar-brand" href=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/homepage.jsp>Easyhousing</a>
 
           </div>
 
@@ -422,7 +422,7 @@
           <div class="collapse navbar-collapse nav-justified" id="bs-example-navbar-collapse-1">
             <div class="col-md-offset-3 column">
               <ul class="nav navbar-nav">
-                <li style="margin-right:150px;margin-left:50px;"><a href=${pageContext.request.contextPath}/jsp/html/homepage.jsp>主页<span
+                <li style="margin-right:150px;margin-left:50px;"><a href=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/homepage.jsp>主页<span
                   class="sr-only">(current)</span></a></li>
 
                 <li data-toggle="modal" data-target="#about"><a href="#">关于</a></li>
@@ -431,7 +431,7 @@
 
 
             <ul class="nav navbar-nav navbar-right">
-              <li data-toggle="modal" data-target="#signin-signup-tab" id="signin-button"><a href=${pageContext.request.contextPath}/logout.do>注销</a></li>
+              <li data-toggle="modal" data-target="#signin-signup-tab" id="signin-button"><a href=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>logout.do>注销</a></li>
 
             </ul>
 
@@ -449,12 +449,12 @@
         <ul class="nav nav-pills nav-stacked">
           <li role="presentation"><img class="img-responsive name img-rounded"></li>
 
-          <li role="presentation" class="active"><a href=${pageContext.request.contextPath}/jsp/html/MyHome/userCenter.jsp>编辑资料</a></li>
-          <li role="presentation"><a href=${pageContext.request.contextPath}/jsp/html/MyHome/collection.jsp>我的收藏</a></li>
-          <li role="presentation"><a href=${pageContext.request.contextPath}/jsp/html/MyHome/myHouse.jsp>我的房子</a></li>
-          <li role="presentation"><a href=${pageContext.request.contextPath}/jsp/html/MyHome/comment.jsp>我的评论</a></li>
-          <!-- <li role="presentation"><a href=${pageContext.request.contextPath}/jsp/html/MyHome/application.jsp>我的申请</a></li>
-          <li role="presentation"><a href=${pageContext.request.contextPath}/jsp/html/MyHome/dealHistory.jsp>成交记录</a></li> -->
+          <li role="presentation" class="active"><a href=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/MyHome/userCenter.jsp>编辑资料</a></li>
+          <li role="presentation"><a href=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/MyHome/collection.jsp>我的收藏</a></li>
+          <li role="presentation"><a href=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/MyHome/myHouse.jsp>我的房子</a></li>
+          <li role="presentation"><a href=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/MyHome/comment.jsp>我的评论</a></li>
+          <!-- <li role="presentation"><a href=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/MyHome/application.jsp>我的申请</a></li>
+          <li role="presentation"><a href=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/MyHome/dealHistory.jsp>成交记录</a></li> -->
         </ul>
       </div>
       <div class="main-right fr">
@@ -468,7 +468,7 @@
             <span class="actTap actSetArgs ">修改密码</span>
 
           </div>
-          <form  method="post" id="updatePwd" style="display: none" class="js_module" action=${pageContext.request.contextPath}/changePwd.do>
+          <form  method="post" id="updatePwd" style="display: none" class="js_module" action=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>changePwd.do>
             <ul class="change-pwd">
               <li class="js_ajaxError ErrMsgNew" style="display: none"></li>
               <li>
@@ -496,11 +496,11 @@
               </li>
             </ul>
           </form>
-          <form  method="post" id="updateName" style="display: none" class="js_module" action=${pageContext.request.contextPath}/changeInfo.do>
+          <form  method="post" id="updateName" style="display: none" class="js_module" action=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>changeInfo.do>
             <ul class="change-pwd">
               <li class="js_ajaxError ErrMsgNew" style="display: none"></li>
               <li>
-                <span style="text-align:right">昵称：</span>
+                <span style="text-align:right">账号：</span>
                 <input type="text" class="form-control" style=" display: inline" id="nickname" placeholder="请输入昵称"
                        maxlength="14" name="username" rule="notNull" validatename="昵称" value=<%out.print(user.getUsername()); %>>
               </li>
@@ -539,7 +539,7 @@
                 %>
               </li>
               <li>
-                <span style="text-align:right">姓名：</span>
+                <span style="text-align:right">昵称：</span>
                 <%
                 if (user.getUserPhoneNumber() == null) {
                 	%>
@@ -581,7 +581,7 @@
           
 
 			
-			<form  method="post" id="updatePortrait" class="js_module" action=${pageContext.request.contextPath}/changePhoto.do enctype="multipart/form-data">
+			<form  method="post" id="updatePortrait" class="js_module" action=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>changePhoto.do enctype="multipart/form-data">
 				<!--
 				<ul>
 					<li>

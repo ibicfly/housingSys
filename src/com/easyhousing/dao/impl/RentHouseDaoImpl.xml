@@ -5,9 +5,14 @@
 		<selectKey  keyProperty="rentHouseId" resultType="Integer" order="AFTER">
 		  	select last_insert_id() AS rentHouseId
 		</selectKey>
-		INSERT INTO RentHouse(communityId, rentHouseAddress, rentHouseArea, rentHouseBuildTime, rentHouseFloor, rentHouseFloorAttribute, rentHouseHall, rentHouseRoom, rentHouseSubway, 
-		rentHouseToilet, rentHouseToward, rentHousePrice, rentHouseProvince,rentHouseRegion,rentHouseAllFloor,communityName,rentHouseUnitNumber,rentHousePublishTime) 
-		VALUES(#{communityId}, #{rentHouseAddress}, #{rentHouseArea}, #{rentHouseBuildTime}, #{rentHouseFloor}, #{rentHouseFloorAttribute}, #{rentHouseHall}, #{rentHouseRoom}, #{rentHouseSubway}, #{rentHouseToilet}, #{rentHouseToward}, #{rentHousePrice}, #{rentHouseProvince},#{rentHouseRegion},#{rentHouseAllFloor},#{communityName},#{rentHouseUnitNumber},#{rentHousePublishTime})
+		INSERT INTO RentHouse
+		(communityId, rentHouseAddress, rentHouseArea, rentHouseBuildTime, rentHouseFloor, rentHouseFloorAttribute
+		, rentHouseHall, rentHouseRoom, rentHouseSubway, rentHouseToilet, rentHouseToward, rentHousePrice, rentHouseProvince,
+		rentHouseRegion,rentHouseAllFloor,communityName,rentHouseUnitNumber,rentHousePublishTime) 
+		VALUES(#{communityId}, #{rentHouseAddress}, #{rentHouseArea}, #{rentHouseBuildTime}, #{rentHouseFloor},
+		 #{rentHouseFloorAttribute}, #{rentHouseHall}, #{rentHouseRoom}, #{rentHouseSubway}, #{rentHouseToilet}, #{rentHouseToward}, 
+		#{rentHousePrice}, #{rentHouseProvince},#{rentHouseRegion},#{rentHouseAllFloor},#{communityName},
+		#{rentHouseUnitNumber},#{rentHousePublishTime})
 	</insert>
 	
 	<delete id="deleteRentHouse" parameterType="com.easyhousing.model.RentHouse">

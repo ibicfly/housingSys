@@ -38,7 +38,7 @@
     .home_background {
     width: 100%;
     height: 450px;
-    background: url(${pageContext.request.contextPath}/jsp/images/homepage/4.jpg) no-repeat center top;
+    background: url(<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/images/homepage/4.jpg) no-repeat center top;
     background-size: cover;
     }
     .backgroundbg {
@@ -51,7 +51,7 @@
     .home_head {
       width: 100%;
       height: 450px;
-      background: url(${pageContext.request.contextPath}/jsp/images/homepage/bannerV2.jpg) no-repeat center top;
+      background: url(<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/images/homepage/bannerV2.jpg) no-repeat center top;
       background-size: cover;
     }
   .headerbg {
@@ -103,7 +103,7 @@
   }
   .home_head .header .city {
   color: #333;
-  background: url(${pageContext.request.contextPath}/jsp/images/homepage/citybg-1.png) no-repeat left 17px;
+  background: url(<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/images/homepage/citybg-1.png) no-repeat left 17px;
   }
   .header .city {
   width: 40px;
@@ -112,7 +112,7 @@
   float: left;
   margin-left: 10px;
   padding-left: 15px;
-  /*background: url(${pageContext.request.contextPath}/jsp/images/citybg.png) no-repeat left 17px;*/
+  /*background: url(<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/images/citybg.png) no-repeat left 17px;*/
   font-size: 16px;
   }
   .header .nav {
@@ -150,7 +150,7 @@
   margin: auto;
 
   border-radius: 0;
-  /*background: url(${pageContext.request.contextPath}/jsp/images/winbg.png);*/
+  /*background: url(<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/images/winbg.png);*/
   margin-top: 150px;
   }
   .search_box .search {
@@ -162,7 +162,7 @@
       width: 600px;
       height: 50px;
       border-radius: 0px;
-      background: url(${pageContext.request.contextPath}/jsp/images/homepage/shbg.png);
+      background: url(<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/images/homepage/shbg.png);
       position: relative;
       opacity:100;
     }
@@ -185,7 +185,7 @@
       height: 50px;
       line-height: 50px;
       padding-right: 10px;
-      background: url(${pageContext.request.contextPath}/jsp/images/homepage/djimg03.png) no-repeat right center;
+      background: url(<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/images/homepage/djimg03.png) no-repeat right center;
       display: block;
       white-space: nowrap;
       text-overflow: ellipsis;
@@ -200,7 +200,7 @@
       position: absolute;
       top: 48px;
       left: 0;
-      background: url(${pageContext.request.contextPath}/jsp/images/homepage/shbg.png);
+      background: url(<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/images/homepage/shbg.png);
       padding: 5px 6px;
       display: none;
     }
@@ -246,7 +246,7 @@
       height: 50px;
       float: right;
       font-size: 0;
-      background: url(${pageContext.request.contextPath}/jsp/images/homepage/djimg04.png) no-repeat center center;
+      background: url(<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/images/homepage/djimg04.png) no-repeat center center;
       border: none;
       border-radius: 0px;
     }
@@ -254,7 +254,7 @@
       width: 120px;
       height: 50px;
       border-radius: 0px;
-      /*background: url(${pageContext.request.contextPath}/jsp/images/homepage/djimg29.png);*/
+      /*background: url(<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/images/homepage/djimg29.png);*/
       background-color: #4b91c4;
       line-height: 50px;
       text-align: center;
@@ -267,7 +267,7 @@
       color: #fff;
       display: inline-block;
       padding-left: 15px;
-      background: url(${pageContext.request.contextPath}/jsp/images/homepage/djimg05.png) no-repeat left center;
+      background: url(<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/images/homepage/djimg05.png) no-repeat left center;
     }
   .mf_link {
   width: 1200px;
@@ -380,7 +380,7 @@
     /*.nhlist strong {*/
       /*width: 100%;*/
       /*height: 100%;*/
-      /*!*background: url(${pageContext.request.contextPath}/jsp/images/homepage/windowbg.png);*!*/
+      /*!*background: url(<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/images/homepage/windowbg.png);*!*/
       /*text-align: center;*/
       /*font-size: 0;*/
       /*position: absolute;*/
@@ -461,8 +461,8 @@
     <div class="headbox">
       <div class="headerbg">
         <div class="header">
-          <a href="${pageContext.request.contextPath}/jsp/html/homepage.jsp">
-            <img src="${pageContext.request.contextPath}/jsp/images/homepage/logo1.png" class="logo">
+          <a href="<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/homepage.jsp">
+            <img src="<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/images/homepage/logo1.png" class="logo">
           </a>
           <div class="city">
             <!--福州-->
@@ -493,26 +493,26 @@
 
           <div class="nav navml">
             <span>
-              <a href=${pageContext.request.contextPath}/jsp/html/homepage.jsp class="href">首页</a>
+              <a href=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/homepage.jsp class="href">首页</a>
             </span>
  <!--            <span>
-              <a href=${pageContext.request.contextPath}/jsp/html/homepage.jsp class="href">二手房</a>
+              <a href=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/homepage.jsp class="href">二手房</a>
             </span> -->
             <span>
-              <a href=${pageContext.request.contextPath}/buildingSelect.do class="href">新房</a>
+              <a href=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>buildingSelect.do class="href">新房</a>
             </span>
             <span>
-              <a href=${pageContext.request.contextPath}/rentHouseSelect.do class="href">租房</a>
+              <a href=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>rentHouseSelect.do class="href">租房</a>
             </span>
 
           </div>
         </div>
       </div>
       
-      <form action=${pageContext.request.contextPath}/globalSearch.do method="post" id="searchForm">
+      <form action=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>globalSearch.do method="post" id="searchForm">
       <div class="search_box searchtp">
         <div class="shtop" style="text-align: center">
-          <img src=${pageContext.request.contextPath}/jsp/images/homepage/djimg01.png>
+          <img src=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/images/homepage/djimg01.png>
         </div>s
         <div class="search">
           <div class="sh_l fl">
@@ -550,10 +550,10 @@
   <div class="mf_link">
     <div class="mf_item">
       <strong>
-      <a href=${pageContext.request.contextPath}/rentHouseSelect.do>
+      <a href=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>rentHouseSelect.do>
         <div>
           <span></span>
-          <img src=${pageContext.request.contextPath}/jsp/images/homepage/djimg30.png alt="找出租房" title="找出租房">
+          <img src=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/images/homepage/djimg30.png alt="找出租房" title="找出租房">
         </div>
         <h3>找出租房</h3>
         </a>
@@ -563,20 +563,20 @@
         </p>
       </strong>
       <strong>
-       <a href=${pageContext.request.contextPath}/buildingSelect.do>
+       <a href=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>buildingSelect.do>
       <div>
         <span></span>
-        <img src=${pageContext.request.contextPath}/jsp/images/homepage/djimg31.png alt="找新房" title="找新房">
+        <img src=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/images/homepage/djimg31.png alt="找新房" title="找新房">
       </div>
       <h3>找新房</h3>
       </a>
     </strong>
     <!-- 
       <strong>
-       <a href=${pageContext.request.contextPath}/mapSearch.do>
+       <a href=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>mapSearch.do>
       <div>
         <span></span>
-        <img src=${pageContext.request.contextPath}/jsp/images/homepage/djimg32.png alt="地图找房" title="地图找房">
+        <img src=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/images/homepage/djimg32.png alt="地图找房" title="地图找房">
       </div>
       <h3>地图找房</h3>
       </a>
@@ -595,30 +595,30 @@
         <ul>
           <li style="margin-left:0px;">
             <a>
-            <img src = ${pageContext.request.contextPath}/jsp/images/homepage/1.jpg>
-          <span>
+            <img src = <%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/images/homepage/1.jpg>
+          <!-- <span>
              <b>国博城</b>
              <em>16200元/m²</em>
 
-          </span>
+          </span> -->
             </a>
           </li>
           <li>
             <a>
-              <img src = ${pageContext.request.contextPath}/jsp/images/homepage/2.jpg>
-                 <span>
+              <img src = <%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/images/homepage/2.jpg>
+                <!--  <span>
                  <b>蓝光林肯公园</b>
                  <em>11000元/m²</em>
-                 </span>
+                 </span> -->
             </a>
           </li>
           <li>
             <a>
-              <img src = ${pageContext.request.contextPath}/jsp/images/homepage/3.jpg>
-                      <span>
+              <img src = <%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/images/homepage/3.jpg>
+               <!--        <span>
                       <b>富力湾</b>
                       <em>300万/套</em>
-                        </span>
+                        </span> -->
             </a>
           </li>
         </ul>

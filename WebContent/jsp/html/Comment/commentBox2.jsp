@@ -26,11 +26,11 @@ SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
   <%
   if (s.getAttribute("user") != null) {
 	  %>
-	  <form action=${pageContext.request.contextPath}/userCommentBuilding.do method="post">
+	  <form action=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>userCommentBuilding.do method="post">
 	  <div class="reviewArea clearfix">
-	    <textarea class="content comment-input" placeholder="请在此处输入评论："
+	    <textarea id="userComment"  placeholder="请在此处输入评论："
 	              onkeyup="keyUP(this)" name="userComment"></textarea>
-	    <button class="plBtn" onclick="parent.location.reload();">评论</button>
+	    <button class="plBtn" >评论</button>
 	  </div>
 	  </form>
 	  <%
@@ -41,7 +41,11 @@ SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
   <div class="comment-show">
   <%
     List<Collect> lc = (List<Collect>)s.getAttribute("buildingUserComments");
+  if(lc!=null&&lc.size()!=0)
+  {
     for (Collect i : lc) {
+    	if(i!=null)
+    	{
     	%>
     	<div class="comment-show-con clearfix">
 	      <div class="comment-show-con-img pull-left">
@@ -50,15 +54,18 @@ SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 	      <div class="pl-text clearfix">
 	      <a href="#" class="comment-size-name"><%=i.name %>: </a>
 	      <span class="my-pl-con">&nbsp;<%=i.comment %></span> </div>
-	      <div class="date-dz"> <span class="date-dz-left pull-left comment-time">
-	      <%=sdf.format(new Date(i.decoration)) %></span>
+	      <div class="date-dz"> 
+	      <!-- <span class="date-dz-left pull-left comment-time">
+	      </span> -->
 	      <div class="date-dz-right pull-right comment-pl-block">
 	
 	
 	     <a href="javascript:;" class="date-dz-z pull-left">
 	     </a> </div> </div><div class="hf-list-con"></div></div> </div>
     	<%
+    	}
     }
+  }
     %>
   </div>
   <!--回复区域 end-->
@@ -66,13 +73,8 @@ SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 
 
 <script type="text/javascript" src="js/jquery-1.12.0.min.js"></script>
-<script type="text/javascript" src="js/jquery.flexText.js"></script>
 <!--textarea高度自适应-->
-<script type="text/javascript">
-  $(function () {
-    $('.content').flexText();
-  });
-</script>
+
 <!--textarea限制字数-->
 <script type="text/javascript">
   function keyUP(t) {
@@ -86,6 +88,14 @@ SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 <!--点击评论创建评论条-->
 
 <script type="text/javascript">
+function clickPin()
+{
+		var comment=encodeURI(document.getElementById("userComment").innerText);
+		window.alert(comment);
+		debugger;
+		$.post("userCommentBuilding.do",{"comment":comment});
+}
+		
   $('.commentAll').on('click', '.plBtn', function () {
     var myDate = new Date();
     //获取当前年

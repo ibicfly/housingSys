@@ -625,7 +625,7 @@
               <span class="icon-bar"></span>
             </button>
 
-            <a class="navbar-brand" href=${pageContext.request.contextPath}/jsp/html/homepage.jsp>Easyhousing</a>
+            <a class="navbar-brand" href=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/homepage.jsp>Easyhousing</a>
 
           </div>
 
@@ -634,7 +634,7 @@
           <div class="collapse navbar-collapse nav-justified" id="bs-example-navbar-collapse-1">
             <div class="col-md-offset-3 column">
               <ul class="nav navbar-nav">
-                <li style="margin-right:150px;margin-left:50px;"><a href=${pageContext.request.contextPath}/jsp/html/homepage.jsp>主页<span
+                <li style="margin-right:150px;margin-left:50px;"><a href=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/homepage.jsp>主页<span
                   class="sr-only">(current)</span></a></li>
 
                 <li data-toggle="modal" data-target="#about"><a href="#">关于</a></li>
@@ -642,7 +642,7 @@
             </div>
 
             <ul class="nav navbar-nav navbar-right">
-              <li data-toggle="modal" data-target="#signin-signup-tab" id="signin-button"><a href=${pageContext.request.contextPath}/logout.do>注销</a></li>
+              <li data-toggle="modal" data-target="#signin-signup-tab" id="signin-button"><a href=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>logout.do>注销</a></li>
 
             </ul>
 
@@ -661,12 +661,12 @@
           <li role="presentation"><img class="img-responsive name img-rounded"></li>
 
 
-          <li role="presentation"><a href=${pageContext.request.contextPath}/jsp/html/MyHome/userCenter.jsp>编辑资料</a></li>
-          <li role="presentation" class="active"><a href=${pageContext.request.contextPath}/jsp/html/MyHome/collection.jsp>我的收藏</a></li>
-          <li role="presentation"><a href=${pageContext.request.contextPath}/jsp/html/MyHome/myHouse.jsp>我的房子</a></li>
-          <li role="presentation"><a href=${pageContext.request.contextPath}/jsp/html/MyHome/comment.jsp>我的评论</a></li>
-          <!--<li role="presentation"><a href=${pageContext.request.contextPath}/jsp/html/MyHome/application.jsp>我的申请</a></li>
-          <li role="presentation"><a href=${pageContext.request.contextPath}/jsp/html/MyHome/dealHistory.jsp>成交记录</a></li>-->
+          <li role="presentation"><a href=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/MyHome/userCenter.jsp>编辑资料</a></li>
+          <li role="presentation" class="active"><a href=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/MyHome/collection.jsp>我的收藏</a></li>
+          <li role="presentation"><a href=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/MyHome/myHouse.jsp>我的房子</a></li>
+          <li role="presentation"><a href=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/MyHome/comment.jsp>我的评论</a></li>
+          <!--<li role="presentation"><a href=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/MyHome/application.jsp>我的申请</a></li>
+          <li role="presentation"><a href=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/MyHome/dealHistory.jsp>成交记录</a></li>-->
         </ul>
       </div>
       <div class="main-right fr">
@@ -701,7 +701,7 @@
                           <div class="info-panel" style="float: left">
                             <h2><a target="_blank"
                                    href=""> <%=tmp.name %> </a>
-                                   <a id=<%=tmp.houseId %> onclick="click2(this.id);" href=${pageContext.request.contextPath}/userCancelBuildingCollect.do>
+                                   <a id=<%=tmp.houseId %> onclick="click2(this.id);" href=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>userCancelBuildingCollect.do>
                                   <button type="button" class="btn btn-danger" style="float: right">取消关注</button></a>
                             </h2>
 
@@ -751,7 +751,7 @@
 		                   <div class="info-panel" style="float: left">
 		                    <h2><a target="_blank"
 		                           href=""><%=i.name %> </a>
-		                           <a id=<%=i.houseId%> onclick="click(this.id);" href=${pageContext.request.contextPath}/userCancelRentCollect.do>
+		                           <a id=<%=i.houseId%> onclick="click(this.id);" href=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>userCancelRentCollect.do>
 		                           <button type="button" class="btn btn-danger" style="float: right" >
 		                                                取消关注
 		                           </button>

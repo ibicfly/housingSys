@@ -173,7 +173,7 @@ SimpleDateFormat sdf = new SimpleDateFormat("yyyy年MM月dd日");
       text-align: center;
       height: 33px;
       line-height: 33px;
-      background: url(${pageContext.request.contextPath}/jsp/images/rentWindow/djimg23.png) no-repeat right center;
+      background: url(<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/images/rentWindow/djimg23.png) no-repeat right center;
       display: block;
       white-space: nowrap;
       text-overflow: ellipsis;
@@ -247,7 +247,7 @@ SimpleDateFormat sdf = new SimpleDateFormat("yyyy年MM月dd日");
       height: 33px;
       float: right;
       font-size: 0;
-      background: url(${pageContext.request.contextPath}/jsp/images/rentWindow/djimg24.png) no-repeat center center;
+      background: url(<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/images/rentWindow/djimg24.png) no-repeat center center;
       border: none;
     }
     input[type="button"], input[type="file"], input[type="submit"], input[type="reset"] {
@@ -302,7 +302,7 @@ SimpleDateFormat sdf = new SimpleDateFormat("yyyy年MM月dd日");
     }
     .subsh_r .al span {
       padding-left: 15px;
-      background: url(${pageContext.request.contextPath}/jsp/images/rentWindow/djimg25.png) no-repeat left center;
+      background: url(<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/images/rentWindow/djimg25.png) no-repeat left center;
 
     }
     .subsh_r a span {
@@ -426,7 +426,7 @@ SimpleDateFormat sdf = new SimpleDateFormat("yyyy年MM月dd日");
       line-height: 35px;
     }
     .mod-banner .mid-content .breadcrumbs .icon {
-      background: url(${pageContext.request.contextPath}/jsp/images/loupan/bread-icon.png) no-repeat;
+      background: url(<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/images/loupan/bread-icon.png) no-repeat;
       width: 13px;
       height: 19px;
       display: inline-block;
@@ -618,7 +618,7 @@ SimpleDateFormat sdf = new SimpleDateFormat("yyyy年MM月dd日");
       margin-right: 8px;
       width: 7px;
       height: 13px;
-      /*!*background: url(${pageContext.request.contextPath}/jsp/${pageContext.request.contextPath}/jsp/img/detail/iic.png);*!  background: -webkit-image-set(url(${pageContext.request.contextPath}/jsp/${pageContext.request.contextPath}/jsp/img/detail/iic.png) 1x, url(${pageContext.request.contextPath}/jsp/${pageContext.request.contextPath}/jsp/img/detail/iic@2x.png) 2x);*/
+      /*!*background: url(<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/img/detail/iic.png);*!  background: -webkit-image-set(url(<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/img/detail/iic.png) 1x, url(<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/img/detail/iic@2x.png) 2x);*/
       background-repeat: no-repeat;
     }
     .mod-banner .banner-box .box-left .box-left-bottom .bottom-info .where {
@@ -913,6 +913,10 @@ SimpleDateFormat sdf = new SimpleDateFormat("yyyy年MM月dd日");
   </style>
 
   <script type="text/javascript">try {
+	  function reload()
+	  {
+		  
+	  }
     var AG_onLoad=function(func){
       if(document.readyState==="complete"||document.readyState==="interactive")
         func();
@@ -1367,7 +1371,7 @@ SimpleDateFormat sdf = new SimpleDateFormat("yyyy年MM月dd日");
   <div class="headerbg listhead">
     <div class="header">
       <a href="#">
-        <img src="${pageContext.request.contextPath}/jsp/images/rentWindow/logo1.png" class="logo" >
+        <img src="<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/images/rentWindow/logo1.png" class="logo" >
       </a>
       <div class="nav1 navml">
            <span>
@@ -1394,16 +1398,16 @@ SimpleDateFormat sdf = new SimpleDateFormat("yyyy年MM月dd日");
 	  </div>
 	        <div class="nav navml">
 	          <span>
-	            <a href=${pageContext.request.contextPath}/jsp/html/homepage.jsp class="href">首页</a>&nbsp&nbsp&nbsp
+	            <a href=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/homepage.jsp class="href">首页</a>&nbsp&nbsp&nbsp
 	          </span>
 <!-- 	          <span>
-	            <a href=${pageContext.request.contextPath}/jsp/html/homepage.jsp class="href">二手房</a>&nbsp&nbsp&nbsp
+	            <a href=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/homepage.jsp class="href">二手房</a>&nbsp&nbsp&nbsp
 	          </span> -->
 	          <span>
-	            <a href=${pageContext.request.contextPath}/buildingSelect.do class="href" style="color: #8fcafe">新房</a>&nbsp&nbsp&nbsp
+	            <a href=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>buildingSelect.do class="href" style="color: #8fcafe">新房</a>&nbsp&nbsp&nbsp
 	          </span>
 	          <span>
-	            <a href=${pageContext.request.contextPath}/rentHouseSelect.do class="href">租房</a>
+	            <a href=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>rentHouseSelect.do class="href">租房</a>
 	          </span>
 
       </div>
@@ -1413,7 +1417,7 @@ SimpleDateFormat sdf = new SimpleDateFormat("yyyy年MM月dd日");
   <div class="wsrrent">
     <div class="container">
       <div class="subsh subsher">
-        <form action=${pageContext.request.contextPath}/globalSearch.do method="post" id="searchForm">
+        <form action=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>globalSearch.do method="post" id="searchForm">
           <div class="subsh_l fl">
             <div class="sd_sel fl">
             <input hidden=true id="keyword" value="新房" name="which"></input>
@@ -1423,7 +1427,7 @@ SimpleDateFormat sdf = new SimpleDateFormat("yyyy年MM月dd日");
 					<li class="sel">租房</li>
 				</ul>
             </div>
-            <input type="text" name="content" placeholder="请输入小区、地铁、区域开始找房" class="text" id="autoSearchText" maxlength="20" autocomplete="off">
+            <input type="text" name="content" placeholder="请输入小区、区域开始找房" class="text" id="autoSearchText" maxlength="20" autocomplete="off">
             <div id="autoSearchItem" style="height: 285px; visibility: hidden;">
               <ul class="menu_v"></ul>
             </div>
@@ -1433,7 +1437,7 @@ SimpleDateFormat sdf = new SimpleDateFormat("yyyy年MM月dd日");
           </form>
           <!-- 
         <div class="subsh_r fr">
-          <a href=${pageContext.request.contextPath}/mapSearch.do class="al">
+          <a href=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>mapSearch.do class="al">
               <span>
                 <b>地图找房</b>
                 <i>地图</i>
@@ -1454,18 +1458,18 @@ SimpleDateFormat sdf = new SimpleDateFormat("yyyy年MM月dd日");
               <%
               if (s.getAttribute("user") == null) {
             	  %>
-            	  <a href=${pageContext.request.contextPath}/jsp/html/logIn.jsp style="width: 100%;height: 100%; ">收藏楼盘</a>
+            	  <a href=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/logIn.jsp style="width: 100%;height: 100%; ">收藏楼盘</a>
             	  <%
               }
               else {
             	  if (collect) {
             		  %>
-            		  <a href=${pageContext.request.contextPath}/userCancelBuildingCollectDetail.do style="width: 100%;height: 100%; ">取消楼盘收藏</a>
+            		  <a href=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>userCancelBuildingCollectDetail.do style="width: 100%;height: 100%; ">取消楼盘收藏</a>
             		  <%
             	  }
             	  else {
             		  %>
-            		  <a href=${pageContext.request.contextPath}/userBuildingCollect.do style="width: 100%;height: 100%; ">收藏楼盘</a>
+            		  <a href=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>userBuildingCollect.do style="width: 100%;height: 100%; ">收藏楼盘</a>
             		  <%
             	  }
               }
@@ -1479,13 +1483,13 @@ SimpleDateFormat sdf = new SimpleDateFormat("yyyy年MM月dd日");
       </div>
       <div class="mod-banner">
         <div class="filter-bg">
-          <img src="${pageContext.request.contextPath}/jsp/images/loupan/bf0ac046-24ae-46b8-bbb2-9cb0d92a3f62.jpg.100x36.jpg" style="width:100%;height:100%;">
+          <img src="<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/images/loupan/bf0ac046-24ae-46b8-bbb2-9cb0d92a3f62.jpg.100x36.jpg" style="width:100%;height:100%;">
         </div>
         <div class="opacity-bg"></div>
         <div class="mid-content">
           <div class="breadcrumbs">
             <i class="icon"></i>&nbsp
-            <a href=${pageContext.request.contextPath}/buildingSelect.do>易购房</a>
+            <a href=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>buildingSelect.do>易购房</a>
             <span class="stp">&nbsp>&nbsp</span>
             <a href="#"><%=bi.getBuildingName() %></a>
           </div>
@@ -1577,7 +1581,7 @@ SimpleDateFormat sdf = new SimpleDateFormat("yyyy年MM月dd日");
             <div class="houselist">
               <ul class="clear house-det">
                 <li class="img-li">
-                  <img class="" src="${pageContext.request.contextPath}/jsp/images/loupan/2e3571c9-f321-4231-a645-7ab1b85db3da.jpg.280x.jpg">
+                  <img class="" src="<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/images/loupan/2e3571c9-f321-4231-a645-7ab1b85db3da.jpg.280x.jpg">
                 </li>
                 <li class="info-li">
                   <p class="p1"><%=bi.getBuildingDecoration() %><span>套内 <%=bi.getBuildingMinArea() %>m²-<%=bi.getBuildingMaxArea() %>m²</span></p>
@@ -1599,10 +1603,6 @@ SimpleDateFormat sdf = new SimpleDateFormat("yyyy年MM月dd日");
           <p class="mod-details-line"></p>
           <div class="box-loupan" style="width: 940px; height: 263px;">
             <p class="desc-p"></p>
-            <p class="desc-p clear">
-              <span class="label">项目地址：</span>
-              <span class="label-val"><%=bi.getBuildingNeighbourhood() %></span>
-            </p>
             <p class="desc-p clear">
               <span class="label">开发商：</span>
               <span class="label-val">恒大地产房地产开发有限公司</span>
@@ -1660,24 +1660,5 @@ SimpleDateFormat sdf = new SimpleDateFormat("yyyy年MM月dd日");
       
 
     </div>
-  
-  <div class="theme-popover" style="display: none;">
-    <div class="theme-poptit">
-      <a href="javascript:;" title="关闭" class="close">×</a>
-      <h3>请填写申请表单</h3>
-    </div>
-    <div class="theme-popbod dform">
-      <form class="theme-signin" name="loginform" action="https://www.baidu.com" method="post">
-        <ol>
-          <li></li>
-          <li><strong>用户名：</strong><input class="ipt" type="text" name="log" value="用户名" size="20"></li>
-          <li><strong>密码：</strong><input class="ipt" type="text" name="pwd" value="姓名" size="20"></li>
-          <li><strong>密码：</strong><input class="ipt" type="text" name="pwd" value="电话" size="20"></li>
-          <li><strong>密码：</strong><input class="ipt" type="text" name="pwd" value="时间" size="20"></li>
-          <li><input class="btn btn-primary" type="submit" name="submit" value=" 确定申请 " onclick=alert("你的申请已提交");></li>
-        </ol>
-      </form>
-    </div>
-  </div>
 </body>
 </html>

@@ -79,11 +79,13 @@ public class CommentServiceImpl implements CommentService {
 			BuildingInfo bi = new BuildingInfo();
 			bi.setBuildingId(i.getBuildingId());
 			bi = buildingInfoDao.selectBuildingInfo(bi);
-			
-			c.decoration = bi.getBuildingDecoration();
-			c.name = bi.getBuildingName();
-			c.houseAddress = bi.getBuildingAddress();
-			c.price = bi.getBuildingReferencePrice();
+			if(bi!=null)
+			{
+				c.decoration = bi.getBuildingDecoration();
+				c.name = bi.getBuildingName();
+				c.houseAddress = bi.getBuildingAddress();
+				c.price = bi.getBuildingReferencePrice();
+			}
 			List<String> lp = buildingPicDao.selectBuildingPicByBuildingId(c.houseId);
 			if (lp.size() != 0)
 				c.picUrl = lp.get(0);

@@ -1,7 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<!-- saved from url=(0134)./home.html# -->
 <html lang="en">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -10,37 +9,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
-
-
-
-
  <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
   <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-  <link rel="stylesheet" href=${pageContext.request.contextPath}/jsp/html/SystemUser/css/bootstrap.min.css>
-  <script src=${pageContext.request.contextPath}/jsp/html/SystemUser/js/ace.min.js></script>
-  <script src=${pageContext.request.contextPath}/jsp/html/SystemUser/js/ace-elements.min.js></script>
-  <script src=${pageContext.request.contextPath}/jsp/html/SystemUser/js/ace-extra.min.js></script>
-  <script src=${pageContext.request.contextPath}/jsp/html/SystemUser/js/bar.js></script>
-  <link rel="stylesheet" href=${pageContext.request.contextPath}/jsp/html/SystemUser/css/dataTables.bootstrap.min.css>
-  <link rel="stylesheet" href=${pageContext.request.contextPath}/jsp/html/SystemUser/css/style.css>
-  <link rel="stylesheet" href=${pageContext.request.contextPath}/jsp/html/SystemUser/css/style.css>
-  <link rel="stylesheet" href=${pageContext.request.contextPath}/jsp/html/SystemUser/css/codemirror.css>
-  <link rel="stylesheet" href=${pageContext.request.contextPath}/jsp/html/SystemUser/css/ace.min.css>
-  <link rel="stylesheet" href=${pageContext.request.contextPath}/jsp/html/SystemUser/css/font-awesome.min.css>
-  <script src=${pageContext.request.contextPath}/jsp/html/SystemUser/js/jquery.min.js></script>
-  <script src=${pageContext.request.contextPath}/jsp/html/SystemUser/js/bootstrap.min.js></script>
-  <script src=${pageContext.request.contextPath}/jsp/html/SystemUser/js/typeahead-bs2.min.js></script>
-  <script src=${pageContext.request.contextPath}/jsp/html/SystemUser/js/jquery.dataTables.min.js></script>
-  <script src=${pageContext.request.contextPath}/jsp/html/SystemUser/js/jquery.dataTables.bootstrap.js></script>
-  <script src=${pageContext.request.contextPath}/jsp/html/SystemUser/js/H-ui.js></script>
-  <script src=${pageContext.request.contextPath}/jsp/html/SystemUser/js/H-ui.admin.js></script>
-  <script src=${pageContext.request.contextPath}/jsp/html/SystemUser/js/layer.js></script>
-  <link rel="stylesheet" href=${pageContext.request.contextPath}/jsp/html/SystemUser/css/layer.css>
-  <script src=${pageContext.request.contextPath}/jsp/html/SystemUser/js/laydate.js></script>
-  <link rel="stylesheet" href=${pageContext.request.contextPath}/jsp/html/SystemUser/css/laydate.css>
-  <link rel="stylesheet" href=${pageContext.request.contextPath}/jsp/html/SystemUser/css/laydate(1).css>
+  <link rel="stylesheet" href=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/SystemUser/css/bootstrap.min.css>
+  <script src=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/SystemUser/js/ace.min.js></script>
+  <script src=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/SystemUser/js/ace-elements.min.js></script>
+  <script src=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/SystemUser/js/ace-extra.min.js></script>
+  <link rel="stylesheet" href=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/SystemUser/css/dataTables.bootstrap.min.css>
+  <link rel="stylesheet" href=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/SystemUser/css/style.css>
+  <link rel="stylesheet" href=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/SystemUser/css/codemirror.css>
+  <link rel="stylesheet" href=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/SystemUser/css/ace.min.css>
+  <script src=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/SystemUser/js/bootstrap.min.js></script>
+  <script src=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/SystemUser/js/jquery.dataTables.min.js></script>
+  <script src=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/SystemUser/js/jquery.dataTables.bootstrap.js></script>
+  <link rel="stylesheet" href=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/SystemUser/css/layer.css>
+  <link rel="stylesheet" href=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/SystemUser/css/laydate.css>
+  <link rel="stylesheet" href=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/SystemUser/css/laydate(1).css>
 
 
   <script type="text/javascript">
@@ -97,7 +83,7 @@
     $(document).ready(function () {
       $('#nav_list').find('li.home').click(function () {
         $('#nav_list').find('li.home').removeClass('active');
-        $(this).addClass('active');
+        //$(this).addClass('active');
       });
 
 
@@ -124,7 +110,7 @@
             icon: 2,
           },
           function () {
-            location.href = '${pageContext.request.contextPath}/jsp/html/SystemUser/adminLogin.jsp';
+            location.href = '<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/SystemUser/adminLogin.jsp';
 
           });
       });
@@ -143,12 +129,11 @@
   </script>
   <div class="navbar-container" id="navbar-container">
     <div class="navbar-header pull-left">
-      <a href=${pageContext.request.contextPath}/jsp/html/SystemUser/home.jsp# class="navbar-brand">
+      <a href=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/SystemUser/home.jsp# class="navbar-brand">
         <small>
-          <!--<img src="../../images/SystemUser/logo.png">-->
         </small>
-      </a><!-- /.brand -->
-    </div><!-- /.navbar-header -->
+      </a>
+    </div>
 
   </div>
 </div>
@@ -160,7 +145,7 @@
     }
   </script>
   <div class="main-container-inner">
-    <a class="menu-toggler" id="menu-toggler" href=${pageContext.request.contextPath}/jsp/html/SystemUser/home.jsp#>
+    <a class="menu-toggler" id="menu-toggler" href=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/SystemUser/home.jsp#>
       <span class="menu-text"></span>
     </a>
     <div class="sidebar" id="sidebar" style="height: 514px;">
@@ -180,56 +165,60 @@
           <span class="btn btn-warning"></span>
           <span class="btn btn-danger"></span>
         </div>
-      </div><!-- #sidebar-shortcuts -->
+      </div>
       <ul class="nav nav-list" id="nav_list" style="height: 440px;text-align: right">
         <li class="home">
-          <a href="javascript:void(0)"  name=${pageContext.request.contextPath}/homeinit.do class="iframeurl" title="">
+          <a href="javascript:void(0)"  name=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>homeinit.do class="iframeurl" title="">
             <span class="menu-text"> 系统首页 </span>
           </a>
         </li>
-
-        <li>
-          <a class="dropdown-toggle" href="#"><span class="menu-text"> 用户 </span></a>
-          <ul class="submenu" id="Sort_link_1">
-            <li class="home" style="height: 41.3333px;">
-              <a href="#" title="用户管理" name=${pageContext.request.contextPath}/managerUserinit.do class="iframeurl" style="text-align: center">用户管理</a>
-            </li>
+      <li>
+          <a href="#" title="用户管理" class="iframeurl" name=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>managerUserinit.do><span class="menu-text">用户管理 </span></a>
+        </li> 
+        <!-- 
+		<li>
+          <a href="#" class="dropdown-toggle" name=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/SystemUser/managerBuilding.jsp><span class="menu-text">租房管理</span></a>
+          <ul class="submenu" id="Sort_link_4">
+            <li >
+              <a href="#" title="租房管理" class="iframeurl" style="text-align: center" name=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>managerRentHouseinit.do>租房管理</a>
+            <li >
+              <a href="#" title="租房记录" class="iframeurl" style="text-align: center" name=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>managerRentHouseDealinit.do >租房记录</a>
           </ul>
         </li>
-
-        <li>
-          <a href="#" class="dropdown-toggle"><span class="menu-text"> 租房管理 </span></a>
-          <ul class="submenu" id="Sort_link_2">
-            <li class="home" style="height: 41.3333px;">
-              <a href="#" title="租房管理" class="iframeurl" name=${pageContext.request.contextPath}/managerRentHouseinit.do style="text-align: center">租房管理</a>
-            </li>
-            <li class="home" style="height: 41.3333px;">
-              <a href="#" title="租房记录" name=${pageContext.request.contextPath}/managerRentHouseDealinit.do class="iframeurl" style="text-align: center">租房记录</a>
-            </li>
-          </ul>
+         -->
+ 		<li>
+          <a href="#" class="iframeurl" name=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>managerRentHouseinit.do><span class="menu-text">租房管理</span></a>
         </li>
-
-
-        <li>
-          <a href="#" class="iframeurl" name=${pageContext.request.contextPath}/managerAgentinit.do><span class="menu-text"> 经纪人 </span></a>
+        <!-- 
+		<li>
+          <a href="#" class="iframeurl" name=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>managerRentHouseDealinit.do><span class="menu-text">租房记录</span></a>
         </li>
 
         <li>
-          <a href="#" class="dropdown-toggle" name=${pageContext.request.contextPath}/jsp/html/SystemUser/managerBuilding.jsp><span class="menu-text"> 楼盘管理 </span></a>
+          <a href="#" class="iframeurl" name=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>managerAgentinit.do><span class="menu-text"> 经纪人 </span></a>
+        </li>
+
+        <li>
+          <a href="#" class="dropdown-toggle" name=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/SystemUser/managerBuilding.jsp><span class="menu-text">楼盘管理 </span></a>
           <ul class="submenu" id="Sort_link_5">
-            <li class="home" style="height: 41.3333px;">
-              <a href="#" title="楼盘管理" class="iframeurl" name=${pageContext.request.contextPath}/managerBuildinginit.do style="text-align: center">楼盘管理</a>
-            <li class="home" style="height: 41.3333px;">
-              <a href="#" title="楼盘交易" name=${pageContext.request.contextPath}/managerBuildingDealinit.do class="iframeurl" style="text-align: center">买房记录</a>
+            <li >
+              <a href="#" title="楼盘管理" class="iframeurl" style="text-align: center" name=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>managerBuildinginit.do>楼盘管理</a>
+            <li >
+              <a href="#" title="楼盘交易" class="iframeurl" style="text-align: center" name=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>managerBuildingDealinit.do >买房记录</a>
           </ul>
-        </li>
-        
+        </li> -->
         <li>
-          <a href="#" class="iframeurl" name=${pageContext.request.contextPath}/managerCheckRentHouseinit.do><span class="menu-text"> 审核租房 </span></a>
+          <a href="#" class="iframeurl" name=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>managerBuildinginit.do><span class="menu-text">楼盘管理 </span></a>
         </li>
-        
+        <!-- 
+        <li>
+          <a href="#" class="iframeurl" name=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>managerCheckRentHouseinit.do><span class="menu-text"> 审核租房 </span></a>
+        </li>
+         --> 
       </ul>
 
+        
+        
 
       <div class="sidebar-collapse" id="sidebar-collapse">
         <i class="icon-double-angle-left" data-icon1="icon-double-angle-left" data-icon2="icon-double-angle-right"></i>
@@ -253,46 +242,17 @@
         <ul class="breadcrumb">
           <li>
             <i class="icon-home home-icon"></i>
-            <a href=${pageContext.request.contextPath}/homeinit.do>首页</a>
+            <a href=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>homeinit.do>首页</a>
           </li>
-          <li class="active"><span class="Current_page iframeurl"></span></li>
-          <li class="active" id="parentIframe"><span class="parentIframe iframeurl"></span></li>
-          <li class="active" id="parentIfour"><span class="parentIfour iframeurl"></span></li>
         </ul>
       </div>
 
 
-
       <iframe id="iframe" style="border: 0px; width: 90%; background-color: rgb(255, 255, 255); height: 473px; "
-              name="iframe" frameborder="0" src=${pageContext.request.contextPath}/homeinit.do></iframe>
-      <!--<iframe id="managerUser" style="border: 0px; width: 100%; background-color: rgb(255, 255, 255); height: 473px; "-->
-              <!--name="iframe" frameborder="0" src="./managerUser.html"></iframe>-->
-      <!--<iframe id="managerRent" style="border: 0px; width: 100%; background-color: rgb(255, 255, 255); height: 473px; "-->
-              <!--name="iframe" frameborder="0" src="./managerRent.html"></iframe>-->
-      <!--<iframe id="managerRentHistory" style="border: 0px; width: 100%; background-color: rgb(255, 255, 255); height: 473px; "-->
-              <!--name="iframe" frameborder="0" src="./managerRentHistory.html"></iframe>-->
-      <!--<iframe id="managerAgent" style="border: 0px; width: 100%; background-color: rgb(255, 255, 255); height: 473px; "-->
-              <!--name="iframe" frameborder="0" src="./managerAgent.html"></iframe>-->
-      <!--<iframe id="managerBuilding" style="border: 0px; width: 100%; background-color: rgb(255, 255, 255); height: 473px; "-->
-              <!--name="iframe" frameborder="0" src="./managerBuilding.html"></iframe>-->
-      <!--<iframe id="managerBuildingHistory" style="border: 0px; width: 100%; background-color: rgb(255, 255, 255); height: 473px; "-->
-              <!--name="iframe" frameborder="0" src="./managerBuildingHistory.html"></iframe>-->
-      <!--<iframe id="managerPic" style="border: 0px; width: 100%; background-color: rgb(255, 255, 255); height: 473px; "-->
-              <!--name="iframe" frameborder="0" src="./managerPic.html"></iframe>-->
-      <!--<iframe id="managerApplicant" style="border: 0px; width: 100%; background-color: rgb(255, 255, 255); height: 473px; "-->
-              <!--name="iframe" frameborder="0" src="./managerApplicant.html"></iframe>-->
-      <!--<iframe id="managerComment" style="border: 0px; width: 100%; background-color: rgb(255, 255, 255); height: 473px; "-->
-              <!--name="iframe" frameborder="0" src="./managerComment.html"></iframe>-->
-      <div id="calUser" style="display: none">
-
-      </div>
-
-
-      <!-- /.page-content -->
-    </div><!-- /.main-content -->
-
-  </div><!-- /.main-container-inner -->
-
+              name="iframe" frameborder="0" src=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>homeinit.do></iframe>
+      <div id="calUser" style="display: none"></div>
+    </div>
+  </div>
 </div>
 <!--底部样式-->
 
@@ -301,10 +261,6 @@
   <p class="r_f">地址：福建省福州市鼓山18景 技术支持：XXXX</p>
 </div>
 <!--修改密码样式-->
-
-<!-- /.main-container -->
-<!-- basic scripts -->
-
 
 </body>
 </html>

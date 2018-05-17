@@ -169,7 +169,7 @@
       text-align: center;
       height: 33px;
       line-height: 33px;
-      background: url(${pageContext.request.contextPath}/jsp/images/rentWindow/djimg23.png) no-repeat right center;
+      background: url(<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/images/rentWindow/djimg23.png) no-repeat right center;
       display: block;
       white-space: nowrap;
       text-overflow: ellipsis;
@@ -243,7 +243,7 @@
       height: 33px;
       float: right;
       font-size: 0;
-      background: url(${pageContext.request.contextPath}/jsp/images/rentWindow/djimg24.png) no-repeat center center;
+      background: url(<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/images/rentWindow/djimg24.png) no-repeat center center;
       border: none;
     }
     input[type="button"], input[type="file"], input[type="submit"], input[type="reset"] {
@@ -291,7 +291,7 @@
     }
     .subsh_r .al span {
       padding-left: 15px;
-      background: url(${pageContext.request.contextPath}/jsp/images/rentWindow/djimg25.png) no-repeat left center;
+      background: url(<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/images/rentWindow/djimg25.png) no-repeat left center;
 
 
     }
@@ -328,7 +328,7 @@
       line-height: 32px;
       color: #666;
       padding-left: 15px;
-      background: url(${pageContext.request.contextPath}/jsp/images/rentWindow/djimg25.png) no-repeat left center;
+      background: url(<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/images/rentWindow/djimg25.png) no-repeat left center;
       overflow: hidden;
     }
     .current a {
@@ -361,7 +361,7 @@
       cursor: pointer;
     }
     .nv_list .nvtit li.active span {
-      background: url(${pageContext.request.contextPath}/jsp/images/rentWindow/ppimg15-1.png) no-repeat center center;
+      background: url(<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/images/rentWindow/ppimg15-1.png) no-repeat center center;
       display: none;
     }
     .nv_list .nvtit li span {
@@ -369,7 +369,7 @@
       height: 40px;
       vertical-align: middle;
       display: inline-block;
-      background: url(${pageContext.request.contextPath}/jsp/images/rentWindow/ppimg15.png) no-repeat center center;
+      background: url(<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/images/rentWindow/ppimg15.png) no-repeat center center;
       margin-left: 2px;
       font-size: 0;
     }
@@ -468,7 +468,7 @@
       outline: none;
     }
     .list_tit .hovs {
-      background: url(${pageContext.request.contextPath}/jsp/images/rentWindow/djimg80.png) no-repeat right center;
+      background: url(<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/images/rentWindow/djimg80.png) no-repeat right center;
     }
     .list_tit .hovs, .list_tit .hovx {
       padding-right: 10px;
@@ -482,7 +482,7 @@
       outline: none;
     }
     .list_tit .hovx {
-      background: url(${pageContext.request.contextPath}/jsp/images/rentWindow/djimg81.png) no-repeat right center;
+      background: url(<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/images/rentWindow/djimg81.png) no-repeat right center;
     }
     .list_tit .hovs, .list_tit .hovx {
       padding-right: 10px;
@@ -590,7 +590,7 @@
     .mor_list li .mor_txt .dor {
       height: 24px;
       padding-left: 15px;
-      background: url(${pageContext.request.contextPath}/jsp/images/rentWindow/djimg25.png) no-repeat left center;
+      background: url(<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/images/rentWindow/djimg25.png) no-repeat left center;
       white-space: nowrap;
       text-overflow: ellipsis;
     }
@@ -718,7 +718,7 @@
 		$.ajax({
 			type : "GET",
 			async : false,
-			url : "${pageContext.request.contextPath}/rentHouseSelectAjax.do"
+			url : "<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>rentHouseSelectAjax.do"
 		})
 	}
 
@@ -789,8 +789,8 @@
     </div>
     <div class="headerbg listhead">
       <div class="header">
-        <a href=${pageContext.request.contextPath}/jsp/html/homepage.jsp>
-          <img src=${pageContext.request.contextPath}/jsp/images/rentWindow/logo1.png class="logo" >
+        <a href=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/homepage.jsp>
+          <img src=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/images/rentWindow/logo1.png class="logo" >
         </a>
         <div class="nav1 navml">
         <span>
@@ -817,16 +817,16 @@
 	  </div>
 	        <div class="nav navml">
 	          <span>
-	            <a href=${pageContext.request.contextPath}/jsp/html/homepage.jsp class="href">首页</a>&nbsp&nbsp&nbsp
+	            <a href=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/homepage.jsp class="href">首页</a>&nbsp&nbsp&nbsp
 	          </span>
 <!-- 	          <span>
-	            <a href=${pageContext.request.contextPath}/jsp/html/homepage.jsp class="href">二手房</a>&nbsp&nbsp&nbsp
+	            <a href=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/homepage.jsp class="href">二手房</a>&nbsp&nbsp&nbsp
 	          </span> -->
 	          <span>
-	            <a href=${pageContext.request.contextPath}/buildingSelect.do class="href">新房</a>&nbsp&nbsp&nbsp
+	            <a href=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>buildingSelect.do class="href">新房</a>&nbsp&nbsp&nbsp
 	          </span>
 	          <span>
-	            <a href=${pageContext.request.contextPath}/rentHouseSelect.do class="href" style="color: #8fcafe">租房</a>
+	            <a href=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>rentHouseSelect.do class="href" style="color: #8fcafe">租房</a>
 	          </span>
 	
 	        </div>
@@ -837,7 +837,7 @@
     <div class="wsrrent">
       <div class="container">
         <div class="subsh subsher">
-        <form action=${pageContext.request.contextPath}/globalSearch.do method="post" id="searchForm">
+        <form action=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>globalSearch.do method="post" id="searchForm">
           <div class="subsh_l fl">
             <div class="sd_sel fl">
             <input hidden=true id="keyword" value="新房" name="which"></input>
@@ -847,7 +847,7 @@
 					<li class="sel">租房</li>
 				</ul>
             </div>
-            <input type="text" name="content" placeholder="请输入小区、地铁、区域开始找房" class="text" id="autoSearchText" maxlength="20" autocomplete="off">
+            <input type="text" name="content" placeholder="请输入小区、区域开始找房" class="text" id="autoSearchText" maxlength="20" autocomplete="off">
             <div id="autoSearchItem" style="height: 285px; visibility: hidden;">
               <ul class="menu_v"></ul>
             </div>
@@ -856,7 +856,7 @@
           </div>
           </form>
  <!--          <div class="subsh_r fr">
-            <a href=${pageContext.request.contextPath}/mapSearch.do class="al">
+            <a href=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>mapSearch.do class="al">
               <span>
                 <b>地图找房</b>
                 <i>地图</i>
@@ -964,6 +964,7 @@
             	  out.print("qy");
               %>" id="10" onclick="clickArea1(this.id, '江津');">江津区</a>
             </li>
+            <!-- 
             <li class="Switch">
               <strong>地铁:</strong>
               <a class="mt on" id="bx">不限</a>
@@ -972,7 +973,7 @@
               <a class="qy" id="13">3号线</a>
               <a class="qy" id="14">6号线</a>
               <a class="qy" id="15">国博线</a>
-            </li>
+            </li> -->
             <li class="Switch">
               <strong>租金:</strong>
               <%
@@ -1088,10 +1089,10 @@
           <em>套符合您的要求</em>
         </div>
         <div class="cenr fr">
-          <span>排序:</span>
+         <!--  <span>排序:</span>
           <a href="#" class="first active" tvalue="p1">默认</a>
-          <a href="#" class="hovs" tvalue="p2">价格</a>
-          <a href="#" class="hovx" tvalue="p3">价格</a>
+        <a href="#" class="hovs" tvalue="p2">价格</a>
+          <a href="#" class="hovx" tvalue="p3">价格</a> -->  
         </div>
       </div>
       <form action="rentHouseDetail.do">
@@ -1101,12 +1102,14 @@
       	int st = (Integer)s.getAttribute("st");
       	int ed = Math.min(st + 5, list.size());
       	List<String> picUrl = (List<String>)s.getAttribute("rentHousePicList");
+      	if(picUrl!=null&&picUrl.size()!=0)
+      	{
       	for(int iter = st; iter < ed; iter++) {
       		RentHouse i = list.get(iter);
       		
       	%>
       	<li>
-          <a onclick="clickArea4('<% out.print(list.get(iter).getRentHouseId()); %>');" href=${pageContext.request.contextPath}/rentHouseDetail.do class="data_link" target="_blank"></a>
+          <a onclick="clickArea4('<% out.print(list.get(iter).getRentHouseId()); %>');" href=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>rentHouseDetail.do class="data_link" target="_blank"></a>
           <div class="mor_img">
             <a href="#" target="_blank" onerror="this.src='#'" alt="" title="">
               <img src=<%=picUrl.get(iter) %>>
@@ -1123,12 +1126,13 @@
             	<!--沙坪坝区沙正街 电力小区 3房130平米3000元/月-->
             </h3>
             <p class="dot">
+             
             	<%
             		out.print(i.getCommunityName()+"小区|");
-            		if (i.getRentHouseBuildTime() != null)
-            			out.print(sdf.format(i.getRentHouseBuildTime())+"年建");
+            		
             	%>
-              <!--  电力小区｜1997年建｜中装<br>
+            	<!--
+               电力小区｜1997年建｜中装<br>
               		商圈：沙正街｜-->
               <em>
               	<%
@@ -1165,22 +1169,26 @@
             3室2厅
           </div>
         </li>
-        <%}%>
+        <%}}%>
         	
       </ul>
       </form>
      <div id="pagination" class="pagination simple-pagination">
         <div class="lightbox">
+          <%if(st!=0){ %>
           <strong class="active">
-             <a href=${pageContext.request.contextPath}/prePage.do style="border: 0px;">
+             <a href=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>prePage.do style="border: 0px;">
             <span class="sel prev">上一页</span>
             </a>
           </strong>
+          <%} %>
+          <%if(ed<list.size()){ %>
           <strong class="active">
-            <a href=${pageContext.request.contextPath}/nextPage.do style="border: 0px;">
+            <a href=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>nextPage.do style="border: 0px;">
             <span class="sel prev">下一页</span>
             </a>
           </strong>
+          <%} %>
         </div>
       </div>
     </div>

@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
   <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href=${pageContext.request.contextPath}/jsp/css/login.css>
+  <link rel="stylesheet" href=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/css/login.css>
 <style>
   .gotoIndex{
     position: absolute;
@@ -19,7 +19,7 @@
     text-decoration: none;
   }
   .login-body{
-    background: url(${pageContext.request.contextPath}/jsp/images/login/bg-pixiu.png) no-repeat;
+    background: url(<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/images/login/bg-pixiu.png) no-repeat;
     background-size: 100% 100%;
     width: 383px;
     height: 383px;
@@ -30,7 +30,7 @@
   }
   .login-wrap {
 
-    background:url(${pageContext.request.contextPath}/jsp/images/register/bg.jpg);
+    background:url(<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/images/register/bg.jpg);
     overflow: hidden;
     width: 100%;
     height: 100%;
@@ -66,7 +66,7 @@
         return time.getTime();
     }
     function reloadValidateCode(){
-        $("#captcha_img").attr("src", "${pageContext.request.contextPath}/validateCode.do?t=" + genTimestamp());
+        $("#captcha_img").attr("src", "<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>validateCode.do?t=" + genTimestamp());
     }
 </script>
 </head>
@@ -77,12 +77,11 @@
     <div class="row clearfix">
 
       <div class="col-md-2 column">
-      <p style="color: white; font-size: 25px;font-weight: bold">  &nbsp &nbsp Easy</p>
-      <p style="color:white;font-size: 25px;font-weight: bold"> &nbsp Housing</p>
+      <p style="color: white; font-size: 25px;font-weight: bold">EasyHousing</p>
       </div>
 
       <div class="col-md-2 col-md-offset-8 column">
-        <a href=${pageContext.request.contextPath}/jsp/html/homepage.jsp class="gotoIndex"style="padding-top: 25px;padding-right:20px;font-size: 15px;font-weight: 100">
+        <a href=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/homepage.jsp class="gotoIndex"style="padding-top: 25px;padding-right:20px;font-size: 15px;font-weight: 100">
           <font color="white">返回EasyHousing首页  <span class="glyphicon glyphicon-arrow-right"></span> </font>
         </a>
       </div>
@@ -96,7 +95,7 @@
     <div class="col-md-12 column">
       <br>
       <div class="col-md-4 column col-md-offset-7">
-        <a href=${pageContext.request.contextPath}/jsp/html/logIn.jsp >
+        <a href=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/logIn.jsp >
           <font color="white">已有账号？ </font>
         </a>
       </div>
@@ -116,7 +115,7 @@
 
 
 
-              <form action=${pageContext.request.contextPath}/register.do class="form-horizontal col-md-12 " id="register_form" method="post">
+              <form action=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>register.do class="form-horizontal col-md-12 " id="register_form" method="post">
                 <br><br>
                 <div class="form-group">
 
@@ -165,7 +164,7 @@
                   </div>
                   <label id="x" class="control-label col-md-2" style="padding-top: 0px;">
                     <a class="btn btn-default" title="换一个" onclick="javascript:reloadValidateCode();">
-                    	<img id="captcha_img" src=${pageContext.request.contextPath}/validateCode.do alt="验证码">
+                    	<img id="captcha_img" src=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>validateCode.do alt="验证码">
                     </a>
                   </label>
                 </div>

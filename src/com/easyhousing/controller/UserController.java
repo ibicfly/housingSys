@@ -125,8 +125,8 @@ public class UserController {
 			return modelAndView;
 		}
 		
-		if(username == null || username.length() < 5) {
-			modelAndView.addObject("failuremessage", "用户名至少为五位！");
+		if(username == null || username.length() < 3) {
+			modelAndView.addObject("failuremessage", "用户名至少为三位！");
 			modelAndView.setViewName("register");
 			return modelAndView;
 		}
@@ -143,13 +143,19 @@ public class UserController {
 			return modelAndView;
 		}
 		
+		if(userPassword.length() < 6) {
+			modelAndView.addObject("failuremessage", "密码至少为六位");
+			modelAndView.setViewName("register");
+			return modelAndView;
+		}
+		
 		boolean ok = true;
 		for(int i = 0; i < username.length(); i++) {
 			if(username.charAt(i) >= 'a' && username.charAt(i) <= 'z') continue;
 			if(username.charAt(i) >= 'A' && username.charAt(i) <= 'Z') continue;
 			if(username.charAt(i) >= '0' && username.charAt(i) <= '9') continue;
 			ok = false; break;
-		}
+		}//用正则最快
 		if(!ok) {
 			modelAndView.addObject("failuremessage", "密码只由大小字母及数字组成！");
 			modelAndView.setViewName("register");
@@ -160,9 +166,16 @@ public class UserController {
 		nowu.setUsername(u.getUsername());
 		nowu.setUserPassword(u.getUserPassword());
 		nowu.setUserPhoto("http://oxnvfyqo7.bkt.clouddn.com/defaultPhoto.png"); // 初始默认用户头像为默认头像
-		
 		User user = userService.login(nowu);
 		if (user == null) {
+			if(nowu.getName()==null||"".equals(nowu.getName()))
+				nowu.setName("");
+			if(nowu.getUserEmail()==null||"".equals(nowu.getUserEmail()))
+				nowu.setUserEmail("");			
+			if(nowu.getUserSex()==null||"".equals(nowu.getUserSex()))
+				nowu.setUserSex("");
+			if(nowu.getUserPhoneNumber()==null||"".equals(nowu.getUserPhoneNumber()))
+				nowu.setUserPhoneNumber("");
 			userService.insertUser(nowu);
 			modelAndView.addObject("message", "注册成功！");
 			modelAndView.setViewName("logIn");
@@ -191,16 +204,28 @@ public class UserController {
 		List<Application> rentHouseApplication = new ArrayList<>();
 		for (RentHouse_Characteristics i: rentHouse_Characteristics) {
 			RentHouse tmp = rentHouseDao.selectRentHouseById(i.getRentHouseId());
-			Application in = new Application();
-			in.date = tmp.getRentHousePublishTime();
-			in.address = tmp.getRentHouseAddress();
-			in.houseId = tmp.getRentHouseId();
-			in.phone = user.getUserPhoneNumber();
-			in.hall = tmp.getRentHouseHall();
-			in.room = tmp.getRentHouseRoom();
-			in.toilet = tmp.getRentHouseToilet();
-			in.price = tmp.getRentHousePrice();
-			rentHouseApplication.add(in);
+			if(tmp!=null)
+			{
+				Application in = new Application();
+				if(tmp.getRentHousePublishTime()!=null&&!"".equals(tmp.getRentHousePublishTime()))
+				{
+					in.date = tmp.getRentHousePublishTime();
+				}
+				if(tmp.getRentHouseAddress()!=null&&!"".equals(tmp.getRentHouseAddress()))
+				{
+					in.address = tmp.getRentHouseAddress();
+				}
+				in.houseId = tmp.getRentHouseId();
+				if(user.getUserPhoneNumber()!=null&&!"".equals(user.getUserPhoneNumber()))
+				{
+					in.phone = user.getUserPhoneNumber();
+				}
+				in.hall = tmp.getRentHouseHall();
+				in.room = tmp.getRentHouseRoom();
+				in.toilet = tmp.getRentHouseToilet();
+				in.price = tmp.getRentHousePrice();
+				rentHouseApplication.add(in);
+			}
 		}
 		s.setAttribute("rentHouseApplication", rentHouseApplication);
 		
@@ -227,14 +252,26 @@ public class UserController {
 	
 	// 委托房屋发布模块
 	@RequestMapping(value="sendRentHouse.do", method={RequestMethod.GET,RequestMethod.POST})
-	public ModelAndView sendRentHouse(HttpServletRequest request, RentHouse u) throws IllegalStateException, IOException {
+	public ModelAndView sendRentHouse(HttpServletRequest request, RentHouse u) throws Exception {
 		HttpSession s = request.getSession();
 		ModelAndView modelAndView = new ModelAndView();
 		User user = (User) s.getAttribute("user");
 		modelAndView.setViewName("/MyHome/myHouse");
 		modelAndView.addObject("rentMessage", "委托成功。");
 		try {
+			u.setRentHouseBuildTime(new Date());
 			u.setRentHousePublishTime(new Date());
+			if(u.getRentHouseFloor()>8)
+			{
+				u.setRentHouseFloorAttribute("高楼层");
+			}else if(u.getRentHouseFloor()==8)
+			{
+				u.setRentHouseFloorAttribute("中楼层");
+			}else if(u.getRentHouseFloor()>=0)
+			{
+				u.setRentHouseFloorAttribute("低楼层");
+			}
+			u.setRentHouseSubway("天堂地铁");
 			u.setRentHouseAddress(u.getRentHouseProvince()+"市"+u.getRentHouseRegion()+u.getCommunityName()+u.getRentHouseUnitNumber());
 			rentHouseDao.insertRentHouse(u);
 			RentHouse_Characteristics tmp = new RentHouse_Characteristics();
@@ -245,22 +282,47 @@ public class UserController {
 			List<RentHouse_Characteristics> rentHouse_Characteristics = rentHouse_CharacteristicsDao.selectAllByUserId(user.getUserId());
 			List<Application> rentHouseApplication = new ArrayList<>();
 			for (RentHouse_Characteristics i: rentHouse_Characteristics) {
-				RentHouse tt = rentHouseDao.selectRentHouseById(i.getRentHouseId());
-				Application in = new Application();
-				in.date = tt.getRentHousePublishTime();
-				in.address = tt.getRentHouseAddress();
-				in.houseId = tt.getRentHouseId();
-				in.phone = user.getUserPhoneNumber();
-				in.hall = tt.getRentHouseHall();
-				in.room = tt.getRentHouseRoom();
-				in.toilet = tt.getRentHouseToilet();
-				in.price = tt.getRentHousePrice();
-				rentHouseApplication.add(in);
+				if(i!=null)
+				{
+					RentHouse tt = rentHouseDao.selectRentHouseById(i.getRentHouseId());
+					Application in = new Application();
+					in.date = new Date();
+					if(tt.getRentHouseAddress()!=null)
+					{
+						in.address = tt.getRentHouseAddress();
+					}
+					if((Integer)tt.getRentHouseId()!=null)
+					{
+						in.houseId = tt.getRentHouseId();
+					}
+					if(user.getUserPhoneNumber()!=null)
+					{
+						in.phone = user.getUserPhoneNumber();
+					}
+					if((Integer)tt.getRentHouseHall()!=null)
+					{
+						in.hall = tt.getRentHouseHall();
+					}
+					if((Integer)tt.getRentHouseRoom()!=null)
+					{
+						in.room = tt.getRentHouseRoom();
+					}
+					if((Integer)tt.getRentHouseToilet()!=null)
+					{
+						in.toilet = tt.getRentHouseToilet();
+					}
+					if((Integer)tt.getRentHousePrice()!=null)
+					{
+						in.price = tt.getRentHousePrice();
+					}
+					rentHouseApplication.add(in);
+				}
 			}
 			s.setAttribute("rentHouseApplication", rentHouseApplication);
 		} catch (Exception e) {
 			e.printStackTrace();
-			modelAndView.addObject("rentMessage", "委托失败。");
+//			throw new Exception(e);
+//			modelAndView.addObject("rentMessage", "委托失败。");
 		}
 		
 		try {

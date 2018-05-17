@@ -166,7 +166,7 @@ List<BuildingInfo> list = (List<BuildingInfo>)s.getAttribute("buildingList");
       text-align: center;
       height: 33px;
       line-height: 33px;
-      background: url(${pageContext.request.contextPath}/jsp/images/rentWindow/djimg23.png) no-repeat right center;
+      background: url(<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/images/rentWindow/djimg23.png) no-repeat right center;
       display: block;
       white-space: nowrap;
       text-overflow: ellipsis;
@@ -240,7 +240,7 @@ List<BuildingInfo> list = (List<BuildingInfo>)s.getAttribute("buildingList");
       height: 33px;
       float: right;
       font-size: 0;
-      background: url(${pageContext.request.contextPath}/jsp/images/rentWindow/djimg24.png) no-repeat center center;
+      background: url(<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/images/rentWindow/djimg24.png) no-repeat center center;
       border: none;
     }
     input[type="button"], input[type="file"], input[type="submit"], input[type="reset"] {
@@ -288,7 +288,7 @@ List<BuildingInfo> list = (List<BuildingInfo>)s.getAttribute("buildingList");
     }
     .subsh_r .al span {
       padding-left: 15px;
-      background: url(${pageContext.request.contextPath}/jsp/images/rentWindow/djimg25.png) no-repeat left center;
+      background: url(<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/images/rentWindow/djimg25.png) no-repeat left center;
 
 
     }
@@ -325,7 +325,7 @@ List<BuildingInfo> list = (List<BuildingInfo>)s.getAttribute("buildingList");
       line-height: 32px;
       color: #666;
       padding-left: 15px;
-      background: url(${pageContext.request.contextPath}/jsp/images/rentWindow/djimg25.png) no-repeat left center;
+      background: url(<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/images/rentWindow/djimg25.png) no-repeat left center;
       overflow: hidden;
     }
     .current a {
@@ -358,7 +358,7 @@ List<BuildingInfo> list = (List<BuildingInfo>)s.getAttribute("buildingList");
       cursor: pointer;
     }
     .nv_list .nvtit li.active span {
-      background: url(${pageContext.request.contextPath}/jsp/images/rentWindow/ppimg15-1.png) no-repeat center center;
+      background: url(<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/images/rentWindow/ppimg15-1.png) no-repeat center center;
       display: none;
     }
     .nv_list .nvtit li span {
@@ -366,7 +366,7 @@ List<BuildingInfo> list = (List<BuildingInfo>)s.getAttribute("buildingList");
       height: 40px;
       vertical-align: middle;
       display: inline-block;
-      background: url(${pageContext.request.contextPath}/jsp/images/rentWindow/ppimg15.png) no-repeat center center;
+      background: url(<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/images/rentWindow/ppimg15.png) no-repeat center center;
       margin-left: 2px;
       font-size: 0;
     }
@@ -465,7 +465,7 @@ List<BuildingInfo> list = (List<BuildingInfo>)s.getAttribute("buildingList");
       outline: none;
     }
     .list_tit .hovs {
-      background: url(${pageContext.request.contextPath}/jsp/images/rentWindow/djimg80.png) no-repeat right center;
+      background: url(<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/images/rentWindow/djimg80.png) no-repeat right center;
     }
     .list_tit .hovs, .list_tit .hovx {
       padding-right: 10px;
@@ -479,7 +479,7 @@ List<BuildingInfo> list = (List<BuildingInfo>)s.getAttribute("buildingList");
       outline: none;
     }
     .list_tit .hovx {
-      background: url(${pageContext.request.contextPath}/jsp/images/rentWindow/djimg81.png) no-repeat right center;
+      background: url(<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/images/rentWindow/djimg81.png) no-repeat right center;
     }
     .list_tit .hovs, .list_tit .hovx {
       padding-right: 10px;
@@ -587,7 +587,7 @@ List<BuildingInfo> list = (List<BuildingInfo>)s.getAttribute("buildingList");
     .mor_list li .mor_txt .dor {
       height: 24px;
       padding-left: 15px;
-      background: url(${pageContext.request.contextPath}/jsp/images/rentWindow/djimg25.png) no-repeat left center;
+      background: url(<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/images/rentWindow/djimg25.png) no-repeat left center;
       white-space: nowrap;
       text-overflow: ellipsis;
     }
@@ -715,7 +715,7 @@ List<BuildingInfo> list = (List<BuildingInfo>)s.getAttribute("buildingList");
 		$.ajax({
 			type : "GET",
 			async : false,
-			url : "${pageContext.request.contextPath}/buildingSelectAjax.do"
+			url : "<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>buildingSelectAjax.do"
 		})
 	}
 
@@ -778,8 +778,8 @@ List<BuildingInfo> list = (List<BuildingInfo>)s.getAttribute("buildingList");
   </div>
     <div class="headerbg listhead">
       <div class="header">
-        <a href=${pageContext.request.contextPath}/jsp/html/homepage.jsp>
-          <img src=${pageContext.request.contextPath}/jsp/images/rentWindow/logo1.png class="logo" >
+        <a href=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/homepage.jsp>
+          <img src=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/images/rentWindow/logo1.png class="logo" >
         </a>
         <div class="nav1 navml">
         <span>
@@ -806,16 +806,16 @@ List<BuildingInfo> list = (List<BuildingInfo>)s.getAttribute("buildingList");
 	  </div>
 	        <div class="nav navml">
 	          <span>
-	            <a href=${pageContext.request.contextPath}/jsp/html/homepage.jsp class="href">首页</a>&nbsp&nbsp&nbsp
+	            <a href=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/homepage.jsp class="href">首页</a>&nbsp&nbsp&nbsp
 	          </span>
 	<!--      <span>
-	            <a href=${pageContext.request.contextPath}/jsp/html/homepage.jsp class="href">二手房</a>&nbsp&nbsp&nbsp
+	            <a href=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/homepage.jsp class="href">二手房</a>&nbsp&nbsp&nbsp
 	          </span> -->
 	          <span>
-	            <a href=${pageContext.request.contextPath}/buildingSelect.do class="href" style="color: #8fcafe">新房</a>&nbsp&nbsp&nbsp
+	            <a href=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>buildingSelect.do class="href" style="color: #8fcafe">新房</a>&nbsp&nbsp&nbsp
 	          </span>
 	          <span>
-	            <a href=${pageContext.request.contextPath}/rentHouseSelect.do class="href">租房</a>
+	            <a href=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>rentHouseSelect.do class="href">租房</a>
 	          </span>
 	
 	        </div>
@@ -827,7 +827,7 @@ List<BuildingInfo> list = (List<BuildingInfo>)s.getAttribute("buildingList");
   <div class="wsrrent">
     <div class="container">
       <div class="subsh subsher">
-       <form action=${pageContext.request.contextPath}/globalSearch.do method="post" id="searchForm">
+       <form action=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>globalSearch.do method="post" id="searchForm">
           <div class="subsh_l fl">
             <div class="sd_sel fl">
             <input hidden=true id="keyword" value="新房" name="which"></input>
@@ -837,7 +837,7 @@ List<BuildingInfo> list = (List<BuildingInfo>)s.getAttribute("buildingList");
 					<li class="sel">租房</li>
 				</ul>
             </div>
-            <input type="text" name="content" placeholder="请输入小区、地铁、区域开始找房" class="text" id="autoSearchText" maxlength="20" autocomplete="off">
+            <input type="text" name="content" placeholder="请输入小区、区域开始找房" class="text" id="autoSearchText" maxlength="20" autocomplete="off">
             <div id="autoSearchItem" style="height: 285px; visibility: hidden;">
               <ul class="menu_v"></ul>
             </div>
@@ -847,7 +847,7 @@ List<BuildingInfo> list = (List<BuildingInfo>)s.getAttribute("buildingList");
           </form>
           <!-- 
         <div class="subsh_r fr">
-          <a href=${pageContext.request.contextPath}/mapSearch.do class="al">
+          <a href=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>mapSearch.do class="al">
               <span>
                 <b>地图找房</b>
                 <i>地图</i>
@@ -860,10 +860,10 @@ List<BuildingInfo> list = (List<BuildingInfo>)s.getAttribute("buildingList");
   <div class="container bodywhitew">
     <div class="current">
       当前位置：
-      <a href="${pageContext.request.contextPath}/jsp/html/homepage.jsp" >易购房</a>
+      <a href="<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/homepage.jsp" >易购房</a>
       >
       <span>
-          <a href="${pageContext.request.contextPath}/buildingSelect.do" >新房</a>
+          <a href="<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>buildingSelect.do" >新房</a>
         </span>
     </div>
     <div class="nv_list">
@@ -1032,22 +1032,6 @@ List<BuildingInfo> list = (List<BuildingInfo>)s.getAttribute("buildingList");
               %>" id="20" onclick="clickArea2(this.id, '200', '1000000000');">200万以上</a>
 
           </li>
-          <li class="Switch">
-            <strong>特色:</strong>
-            <a class="mt on" tvalue="bx">不限</a>
-            <a class="qy" tvalue="yihaoxian">低密度</a>
-            <a class="qy" tvalue="erhaoxian">花园</a>
-            <a class="qy" tvalue="sanhaoxian">洋房</a>
-            <a class="qy" tvalue="liuhaoxian">车位充足</a>
-          </li>
-          <li class="Switch">
-            <strong>类型:</strong>
-            <a class="mt on" tvalue="bx">不限</a>
-            <a class="qy" tvalue="yihaoxian">住宅</a>
-            <a class="qy" tvalue="erhaoxian">别墅</a>
-            <a class="qy" tvalue="sanhaoxian">写字楼</a>
-            <a class="qy" tvalue="liuhaoxian">商铺</a>
-          </li>
         </ul>
       </div>
     </div>
@@ -1058,10 +1042,10 @@ List<BuildingInfo> list = (List<BuildingInfo>)s.getAttribute("buildingList");
         <em>套符合您的要求</em>
       </div>
       <div class="cenr fr">
-        <span>排序:</span>
+        <!--<span>排序:</span>
         <a href="#" class="first active" tvalue="p1">默认</a>
-        <a href="#" class="hovs" tvalue="p2">价格</a>
-        <a href="#" class="hovx" tvalue="p3">价格</a>
+         <a href="#" class="hovs" tvalue="p2">价格</a>
+        <a href="#" class="hovx" tvalue="p3">价格</a> -->
       </div>
     </div>
     <ul class="mor_list">
@@ -1073,7 +1057,7 @@ List<BuildingInfo> list = (List<BuildingInfo>)s.getAttribute("buildingList");
     		BuildingInfo i = list.get(iter);
     		%>
     		<li>
-    		<a onclick="clickArea4('<%=i.getBuildingId() %>');" href=${pageContext.request.contextPath}/buildingDetail.do class="data_link" target="_blank"></a>
+    		<a onclick="clickArea4('<%=i.getBuildingId() %>');" href=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>buildingDetail.do class="data_link" target="_blank"></a>
 	        <div class="mor_img">
 	          <a href="#" target="_blank" onerror="this.src='#'" alt="绿地城" title="绿地城">
 	            <img src=<%=picUrl.get(iter) %>>
@@ -1102,7 +1086,7 @@ List<BuildingInfo> list = (List<BuildingInfo>)s.getAttribute("buildingList");
         <a href="#" class="data_link" target="_blank"></a>
         <div class="mor_img">
           <a href="#" target="_blank" onerror="this.src='#'" alt="绿地城" title="绿地城">
-            <img src="${pageContext.request.contextPath}/jsp/images/newhouse/lvdic.jpg">
+            <img src="<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/images/newhouse/lvdic.jpg">
           </a>
         </div>
         <div class="mor_txt">
@@ -1126,16 +1110,21 @@ List<BuildingInfo> list = (List<BuildingInfo>)s.getAttribute("buildingList");
     </ul>
     <div id="pagination" class="pagination simple-pagination">
       <div class="lightbox">
+         <%if(st!=0){ %>
         <strong class="active">
-        <a href=${pageContext.request.contextPath}/buildingPrePage.do style="border: 0px;">
+        <a href=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>buildingPrePage.do style="border: 0px;">
           <span class="sel prev">上一页</span>
         </a>
         </strong>
+        <%} %>
+        
+        <%if(ed<list.size()){ %>
         <strong class="active">
-          <a href=${pageContext.request.contextPath}/buildingNextPage.do style="border: 0px;">
+          <a href=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>buildingNextPage.do style="border: 0px;">
             <span class="sel prev">下一页</span>
           </a>
         </strong>
+        <%} %>
       </div>
     </div>
   </div>

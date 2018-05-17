@@ -36,15 +36,57 @@ public class AdminRentController {
 	
 	//增加租房信息
 	@RequestMapping(value="adminAddRentHouse.do", method={RequestMethod.GET,RequestMethod.POST})
-	public ModelAndView adminAddRentHouse(@RequestParam(value ="inputPublishTime1") @DateTimeFormat(pattern="yyyy-MM-dd") Date inputPublishTime,HttpServletRequest request, RentHouse rentHouse) {
+	public ModelAndView adminAddRentHouse(@RequestParam(value ="inputPublishTime1") 
+	@DateTimeFormat(pattern="yyyy-MM-dd") Date inputPublishTime,HttpServletRequest request, RentHouse rentHouse) {
 		
 		ModelAndView modelAndView = new ModelAndView();
 		HttpSession session = request.getSession();
 		
 		//设置表单时间
-		rentHouse.setRentHousePublishTime(inputPublishTime);
-		System.out.println(inputPublishTime);
-		
+		rentHouse.setRentHousePublishTime(new Date());
+		System.out.println(new Date());
+		if(rentHouse.getCommunityName()==null&&"".equals(rentHouse.getCommunityName()))
+		{
+			rentHouse.setCommunityName("无");
+		}
+		if(rentHouse.getRentHouseAddress()==null||"".equals(rentHouse.getRentHouseAddress()))
+		{
+			rentHouse.setRentHouseAddress("无");
+		}
+		if(rentHouse.getRentHouseBuildTime()==null)
+		{
+			rentHouse.setRentHouseBuildTime(new Date());
+		}
+		if(rentHouse.getRentHouseFloorAttribute()==null&&"".equals(rentHouse.getRentHouseFloorAttribute()))
+		{
+			rentHouse.setRentHouseFloorAttribute("无");
+		}
+		if(rentHouse.getRentHouseProvince()==null&&"".equals(rentHouse.getRentHouseProvince()))
+		{
+			rentHouse.setRentHouseProvince("无");
+		}
+		if(rentHouse.getRentHousePublishTime()==null)
+		{
+			rentHouse.setRentHousePublishTime(new Date());
+		}
+		if(rentHouse.getRentHouseRegion()==null&&"".equals(rentHouse.getRentHouseRegion()))
+		{
+			rentHouse.setRentHouseRegion("无");
+		}
+		if(rentHouse.getRentHouseSubway()==null&&"".equals(rentHouse.getRentHouseSubway()))
+		{
+			rentHouse.setRentHouseSubway("无");
+		}
+		if(rentHouse.getRentHouseToward()==null&&"".equals(rentHouse.getRentHouseToward()))
+		{
+			rentHouse.setRentHouseToward("无");
+		}
+		if(rentHouse.getRentHouseUnitNumber()==null&&"".equals(rentHouse.getRentHouseUnitNumber()))
+		{
+			rentHouse.setRentHouseUnitNumber("无");
+		}
+		rentHouse.setRentHouseFloorAttribute("低楼层");
+
 		rentHouseDao.insertRentHouse(rentHouse);
 		
 		List<RentHouse> rentHouseList = rentHouseDao.selectAllRentHouse();

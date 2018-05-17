@@ -11,40 +11,38 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-   <link rel="stylesheet" href="css/dataTables.bootstrap.min.css">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/codemirror.css">
-  <!--<link rel="stylesheet" href="css/ace.min.css">-->
-  <link rel="stylesheet" href="css/font-awesome.min.cs">
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+   <link rel="stylesheet" href="../css/dataTables.bootstrap.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/codemirror.css">
+  <!--<link rel="stylesheet" href="../css/ace.min.css">-->
 
-  <link rel="stylesheet" href="css/ace-rtl.min.css">
-  <link rel="stylesheet" href="css/ace-skins.min.css">
-  <link rel="stylesheet" href="css/login.css">
-  <link rel="stylesheet" href="css/layer.css">
-
+  <link rel="stylesheet" href="../css/ace-rtl.min.css">
+  <link rel="stylesheet" href="../css/ace-skins.min.css">
+  <link rel="stylesheet" href="../css/login.css">
+  <link rel="stylesheet" href="../css/layer.css">
 
 
-  <script src="js/typeahead-bs2.min.js"></script>
-  <script src="js/H-ui.js"></script>
-  <script src="js/H-ui.admin.js"></script>
-  <script src="js/layer.js"></script>
-  <link rel="stylesheet" href="css/layer.css">
+
+  <script src="../js/typeahead-bs2.min.js"></script>
+  <script src="../js/H-ui.js"></script>
+  <script src="../js/H-ui.admin.js"></script>
+  <script src="../js/layer.js"></script>
+  <link rel="stylesheet" href="../css/layer.css">
   <script src="js/layate.js"></script>
-  <link rel="stylesheet" href="css/laydate.css">
-  <link rel="stylesheet" href="css/laydate(1).css">
+  <link rel="stylesheet" href="../css/laydate.css">
+  <link rel="stylesheet" href="../css/laydate(1).css">
 
 
-  <link rel="stylesheet" href="css/font-awesome.min.css">
   <link href="./sitelogo/sitelogo.css" rel="stylesheet">
   <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
   <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
   <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script src="js/jquery.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/jquery.dataTables.min.js"></script>
-  <script src="js/jquery.dataTables.bootstrap.js"></script>
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+  <script src="../js/jquery.dataTables.min.js"></script>
+  <script src="../js/jquery.dataTables.bootstrap.js"></script>
   <style>
     .form-control {
       display: block;
@@ -1001,7 +999,7 @@
               <span class="icon-bar"></span>
             </button>
 
-            <a class="navbar-brand" href=${pageContext.request.contextPath}/jsp/html/homepage.jsp>Easyhousing</a>
+            <a class="navbar-brand" href=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/homepage.jsp>Easyhousing</a>
 
           </div>
 
@@ -1011,7 +1009,7 @@
           <div class="collapse navbar-collapse nav-justified" id="bs-example-navbar-collapse-1">
             <div class="col-md-offset-3 column">
               <ul class="nav navbar-nav">
-                <li style="margin-right:150px;margin-left:50px;"><a href=${pageContext.request.contextPath}/jsp/html/homepage.jsp>主页<span
+                <li style="margin-right:150px;margin-left:50px;"><a href=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/homepage.jsp>主页<span
                   class="sr-only">(current)</span></a></li>
 
                 <li data-toggle="modal" data-target="#about"><a href="#">关于</a></li>
@@ -1020,7 +1018,7 @@
 
 
             <ul class="nav navbar-nav navbar-right">
-              <li data-toggle="modal" data-target="#signin-signup-tab" id="signin-button"><a href=${pageContext.request.contextPath}/logout.do>注销</a></li>
+              <li data-toggle="modal" data-target="#signin-signup-tab" id="signin-button"><a href=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>logout.do>注销</a></li>
 
             </ul>
 
@@ -1038,12 +1036,12 @@
         <ul class="nav nav-pills nav-stacked">
           <li role="presentation"><img class="img-responsive name img-rounded"></li>
 
-          <li role="presentation"><a href=${pageContext.request.contextPath}/jsp/html/MyHome/userCenter.jsp>编辑资料</a></li>
-          <li role="presentation"><a href=${pageContext.request.contextPath}/jsp/html/MyHome/collection.jsp>我的收藏</a></li>
-          <li role="presentation"><a href=${pageContext.request.contextPath}/jsp/html/MyHome/myHouse.jsp>我的房子</a></li>
-          <li role="presentation"><a href=${pageContext.request.contextPath}/jsp/html/MyHome/comment.jsp>我的评论</a></li>
-          <!--<li role="presentation"><a href=${pageContext.request.contextPath}/jsp/html/MyHome/application.jsp>我的申请</a></li>
-          <li role="presentation" class="active"><a href=${pageContext.request.contextPath}/jsp/html/MyHome/dealHistory.jsp>成交记录</a></li>-->
+          <li role="presentation"><a href=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/MyHome/userCenter.jsp>编辑资料</a></li>
+          <li role="presentation"><a href=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/MyHome/collection.jsp>我的收藏</a></li>
+          <li role="presentation"><a href=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/MyHome/myHouse.jsp>我的房子</a></li>
+          <li role="presentation"><a href=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/MyHome/comment.jsp>我的评论</a></li>
+          <!--<li role="presentation"><a href=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/MyHome/application.jsp>我的申请</a></li>
+          <li role="presentation" class="active"><a href=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/MyHome/dealHistory.jsp>成交记录</a></li>-->
         </ul>
       </div>
 <div class="main-right fr" style="width: 1000px">

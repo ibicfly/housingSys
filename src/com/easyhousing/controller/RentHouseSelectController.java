@@ -207,7 +207,7 @@ public class RentHouseSelectController {
 		for (RentHouse i : list) {
 			List<String> t = rentHousePicDao.selectRentHousePicByRentHouseId(i.getRentHouseId());
 			if (t.size() == 0) {
-				rentHousePicList.add("");
+				rentHousePicList.add("http://oxnvfyqo7.bkt.clouddn.com/null.jpg");
 			}
 			else rentHousePicList.add(t.get(0));
 		}

@@ -25,12 +25,6 @@
 							gahref:'header_ershoufang_all'
                         },
                         {
-                            id : 'ditiefang',
-                            text : '地铁房',
-                            url : webhost + '/ditiefang',
-							gahref:'header_ershoufang_ditie'
-                        },
-                        {
                             id : 'ditu',
                             text : '地图找房',
                             url : webhost + '/ditu',

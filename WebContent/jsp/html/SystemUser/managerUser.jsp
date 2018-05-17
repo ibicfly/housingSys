@@ -13,24 +13,22 @@ List<User> userList = (List<User>)session.getAttribute("userList");
   <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
   <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href=${pageContext.request.contextPath}/jsp/html/SystemUser/css/bootstrap.min.css>
-  <link rel="stylesheet" href=${pageContext.request.contextPath}/jsp/html/SystemUser/css/dataTables.bootstrap.min.css>
-  <link rel="stylesheet" href=${pageContext.request.contextPath}/jsp/html/SystemUser/css/style.css>
-  <link rel="stylesheet" href=${pageContext.request.contextPath}/jsp/html/SystemUser/css/codemirror.css>
-  <link rel="stylesheet" href=${pageContext.request.contextPath}/jsp/html/SystemUser/css/ace.min.css>
-  <link rel="stylesheet" href=${pageContext.request.contextPath}/jsp/html/SystemUser/css/font-awesome.min.css>
-  <script src=${pageContext.request.contextPath}/jsp/html/SystemUser/js/jquery.min.js></script>
-  <script src=${pageContext.request.contextPath}/jsp/html/SystemUser/js/bootstrap.min.js></script>
-  <script src=${pageContext.request.contextPath}/jsp/html/SystemUser/js/typeahead-bs2.min.js></script>
-  <script src=${pageContext.request.contextPath}/jsp/html/SystemUser/js/jquery.dataTables.min.js></script>
-  <script src=${pageContext.request.contextPath}/jsp/html/SystemUser/js/jquery.dataTables.bootstrap.js></script>
-  <script src=${pageContext.request.contextPath}/jsp/html/SystemUser/js/H-ui.js></script>
-  <script src=${pageContext.request.contextPath}/jsp/html/SystemUser/js/H-ui.admin.js></script>
-  <script src=${pageContext.request.contextPath}/jsp/html/SystemUser/js/layer.js></script>
-  <link rel="stylesheet" href=${pageContext.request.contextPath}/jsp/html/SystemUser/css/layer.css>
-  <script src=${pageContext.request.contextPath}/jsp/html/SystemUser/js/laydate.js></script>
-  <link rel="stylesheet" href=${pageContext.request.contextPath}/jsp/html/SystemUser/css/laydate.css>
-  <link rel="stylesheet" href=${pageContext.request.contextPath}/jsp/html/SystemUser/css/laydate(1).css>
+  <link rel="stylesheet" href=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/SystemUser/css/bootstrap.min.css>
+  <link rel="stylesheet" href=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/SystemUser/css/dataTables.bootstrap.min.css>
+  <link rel="stylesheet" href=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/SystemUser/css/style.css>
+  <link rel="stylesheet" href=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/SystemUser/css/codemirror.css>
+  <link rel="stylesheet" href=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/SystemUser/css/ace.min.css>
+  <script src=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/SystemUser/js/bootstrap.min.js></script>
+  <script src=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/SystemUser/js/typeahead-bs2.min.js></script>
+  <script src=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/SystemUser/js/jquery.dataTables.min.js></script>
+  <script src=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/SystemUser/js/jquery.dataTables.bootstrap.js></script>
+  <script src=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/SystemUser/js/H-ui.js></script>
+  <script src=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/SystemUser/js/H-ui.admin.js></script>
+  <script src=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/SystemUser/js/layer.js></script>
+  <link rel="stylesheet" href=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/SystemUser/css/layer.css>
+  <script src=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/SystemUser/js/laydate.js></script>
+  <link rel="stylesheet" href=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/SystemUser/css/laydate.css>
+  <link rel="stylesheet" href=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/SystemUser/css/laydate(1).css>
 
   <style>
     .dataTable th.sorting_desc:after {
@@ -39,8 +37,8 @@ List<User> userList = (List<User>)session.getAttribute("userList");
       color: #307ecc;
     }
     </style>
-  <link rel="stylesheet" href=${pageContext.request.contextPath}/jsp/html/SystemUser/css/ace-rtl.min.css>
-  <link rel="stylesheet" href=${pageContext.request.contextPath}/jsp/html/SystemUser/css/ace-skins.min.css>
+  <link rel="stylesheet" href=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/SystemUser/css/ace-rtl.min.css>
+  <link rel="stylesheet" href=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/SystemUser/css/ace-skins.min.css>
 
 </head>
 <body>
@@ -48,7 +46,7 @@ List<User> userList = (List<User>)session.getAttribute("userList");
   <div class="page-content clearfix" style="display: inline-block">
     <div id="Member_Ratings">
       <div class="d_Confirm_Order_style">
-        <div class="search_style" style="display: block">
+        <!--  <div class="search_style" style="display: block">
           <div class="title_names">搜索查询</div>
           <ul class="search_content clearfix">
 
@@ -59,12 +57,12 @@ List<User> userList = (List<User>)session.getAttribute("userList");
               <button type="button" class="btn_search">查询</button>
             </li>
           </ul>
-        </div>
+        </div>-->
 
         <div class="border clearfix" style="display: block">
                <span class="l_f">
                 <a href="javascript:ovid()" id="member_add" class="btn btn-warning">添加用户</a>
-                <a class="btn btn-danger" onclick="deletePart();" href=${pageContext.request.contextPath}/managerUserinit.do>批量删除</a>
+                <a class="btn btn-danger" onclick="deletePart();" href=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>managerUserinit.do>批量删除</a>
                </span>
           <!--<span class="r_f">共：<b>2345</b>条</span>-->
         </div>
@@ -84,10 +82,10 @@ List<User> userList = (List<User>)session.getAttribute("userList");
                     colspan="1" aria-sort="descending" aria-label="ID: 升序排列" style="width: 90px;">ID
                 </th>
                 <th width="100" tabindex="0" aria-controls="sample-table" rowspan="1" colspan="1"
-                    aria-label="用户名" style="width: 80px;">姓名
+                    aria-label="用户名" style="width: 80px;">昵称
                 </th>
                 <th width="100" tabindex="0" aria-controls="sample-table" rowspan="1" colspan="1"
-                    aria-label="用户名" style="width: 80px;">用户名
+                    aria-label="用户名" style="width: 80px;">账户
                 </th>
                 <th width="80" tabindex="0" aria-controls="sample-table" rowspan="1" colspan="1"
                     aria-label="性别" style="width: 60px;">性别
@@ -171,10 +169,10 @@ List<User> userList = (List<User>)session.getAttribute("userList");
 
 
 <div class="add_menber" id="add_menber_style" style="display:none">
-  <form action=${pageContext.request.contextPath}/adminAddUser.do id="addUser" enctype="multipart/form-data" method="post">
+  <form action=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>adminAddUser.do id="addUser" enctype="multipart/form-data" method="post">
   <ul class=" page-content">
-    <li><label class="label_name">用&nbsp;&nbsp;户 &nbsp;名：</label><span class="add_name"><input value="" name="username" type="text"  class="text_add"/></span><div class="prompt r_f"></div></li>
-    <li><label class="label_name">真实姓名：</label><span class="add_name"><input name="name" type="text"  class="text_add"/></span><div class="prompt r_f"></div></li>
+    <li><label class="label_name">账&nbsp;户：</label><span class="add_name"><input value="" name="username" type="text"  class="text_add"/></span><div class="prompt r_f"></div></li>
+    <li><label class="label_name">昵称：</label><span class="add_name"><input name="name" type="text"  class="text_add"/></span><div class="prompt r_f"></div></li>
 
     <li><label class="label_name">密码：</label><span class="add_name"><input name="userPassword" type="password"  class="form-control"/></span><div class="prompt r_f"></div></li>
         <li>
@@ -208,10 +206,10 @@ List<User> userList = (List<User>)session.getAttribute("userList");
 </div>
 
 <div class="add_menber" id="update_menber_style" style="display:none">
-  <form action=${pageContext.request.contextPath}/adminUpdateUser.do id="updateUser" enctype="multipart/form-data" method="post">
+  <form action=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>adminUpdateUser.do id="updateUser" enctype="multipart/form-data" method="post">
   <ul class=" page-content">
-    <li><label class="label_name">用&nbsp;&nbsp;户 &nbsp;名：</label><span class="add_name"><input value="" name="username" type="text"  class="text_add"/></span><div class="prompt r_f"></div></li>
-    <li><label class="label_name">真实姓名：</label><span class="add_name"><input name="name" type="text"  class="text_add"/></span><div class="prompt r_f"></div></li>
+    <li><label class="label_name">账 &nbsp;户：</label><span class="add_name"><input value="" name="username" type="text"  class="text_add"/></span><div class="prompt r_f"></div></li>
+    <li><label class="label_name">昵称：</label><span class="add_name"><input name="name" type="text"  class="text_add"/></span><div class="prompt r_f"></div></li>
 
     <li><label class="label_name">密码：</label><span class="add_name"><input name="userPassword" type="password"  class="form-control"/></span><div class="prompt r_f"></div></li>
     <li>
@@ -401,7 +399,7 @@ List<User> userList = (List<User>)session.getAttribute("userList");
 		$.ajax({
 			type : "GET",
 			async : false,
-			url : "${pageContext.request.contextPath}/deleteUserAjax.do"
+			url : "<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>deleteUserAjax.do"
 		})
 	}
 
@@ -435,7 +433,7 @@ List<User> userList = (List<User>)session.getAttribute("userList");
 		$.ajax({
 			type : "GET",
 			async : false,
-			url : "${pageContext.request.contextPath}/deleteUserPartAjax.do"
+			url : "<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>deleteUserPartAjax.do"
 		})
 	}
 
@@ -448,11 +446,12 @@ List<User> userList = (List<User>)session.getAttribute("userList");
 				ids += chckBox[index].value + ".";
 			}
 		}
-		alert(ids);
+		//alert(ids);
 		setCookie("deletePart", ids, 365);
 		transpDelPart();
 	}
 </script>
+  <script src=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/SystemUser/js/jquery.min.js></script>
 
 </body>
 </html>

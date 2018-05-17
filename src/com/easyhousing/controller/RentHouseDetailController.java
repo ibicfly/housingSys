@@ -84,7 +84,6 @@ public class RentHouseDetailController {
 			System.out.println("ctbb");
 		}
 		else {
-			System.out.println("????");
 			for(String iString : rentHousePicList) {
 				System.out.println(iString);
 			}

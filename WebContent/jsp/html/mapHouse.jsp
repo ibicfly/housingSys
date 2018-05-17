@@ -69,7 +69,7 @@ for (int i = 0; i < mapRentHouseList.size(); ++i) {
         }
 
         .login-body {
-            background: url(${pageContext.request.contextPath}/jsp/images/login/bg-pixiu.png) no-repeat;
+            background: url(<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/images/login/bg-pixiu.png) no-repeat;
             background-size: 100% 100%;
             width: 383px;
             height: 383px;
@@ -81,7 +81,7 @@ for (int i = 0; i < mapRentHouseList.size(); ++i) {
 
         .login-wrap {
 
-            background: url(${pageContext.request.contextPath}/jsp/images/register/bg.jpg);
+            background: url(<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/images/register/bg.jpg);
             overflow: hidden;
             width: 100%;
             height: 100%;
@@ -259,7 +259,7 @@ for (int i = 0; i < mapRentHouseList.size(); ++i) {
       text-align: center;
       height: 33px;
       line-height: 33px;
-      background: url(${pageContext.request.contextPath}/jsp/images/rentWindow/djimg23.png) no-repeat right center;
+      background: url(<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/images/rentWindow/djimg23.png) no-repeat right center;
       display: block;
       white-space: nowrap;
       text-overflow: ellipsis;
@@ -333,7 +333,7 @@ for (int i = 0; i < mapRentHouseList.size(); ++i) {
       height: 33px;
       float: right;
       font-size: 0;
-      background: url(${pageContext.request.contextPath}/jsp/images/rentWindow/djimg24.png) no-repeat center center;
+      background: url(<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/images/rentWindow/djimg24.png) no-repeat center center;
       border: none;
     }
     input[type="button"], input[type="file"], input[type="submit"], input[type="reset"] {
@@ -388,7 +388,7 @@ for (int i = 0; i < mapRentHouseList.size(); ++i) {
     }
     .subsh_r .al span {
       padding-left: 15px;
-      background: url(${pageContext.request.contextPath}/jsp/images/rentWindow/djimg25.png) no-repeat left center;
+      background: url(<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/images/rentWindow/djimg25.png) no-repeat left center;
 
     }
     .subsh_r a span {
@@ -440,7 +440,7 @@ for (int i = 0; i < mapRentHouseList.size(); ++i) {
   <div class="headerbg listhead">
     <div class="header">
       <a href="#">
-        <img src="${pageContext.request.contextPath}/jsp/images/rentWindow/logo1.png" class="logo" >
+        <img src="<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/images/rentWindow/logo1.png" class="logo" >
       </a>
       <div class="nav1 navml">
            <span>
@@ -467,16 +467,16 @@ for (int i = 0; i < mapRentHouseList.size(); ++i) {
 	  </div>
       <div class="nav navml">
 	          <span>
-	            <a href=${pageContext.request.contextPath}/jsp/html/homepage.jsp class="href">首页</a>&nbsp&nbsp&nbsp
+	            <a href=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/homepage.jsp class="href">首页</a>&nbsp&nbsp&nbsp
 	          </span>
 <!-- 	          <span>
-	            <a href=${pageContext.request.contextPath}/jsp/html/homepage.jsp class="href">二手房</a>&nbsp&nbsp&nbsp
+	            <a href=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>jsp/html/homepage.jsp class="href">二手房</a>&nbsp&nbsp&nbsp
 	          </span> -->
 	          <span>
-	            <a href=${pageContext.request.contextPath}/buildingSelect.do class="href" style="color: #8fcafe">新房</a>&nbsp&nbsp&nbsp
+	            <a href=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>buildingSelect.do class="href" style="color: #8fcafe">新房</a>&nbsp&nbsp&nbsp
 	          </span>
 	          <span>
-	            <a href=${pageContext.request.contextPath}/rentHouseSelect.do class="href">租房</a>
+	            <a href=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>rentHouseSelect.do class="href">租房</a>
 	          </span>
 
       </div>
@@ -693,7 +693,7 @@ for (int i = 0; i < mapRentHouseList.size(); ++i) {
 		function createInfoWindow(json){
         var actsrc="http://www.baidu.com";
 			var iw = new BMap.InfoWindow("" +
-	  "<form action=${pageContext.request.contextPath}/mapRentHouseDetail.do method='post'>" +
+	  "<form action=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ request.getContextPath()+"/"%>mapRentHouseDetail.do method='post'>" +
       "<li style=\'margin: 2px 0px; padding: 0px 5px 5px 0px; cursor: pointer; overflow: hidden; line-height: 17px;\'>"+
         "    <div style=\'width: 300px; height: 80px; display: inline-block\'>"+
         "        <div style=\'zoom: 1; overflow: hidden; padding: 0px 5px; background-color: rgb(240, 240, 240);\'>"+
